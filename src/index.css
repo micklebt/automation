@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic page typography */
+html, body, #root { height: 100%; }
+body { @apply bg-slate-50 text-slate-800; }
+
+/* Slightly darker form background for ease of viewing */
+.form-card-bg { @apply bg-slate-100; }
