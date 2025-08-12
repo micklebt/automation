@@ -11,7 +11,6 @@ import {
   PhoneCall,
   Database,
   Rocket,
-  ArrowRight,
   Mail,
   Clock,
   ShieldCheck,
@@ -93,7 +92,6 @@ export default function Site() {
         <About />
         <QuoteBreak />
         <Services />
-        <WorkflowSection />
         <Process />
         <CaseStudies />
         <Playbooks />
@@ -335,42 +333,6 @@ function Services() {
             <CardContent className="text-slate-600">{s.body}</CardContent>
           </Card>
         ))}
-      </div>
-    </section>
-  );
-}
-
-function WorkflowSection() {
-  const steps = [
-    { title: "Trigger", body: "A form, call, or payment starts the flow." },
-    { title: "Intake", body: "We collect clean, structured details." },
-    { title: "Decide", body: "Rules & AI help route and choose next actions." },
-    { title: "Act", body: "Create jobs, tasks, tickets, or invoices." },
-    { title: "Notify", body: "Update staff and customers by text or email." },
-    { title: "Measure", body: "Dashboards show progress and blockers." },
-  ];
-  return (
-    <section id="workflow" className="py-16">
-      <div className="flex items-baseline justify-between">
-        <div className="flex items-start gap-3">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">The Gear‑Cluster Model</h2>
-          <ListenBadge n={3} />
-        </div>
-        <div className="text-sm text-slate-500">One action drives many others</div>
-      </div>
-      <p className="mt-3 text-slate-600 max-w-3xl">Think of your business as a set of gears. When the first gear turns—say a customer fills a form—the motion transfers to the others: jobs get created, people get notified, records get updated. No extra cranking.</p>
-      <div className="mt-8 grid md:grid-cols-3 gap-5">
-        {steps.map((s, i) => (
-          <Card key={i} className="rounded-2xl border-slate-200">
-            <CardHeader>
-              <CardTitle className="text-slate-900">{i+1}. {s.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="text-slate-600">{s.body}</CardContent>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-6">
-        <Button className="rounded-2xl" onClick={() => document.getElementById('process')?.scrollIntoView({behavior:'smooth'})}>See how we run projects <ArrowRight className="ml-2 h-4 w-4"/></Button>
       </div>
     </section>
   );
