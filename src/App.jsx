@@ -21,6 +21,9 @@ import {
   Volume2,
 } from "lucide-react";
 
+// Hero image
+import stressedManagerImg from "../media/stressed_manager.png";
+
 // Process section images
 import discoveryImg from "../media/discovery.png";
 import workflowDesignImg from "../media/workflow_design.png";
@@ -88,6 +91,7 @@ export default function Site() {
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Hero onCta={() => scrollTo('contact')} />
         <About />
+        <QuoteBreak />
         <Services />
         <WorkflowSection />
         <Process />
@@ -135,21 +139,24 @@ function Header({ sections, onNav }) {
 
 function Hero({ onCta }) {
   return (
-    <section id="home" className="py-16 sm:py-24">
+    <section id="home" className="pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
-          Double Your Output & Cut Stress in Half  Without Hiring Anyone          </motion.h1>
+          Double Your Output Cut Stress 50% With No New Hires</motion.h1>
           <p className="mt-4 text-slate-600 text-lg">
-            40+ years building business systems. We work with one or two clients at a time so your project gets near‑exclusive attention.
+            As a small business owner, you work far too hard for too many hours. Your stress comes from administrative burdens like finances & taxes, ordering & invoicing, taking & returning calls, emails & texts come at all hours of day & night and weekends.			
           </p>
-          <div className="mt-6 flex gap-3">
-            <Button size="lg" onClick={onCta} className="rounded-2xl">Submit the demo form</Button>
-            <Button size="lg" variant="secondary" onClick={() => document.getElementById('workflow')?.scrollIntoView({behavior:'smooth'})} className="rounded-2xl">
-              See the gears turn <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-          <p className="mt-3 text-sm text-slate-500 flex items-center gap-2"><ShieldCheck className="h-4 w-4"/> No fluff. Clear scope, measurable results, weekly demos.</p>
+		    <p className="mt-4 text-slate-600 text-lg">
+			We like to call this the 'busyness of business'. 
+			</p>
+          <p className="mt-4 text-slate-600 text-lg">
+            Life doesn't need to be this way. Through automation and integration we help small businesses grow and improves without adding stress or personnel. Our track record speaks for itself. 		
+	
+  		</p>
+		  
+          
+   
         </div>
         {/* Illustration: Unsplash photo with overlay gears */}
         <motion.div initial={{ opacity: 0, scale: .98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .6, delay: .1 }} className="relative">
@@ -162,16 +169,8 @@ function Hero({ onCta }) {
 
 function HeroArt() {
   return (
-    <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative">
-      <img
-        src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop"
-        alt="Calm blue abstract"
-        className="w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-blue-600/20" />
-      <div className="absolute inset-0 p-6 flex items-center justify-center">
-        <GearCanvas />
-      </div>
+    <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+      <img src={stressedManagerImg} alt="Stressed manager at desk" className="w-full h-full object-cover" />
     </div>
   );
 }
@@ -197,7 +196,7 @@ function GearCanvas() {
   );
 }
 
-function Gear({ cx, cy, r, teeth, speed, label }) {
+/* function Gear({ cx, cy, r, teeth, speed, label }) {
   const teethPath = [];
   const inner = r * 0.75;
   for (let i=0; i<teeth; i++) {
@@ -217,7 +216,7 @@ function Gear({ cx, cy, r, teeth, speed, label }) {
       <text x={cx} y={cy+4} textAnchor="middle" className="fill-slate-800" style={{fontSize:12}}>{label}</text>
     </g>
   );
-}
+} */
 
 function Arrow({ x1, y1, x2, y2 }) {
   return (
@@ -238,27 +237,39 @@ function Pill({ icon: Icon, children }) {
 
 function About() {
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="pt-6 pb-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Put Your Business On Autopilot—End‑to‑End</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">You Can't Hire Your Way Out of a Mess. Automate and Integrate</h2>
         <ListenBadge n={1} />
       </div>
       <div className="grid lg:grid-cols-3 gap-8 items-start mt-6">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 lg:order-2">
           <p className="mt-4 text-slate-600">
-            We turn messy, manual work into crisp, repeatable process flows that make  important things happen on their own. You work directly with a senior builder—clear scope, weekly demos, measurable wins.
-          Effortlessly. Flawlessly. Constantly</p>
+            You probably don't know what you're missing. Times have changed. Your business should too! So many affordable tools can automate tasks you hate and probably avoid. They are are very affordable. 
+             You've earned the rewards you seek. Check out this small sample of prices:
+          </p>
+          <ul className="list-disc ml-8 mt-2 text-slate-700">
+            <li>$20 - Twilio: world class phone agent routes calls, sends sms, answers questions</li>
+            <li>$30 - Make.com: online automation working 24/7; tons of value across entire business</li>
+            <li>$45 - Quickbooks: estimates & invoices on-the-spot; A/R, A/P and account balances</li>
+			<li>FREE to $34 - JotForm: capture customer data and payments; organize & preserve </li>
+            <li>2.9% + 30¢ per transaction - Stripe: global leader in payment processing</li>
+            <li>FREE to $20 - Airtable: organize & automate your business; turns data into action and GOLD!</li>
+			<li>FREE - Google Sheets: automate entry! Capture valuable data with zero effort</li>
+			<li>FREE - Gmail & SMS: instant communication, set reminders, automate responses</li>
+			<li>FREE - Google Maps: route planning, ETA messages, location awareness</li>
+          </ul>
           <p className="mt-4 text-slate-600">
-            We don't just do "AI" or "automation"—we study YOUR business WITH you and then build real, repeatable systems that perform value-addedmove on their own.
+            We don't sell software. We analyze YOUR business WITH you. We examine how YOU do work. Only then do we design SOLUTIONS with repeatable processes that perform value-added work 24/7 flawlessly and non-stop. Can you say that of any employee?!
           </p>
           <p className="mt-4 text-slate-600">
-            What kind of work? Typically, it's the stuff you put off, neglect, or just Plain don't do. Because it's too tedious. Or time-consuming. Or frustrating. Or all of the above.
+            What kind of work? Tedious stuff, redundant entry. The stuff you put off & neglect or just Plain don't do. Because it's too tedious. Or time-consuming. Or frustrating. Or all of the above.
           </p>
           <div className="mt-4">
             <ul className="list-disc ml-5 text-slate-700 text-sm space-y-1">
-              <li>Customer fills a form → job created, text sent, calendar updated.</li>
-              <li>Caller chooses "leak" → ticket opens, technician alerted automatically.</li>
-              <li>Invoice paid → receipt sent, records updated, next steps scheduled.</li>
+              <li>Customer completes online form → job created, text sent, calendar updated.</li>
+              <li>Caller mentions a "leak" → ticket is opened, call directed to plumbing automatically.</li>
+              <li>Invoice gets paid → receipt sent, records updated, Google review reguested.</li>
             </ul>
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
@@ -267,15 +278,17 @@ function About() {
             <Pill icon={ShieldCheck}>Plain‑language docs</Pill>
           </div>
         </div>
-        <Card className="rounded-2xl shadow-sm border-slate-200 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Team planning with sticky notes" className="w-full h-36 object-cover"/>
+        <Card className="rounded-2xl shadow-sm border-slate-200 overflow-hidden lg:order-1">
+          <div className="rounded-2xl overflow-hidden">
+            <img src={new URL('../media/colored_gear_and_icons.jpg', import.meta.url).href} alt="Colored gears and icons" className="w-full h-64 sm:h-80 lg:h-96 object-contain object-top"/>
+          </div>
           <CardHeader>
-            <CardTitle className="text-slate-900">What clients value</CardTitle>
+            <CardTitle className="text-slate-900">What's so special?</CardTitle>
           </CardHeader>
           <CardContent className="text-slate-600 space-y-3">
-            <div className="flex gap-3"><Bot className="h-5 w-5 text-blue-600"/><span>One intake, many actions: a call or form instantly creates the job, routes tasks, and sends confirmations—no bottlenecks.</span></div>
-            <div className="flex gap-3"><Workflow className="h-5 w-5 text-blue-600"/><span>Every job runs the same winning play—clear steps, zero dropped balls, predictable outcomes end‑to‑end.</span></div>
-            <div className="flex gap-3"><Database className="h-5 w-5 text-blue-600"/><span>Clean, structured data at the source: customers submit once; your systems stay in sync for billing, reporting, and decisions.</span></div>
+            <div className="flex gap-3"><Bot className="h-5 w-5 text-blue-600"/><span>Single inputs yield multiple outputs. A call or form automatically and instantly adds a new contact & Quickbooks customer; it creates a job order & routes tasks; sends confirmations and schedules in calendar</span></div>
+            <div className="flex gap-3"><Workflow className="h-5 w-5 text-blue-600"/><span>Automated 'process' means no deviations — each steps is crystal clear so zero dropped balls</span></div>
+            <div className="flex gap-3"><Database className="h-5 w-5 text-blue-600"/><span>Clean & structured data from the source: customer submits once; you benefit from their accuracy and effort</span></div>
           </CardContent>
         </Card>
       </div>
@@ -283,20 +296,35 @@ function About() {
   );
 }
 
+function QuoteBreak() {
+  return (
+    <section className="py-10">
+      <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-slate-50 border border-slate-200 p-6 sm:p-8">
+        <blockquote className="text-center">
+          <p className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold leading-tight text-slate-900">
+            "Stop running your business from your personal phone number. You're missing out on so much capability."
+          </p>
+          <footer className="mt-3 text-slate-600 text-sm">Your time is precious — use systems automation to maximize it.</footer>
+        </blockquote>
+      </div>
+    </section>
+  );
+}
+
 function Services() {
   const items = [
-    { icon: PhoneCall, title: "Voice, SMS, and IVR", body: "Smart call intake, texting, and phone trees that collect the right info and start work without delay." },
-    { icon: Workflow, title: "Workflow Automation", body: "Event‑driven flows where one action triggers many: updates, emails, tasks, invoices, and alerts." },
-    { icon: Database, title: "Data & Systems Integration", body: "Tie forms, CRMs, accounting, and storage together so the same data moves cleanly across tools." },
-    { icon: Bot, title: "AI Assistance", body: "Transcription, intent parsing, summaries, and decision support embedded in your daily work." },
+    { icon: PhoneCall, title: "Voice, SMS, and IVR", body: "Everything revolves around effective communication. Then why are so many businesses so poor at it? Discover the tools to help you fix that chronic business problem. " },
+    { icon: Workflow, title: "Workflow Automation", body: "An event triggers (email is received, payment is due, amount is over/under X dollars) many actions: updates, emails, tasks, invoices, and alerts. This is THE SECRET SAUCE!" },
+    { icon: Database, title: "Data & Systems Integration", body: "We let the customer provide the data and then REUSE it countless ways. The customer and the automation do your admin work." },
+    { icon: Bot, title: "AI is Here. Use It!", body: "Transcribe calls and VMs, grab data from PDFs of bills, invoices, orders; scan receipts and images for data. Don't miss see our video demo. And it's so-o-o affordable." },
   ];
   return (
     <section id="services" className="py-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Services</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Services</h2>
         <ListenBadge n={2} />
       </div>
-      <p className="mt-3 text-slate-600">We keep the list short so the work stays sharp.</p>
+      <p className="mt-3 text-slate-600">See your business described below? You're not alone.</p>
       <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {items.map((s, i) => (
           <Card key={i} className="rounded-2xl border-slate-200 hover:shadow-md transition overflow-hidden">
@@ -325,7 +353,7 @@ function WorkflowSection() {
     <section id="workflow" className="py-16">
       <div className="flex items-baseline justify-between">
         <div className="flex items-start gap-3">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">The Gear‑Cluster Model</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">The Gear‑Cluster Model</h2>
           <ListenBadge n={3} />
         </div>
         <div className="text-sm text-slate-500">One action drives many others</div>
@@ -368,7 +396,7 @@ function Process() {
   return (
     <section id="process" className="py-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Process</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Process</h2>
         <ListenBadge n={4} />
       </div>
       <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -407,7 +435,7 @@ function CaseStudies() {
   return (
     <section id="case-studies" className="py-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Case Studies</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Case Studies</h2>
         <ListenBadge n={5} />
       </div>
       <p className="mt-3 text-slate-600">Real examples of one action spinning many gears.</p>
@@ -446,7 +474,7 @@ function Playbooks() {
   return (
     <section id="playbooks" className="py-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Playbooks</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Playbooks</h2>
         <ListenBadge n={6} />
       </div>
       <p className="mt-3 text-slate-600">Reusable patterns that keep work moving without busywork.</p>
@@ -502,7 +530,7 @@ function Tooling() {
   return (
     <section id="tooling" className="py-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Tools we use</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Tools we use</h2>
         <ListenBadge n={7} />
       </div>
       <p className="mt-3 text-slate-600">We pick the simplest stack that gets the job done.</p>
@@ -575,7 +603,7 @@ function Results() {
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
           <div className="flex items-start justify-between">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">What tends to happen</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">What tends to happen</h2>
             <ListenBadge n={8} />
           </div>
           <ul className="mt-4 space-y-2 text-slate-700">
@@ -614,7 +642,7 @@ function FAQ() {
   return (
     <section id="faq" className="py-16">
       <div className="flex items-start justify-between">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">FAQ</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">FAQ</h2>
         <ListenBadge n={9} />
       </div>
       <div className="mt-6 grid sm:grid-cols-2 gap-5">
@@ -705,7 +733,7 @@ function Contact() {
       <div className="grid lg:grid-cols-2 gap-8 items-start">
         <div>
           <div className="flex items-start justify-between">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Live demo: one action → many results</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Live demo: one action → many results</h2>
             <ListenBadge n={10} />
           </div>
           <p className="mt-3 text-slate-600">Fill this form to see the gears turn. In production, this wires to Make.com or Pipedream and runs the real flow.</p>
