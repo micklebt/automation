@@ -1,0 +1,62 @@
+AI CONVERSION PROMPT FOR BUSINESS SMART CARD
+=============================================
+
+COPY AND PASTE THIS PROMPT INTO CLAUDE AI OR CHATGPT:
+
+---
+
+Please convert my business information into a professional HTML smart card that I can save locally and bookmark in my browser toolbar. 
+
+REQUIREMENTS:
+- Clean, organized layout with collapsible sections
+- Copy-to-clipboard buttons for important numbers and passwords
+- Responsive design that works on mobile and desktop
+- Professional color scheme (blues, grays, whites)
+- Custom favicon that shows as an icon in browser bookmarks
+- Search functionality to quickly find information
+- Print-friendly backup version
+- Security considerations (mark sensitive data clearly)
+
+FEATURES TO INCLUDE:
+- One-click copy buttons for phone numbers, account numbers, passwords
+- Color-coded sections for quick visual scanning
+- Expandable/collapsible sections to reduce clutter
+- Emergency contacts highlighted in red
+- Quick links section with direct buttons to login pages
+- Notes section for procedures and reminders
+- Last updated date tracker
+
+STYLING PREFERENCES:
+- Modern, clean design
+- Easy to read fonts
+- Logical information hierarchy
+- Mobile-responsive layout
+- Professional appearance suitable for business use
+
+SECURITY NOTES:
+- Add warnings about sensitive information
+- Suggest which fields to leave blank for security
+- Include reminder about secure storage
+
+Please make it a complete, standalone HTML file that I can save as "my_business_smart_card.html" and bookmark in my browser.
+
+Here's my business information:
+
+[PASTE YOUR COMPLETED TEMPLATE HERE]
+
+---
+
+USAGE INSTRUCTIONS:
+1. Fill out the business_smart_card_template.txt file
+2. Copy the completed template
+3. Copy this entire prompt into Claude AI or ChatGPT
+4. Paste your business info at the bottom
+5. Save the generated HTML file locally
+6. Open in browser and drag URL to bookmark toolbar
+7. Edit bookmark name to just an icon (like 🏢 or remove text entirely)
+
+TIPS:
+- Test the HTML file locally before bookmarking
+- Update the file periodically and re-save
+- Consider creating multiple versions (work, personal, emergency)
+- Share the concept with your team for their own smart cards

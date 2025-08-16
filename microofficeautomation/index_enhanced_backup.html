@@ -87,7 +87,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 20px; }
-    header { background-color: var(--primary-color); color: white; padding: 2rem 1rem; text-align: center; }
+    header { background-color: var(--primary-color); color: white; padding: 2rem 1rem; text-align: center; max-width: 1100px; margin: 28px auto 2rem; border-radius: 8px; }
     header h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
     header p { font-size: 1.1rem; }
     .cta-primary {
@@ -155,10 +155,7 @@
     <h1><span class="brand-name-large">MicroOffice Automation</span></h1>
     <!-- New primary CTA: scrolls straight to the form -->
     <a href="#contact-form" class="cta-primary">FREE Initial Consult - $400 Value</a>
-    <div style="margin-top: 1rem;">
-      <button onclick="openTechStackPicker()" class="cta-secondary">
-        🚀 Our Tech Stack - Making Magic Happen     </button>
-    </div>
+    <div id="shared-menu-container"></div>
   </header>
 
   <main>
@@ -181,28 +178,28 @@
 
     <h3 style="color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem;">What We Automate for Small Businesses:</h3>
 
-    <h4 style="color: #10b981; margin-bottom: 0.5rem;">📱 Mobile-First Business Solutions:</h4>
+    <h4 style="color: #10b981; margin-bottom: 0.5rem;">📞 Communication Efficiency (Save $23,575/year):</h4>
     <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
-      <li>Customer relationship management (CRM) automation</li>
-      <li>Appointment scheduling and automated reminders</li>
-      <li>Invoice generation and payment processing</li>
-      <li>Inventory tracking and reorder alerts</li>
+      <li><strong>Eliminate phone tag:</strong> Real-time status updates save $7,800 annually</li>
+      <li><strong>Smart voicemail transcription:</strong> 10-second scans vs 3-minute listening saves $7,000</li>
+      <li><strong>Instant file sharing:</strong> Stop "send me that file" hunting, save $7,950</li>
+      <li><strong>Live location dashboards:</strong> End "where are you?" calls, save $3,900</li>
     </ul>
 
-    <h4 style="color: #10b981; margin-bottom: 0.5rem;">💼 Office Workflow Automation:</h4>
+    <h4 style="color: #10b981; margin-bottom: 0.5rem;">💼 Workflow Optimization (Save $26,975/year):</h4>
     <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
-      <li>Document management and digital filing systems</li>
-      <li>Employee onboarding and HR processes</li>
-      <li>Sales pipeline automation</li>
-      <li>Marketing campaign management</li>
+      <li><strong>Stop "quick question" interruptions:</strong> Async messaging saves $12,200</li>
+      <li><strong>End meeting scheduling tennis:</strong> Auto-calendar coordination saves $6,775</li>
+      <li><strong>Password/WiFi automation:</strong> QR codes and smart access save $3,025</li>
+      <li><strong>Digital receipt organization:</strong> Auto-categorized scanning saves $1,250</li>
     </ul>
 
-    <h4 style="color: #10b981; margin-bottom: 0.5rem;">📊 Data-Driven Growth Tools:</h4>
+    <h4 style="color: #10b981; margin-bottom: 0.5rem;">📱 Mobile Liberation (Save $17,500/year):</h4>
     <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
-      <li>Real-time business dashboards</li>
-      <li>Automated reporting and analytics</li>
-      <li>Customer feedback collection and analysis</li>
-      <li>Lead scoring and nurturing systems</li>
+      <li><strong>End desktop dependency:</strong> Mobile workflows save $16,250 annually</li>
+      <li><strong>Smart document capture:</strong> Instant scanning and organization saves $1,250</li>
+      <li><strong>Real-time approvals:</strong> No more "I'll do it when I get back" delays</li>
+      <li><strong>Cloud synchronization:</strong> Access everything from anywhere, anytime</li>
     </ul>
 
     <h3 style="color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem;">Why Small Businesses Choose Us:</h3>
@@ -214,7 +211,18 @@
       <li style="margin-bottom: 0.5rem;">✅ <strong>Local Northeast Ohio Support</strong> - Personal service when you need it</li>
     </ul>
 
-    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-color);"><strong>Ready to automate your way to success?</strong> Join 200+ Northeast Ohio businesses already saving 15+ hours weekly with our automation solutions!</p>
+    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-color);"><strong>Ready to reclaim $68,050+ annually?</strong> Join 200+ Northeast Ohio businesses who've eliminated communication friction and workflow waste with our automation solutions!</p>
+
+    <!-- Tech Stack CTA Section -->
+    <section style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #0ea5e9; border-radius: 12px;">
+      <h3 style="color: #0369a1; margin-bottom: 1rem; font-size: 1.4em;">🚀 Explore Our Complete Technology Solutions</h3>
+      <p style="color: #0c4a6e; margin-bottom: 1.5rem; font-size: 15px;">
+        <strong>Discover 200+ automation tools</strong> organized by implementation ease. See exactly what's possible for your business and get custom pricing.
+      </p>
+      <button onclick="openTechStackPicker()" style="background: var(--success-color); color: white; font-weight: 700; font-size: 1.1rem; padding: 1rem 2rem; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); transition: all 0.3s ease;">
+        🚀 Open Tech Stack Assessment
+      </button>
+    </section>
 
     <section style="text-align: center; margin: 2rem 0;">
       <img src="stressed_manager.png" alt="Stressed manager at work" style="max-width: 600px; width: 50%; height: auto; border-radius: 5px;">
@@ -270,12 +278,14 @@
       const top = (screen.height - height) / 2;
       
       window.open(
-        'tech_stack_picker.html',
+        'complete_tech_picker_backup.html',
         'techStackPicker',
         `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
       );
     }
   </script>
+  
+  <script src="shared_menu.js"></script>
 
 </body>
 </html>

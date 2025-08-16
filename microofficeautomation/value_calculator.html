@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO Meta Tags -->
+  <title>Business Efficiency ROI Calculator | How Much Are You Losing? | MicroOffice Automation</title>
+  <meta name="description" content="Discover how much money your business loses to communication friction and workflow inefficiencies. Free ROI calculator shows 3-person offices typically waste $74,550+ annually." />
+  <link rel="canonical" href="https://microofficeautomation.com/value_calculator.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Business Efficiency ROI Calculator | MicroOffice Automation" />
+  <meta property="og:description" content="Free calculator reveals how much your business loses to fixable inefficiencies. Most 3-person offices waste $74,550+ annually." />
+  <meta property="og:url" content="https://microofficeautomation.com/value_calculator.html" />
+  <meta property="og:image" content="https://microofficeautomation.com/after_image.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Business Efficiency ROI Calculator | MicroOffice Automation" />
+  <meta name="twitter:description" content="Free calculator reveals how much your business loses to fixable inefficiencies." />
+  <meta name="twitter:image" content="https://microofficeautomation.com/after_image.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/ACg8ocJG6ADpoEbmkKBGNjDImN17oJAWT9-KmGVUr6M2jB5x3IeQ3Nsa=s192-c-rg-br100">
+
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --accent-color: #ffc107;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+      --success-color: #10b981;
+      --danger-color: #dc2626;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 20px; }
+    header { background-color: var(--primary-color); color: white; padding: 2rem 1rem; text-align: center; max-width: 1100px; margin: 28px auto 2rem; border-radius: 8px; }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    header p { font-size: 1.1rem; }
+    main { max-width: 1100px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    
+    .calculator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+    .calculator-section { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; }
+    .calculator-section h3 { color: var(--primary-color); margin-bottom: 1rem; }
+    
+    .input-group { margin-bottom: 1.5rem; }
+    .input-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-color); }
+    .input-group input { width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: 16px; }
+    .input-group input:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1); }
+    
+    .scenario-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; }
+    .scenario-card h4 { color: var(--danger-color); margin-bottom: 0.5rem; }
+    .scenario-card .waste-amount { font-size: 1.2rem; font-weight: 700; color: var(--danger-color); }
+    
+    .results-panel { background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border: 2px solid var(--danger-color); border-radius: 12px; padding: 2rem; text-align: center; }
+    .total-waste { font-size: 2.5rem; font-weight: 900; color: var(--danger-color); margin: 1rem 0; }
+    
+    .solution-panel { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 2px solid var(--success-color); border-radius: 12px; padding: 2rem; margin-top: 2rem; text-align: center; }
+    .roi-highlight { font-size: 1.5rem; font-weight: 700; color: var(--success-color); }
+    
+    .cta-button { background: var(--success-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; text-decoration: none; display: inline-block; margin: 1rem 0.5rem; cursor: pointer; }
+    .cta-button:hover { background: #059669; transform: translateY(-1px); }
+    
+    /* Brand Name Styling */
+    .brand-name {
+      color: #ff6b35;
+      font-weight: 800;
+      font-size: 1.15em;
+      text-shadow: 0 1px 3px rgba(255, 107, 53, 0.3);
+      letter-spacing: 0.5px;
+    }
+    
+    .brand-name-large {
+      color: #ffc107;
+      font-weight: 900;
+      font-size: 1.4em;
+      text-shadow: 0 2px 4px rgba(255, 193, 7, 0.5);
+      letter-spacing: 1px;
+    }
+    
+    @media (max-width: 768px) {
+      .calculator-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.6rem; }
+      .total-waste { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="brand-name-large">MicroOffice Automation</span> ROI Calculator</h1>
+    <p>Discover How Much Money Your Business Loses to Fixable Inefficiencies</p>
+    <div id="shared-menu-container"></div>
+  </header>
+
+  <main>
+    <section>
+      <h2 style="color: var(--danger-color); text-align: center; margin-bottom: 1rem;">⚠️ The Shocking Truth About Business Efficiency</h2>
+      <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
+        Most businesses have no idea they're hemorrhaging <strong>$50,000-100,000+ annually</strong> to easily fixable communication and workflow friction. Use our calculator to see your actual losses.
+      </p>
+    </section>
+
+    <div class="calculator-grid">
+      <div class="calculator-section">
+        <h3>📊 Your Business Setup</h3>
+        <div class="input-group">
+          <label for="teamSize">Number of People in Office:</label>
+          <input type="number" id="teamSize" value="3" min="1" max="50">
+        </div>
+        <div class="input-group">
+          <label for="hourlyRate">Average Hourly Rate ($):</label>
+          <input type="number" id="hourlyRate" value="25" min="10" max="200">
+        </div>
+        <div class="input-group">
+          <label for="workDays">Work Days Per Year:</label>
+          <input type="number" id="workDays" value="250" min="200" max="300">
+        </div>
+      </div>
+
+      <div class="calculator-section">
+        <h3>💰 Your Annual Waste</h3>
+        <div id="resultsContainer">
+          <div class="results-panel">
+            <h4>Total Annual Loss:</h4>
+            <div class="total-waste" id="totalWaste">$74,550</div>
+            <p>That's <span id="weeklyWaste">$1,434</span> lost every single week!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2 style="color: var(--danger-color); margin-bottom: 2rem; text-align: center;">🔥 Where Your Money Disappears</h2>
+      
+      <div class="scenario-card">
+        <h4>📞 Phone Tag with Field Workers</h4>
+        <p>4 phone tag cycles daily × 6 minutes each × your team size</p>
+        <div class="waste-amount" id="phoneTagWaste">$7,800/year</div>
+      </div>
+
+      <div class="scenario-card">
+        <h4>📧 Voicemail Hunting (3-minute messages for 3-second info)</h4>
+        <p>8 voicemails daily × 3 minutes each × inefficiency factor</p>
+        <div class="waste-amount" id="voicemailWaste">$7,000/year</div>
+      </div>
+
+      <div class="scenario-card">
+        <h4>❓ "Quick Question" Interruptions</h4>
+        <p>15 interruptions daily × 5 minutes each (including refocus time)</p>
+        <div class="waste-amount" id="interruptionWaste">$12,200/year</div>
+      </div>
+
+      <div class="scenario-card">
+        <h4>📁 "Send Me That File" Hunting</h4>
+        <p>12 file requests daily × 6 minutes of searching and wrong versions</p>
+        <div class="waste-amount" id="fileWaste">$7,950/year</div>
+      </div>
+
+      <div class="scenario-card">
+        <h4>📅 Meeting Scheduling Tennis</h4>
+        <p>4 meetings weekly × 8 email exchanges × 2 minutes each</p>
+        <div class="waste-amount" id="schedulingWaste">$6,775/year</div>
+      </div>
+
+      <div class="scenario-card">
+        <h4>📱 "I'm Not at My Computer" Paralysis</h4>
+        <p>6 times daily × 25 minutes of delay and forgotten tasks</p>
+        <div class="waste-amount" id="mobileWaste">$16,250/year</div>
+      </div>
+
+      <div class="scenario-card">
+        <h4>🔐 WiFi/Password Requests</h4>
+        <p>5 password requests daily × 3 minutes each + troubleshooting</p>
+        <div class="waste-amount" id="passwordWaste">$3,025/year</div>
+      </div>
+    </section>
+
+    <div class="solution-panel">
+      <h2 style="color: var(--success-color); margin-bottom: 1rem;">💡 The Solution</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+        <span class="brand-name">MicroOffice Automation</span> eliminates these inefficiencies with proven automation solutions.
+      </p>
+      <div class="roi-highlight">
+        Investment: $2,000-5,000 • Annual Savings: <span id="totalSavings">$74,550</span>
+      </div>
+      <div class="roi-highlight">
+        ROI: <span id="roiPercent">1,400-3,700%</span> • Payback: 3-4 weeks
+      </div>
+      
+      <div style="margin-top: 2rem;">
+        <a href="mailto:info@microofficeautomation.com?subject=ROI Calculator Results - Let's Fix This!" class="cta-button">📧 Get Custom Solution</a>
+        <a href="tel:+13309195744" class="cta-button">📞 Call (330) 919-5744</a>
+        <a href="complete_tech_picker_backup.html" class="cta-button" style="background: var(--accent-color); color: #1b1b1b;">🚀 Explore Solutions</a>
+      </div>
+    </div>
+
+    <section style="margin-top: 3rem;">
+      <h2 style="color: var(--primary-color);">🎯 Why These Numbers Matter</h2>
+      <ul style="list-style: disc; padding-left: 2rem; margin: 1rem 0;">
+        <li><strong>Conservative Estimates:</strong> These calculations use modest time losses - most businesses waste even more</li>
+        <li><strong>Compound Effects:</strong> Inefficiencies create stress, reduce focus, and lower quality</li>
+        <li><strong>Scalable Losses:</strong> Problems multiply as your team grows</li>
+        <li><strong>Proven Solutions:</strong> Every inefficiency listed has a tested automation fix</li>
+        <li><strong>Immediate Impact:</strong> Most solutions show results within 24-48 hours</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer style="text-align: center; margin-top: 3rem; padding: 2rem; color: #666;">
+    <div style="margin-bottom: 0.25rem;"><span class="brand-name">MicroOffice Automation</span></div>
+    <div>Service Area: Northeast Ohio, USA</div>
+    <div><a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a> &nbsp;|&nbsp; <a href="tel:+13309195744">+1 (330) 919‑5744</a></div>
+    <div style="margin-top: 0.5rem;">&copy; 2025 <span class="brand-name">MicroOffice Automation</span> | All rights reserved</div>
+  </footer>
+
+  <script>
+    function calculateWaste() {
+      const teamSize = parseInt(document.getElementById('teamSize').value) || 3;
+      const hourlyRate = parseFloat(document.getElementById('hourlyRate').value) || 25;
+      const workDays = parseInt(document.getElementById('workDays').value) || 250;
+      
+      // Calculate individual wastes (scaled to team size and hourly rate)
+      const phoneTag = Math.round(teamSize * 312 * hourlyRate / 25); // Base: $7,800 for 3 people at $25/hr
+      const voicemail = Math.round(teamSize * 280 * hourlyRate / 25); // Base: $7,000
+      const interruptions = Math.round(teamSize * 488 * hourlyRate / 25); // Base: $12,200
+      const fileHunting = Math.round(teamSize * 318 * hourlyRate / 25); // Base: $7,950
+      const scheduling = Math.round(teamSize * 271 * hourlyRate / 25); // Base: $6,775
+      const mobile = Math.round(teamSize * 650 * hourlyRate / 25); // Base: $16,250
+      const passwords = Math.round(teamSize * 121 * hourlyRate / 25); // Base: $3,025
+      
+      const total = phoneTag + voicemail + interruptions + fileHunting + scheduling + mobile + passwords;
+      const weekly = Math.round(total / 52);
+      
+      // Update display
+      document.getElementById('totalWaste').textContent = `$${total.toLocaleString()}`;
+      document.getElementById('weeklyWaste').textContent = `$${weekly.toLocaleString()}`;
+      document.getElementById('totalSavings').textContent = `$${total.toLocaleString()}`;
+      
+      // Update individual scenarios
+      document.getElementById('phoneTagWaste').textContent = `$${phoneTag.toLocaleString()}/year`;
+      document.getElementById('voicemailWaste').textContent = `$${voicemail.toLocaleString()}/year`;
+      document.getElementById('interruptionWaste').textContent = `$${interruptions.toLocaleString()}/year`;
+      document.getElementById('fileWaste').textContent = `$${fileHunting.toLocaleString()}/year`;
+      document.getElementById('schedulingWaste').textContent = `$${scheduling.toLocaleString()}/year`;
+      document.getElementById('mobileWaste').textContent = `$${mobile.toLocaleString()}/year`;
+      document.getElementById('passwordWaste').textContent = `$${passwords.toLocaleString()}/year`;
+      
+      // Calculate ROI
+      const lowROI = Math.round((total / 5000) * 100);
+      const highROI = Math.round((total / 2000) * 100);
+      document.getElementById('roiPercent').textContent = `${lowROI}-${highROI}%`;
+    }
+
+    // Add event listeners
+    document.getElementById('teamSize').addEventListener('input', calculateWaste);
+    document.getElementById('hourlyRate').addEventListener('input', calculateWaste);
+    document.getElementById('workDays').addEventListener('input', calculateWaste);
+
+    // Initial calculation
+    calculateWaste();
+  </script>
+  
+  <script src="shared_menu.js"></script>
+</body>
+</html>
