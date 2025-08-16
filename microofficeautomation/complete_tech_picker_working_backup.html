@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Business Solutions Assessment | MicroOffice Automation Tech Stack</title>
+  <meta name="description" content="Explore automation solutions for your small business. Select technologies that solve your challenges and get a custom package from MicroOffice Automation." />
+  <link rel="canonical" href="https://microofficeautomation.com/complete_tech_picker.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Business Solutions Assessment | MicroOffice Automation" />
+  <meta property="og:description" content="Explore automation solutions for your small business. Select technologies that solve your challenges and get a custom package." />
+  <meta property="og:url" content="https://microofficeautomation.com/complete_tech_picker.html" />
+  <meta property="og:image" content="https://microofficeautomation.com/after_image.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Business Solutions Assessment | MicroOffice Automation" />
+  <meta name="twitter:description" content="Explore automation solutions for your small business. Select technologies that solve your challenges and get a custom package." />
+  <meta name="twitter:image" content="https://microofficeautomation.com/after_image.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/ACg8ocJG6ADpoEbmkKBGNjDImN17oJAWT9-KmGVUr6M2jB5x3IeQ3Nsa=s192-c-rg-br100">
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --accent-color: #ffc107;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+      --success-color: #10b981;
+    }
+    body{font-family:'Segoe UI',system-ui;background:var(--bg-color);margin:0;padding:0;color:var(--text-color)}
+    .wrap{max-width:1100px;margin:28px auto;padding:0 18px}
+    .card{background:#fff;border:1px solid #dfe8f3;border-radius:16px;box-shadow:0 8px 24px rgba(17, 24, 39, .08);overflow:hidden}
+    .hdr{padding:16px 18px;border-bottom:1px solid #dfe8f3;background:var(--primary-color);color:white}
+    .title{font-size:20px;font-weight:800;margin:0}
+    .muted{color:#e0e7ff;font-size:14px;margin-top:4px}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    input[type="search"],button{border:1px solid #dfe8f3;border-radius:8px;padding:8px 10px;font-size:14px;transition:all 0.2s ease;cursor:pointer;background:#fff;color:var(--primary-color);font-weight:600}
+    input[type="search"]{cursor:text}
+    input[type="search"]::placeholder{color:#94a3b8}
+    input[type="search"]:focus{outline:none;border-color:var(--accent-color);box-shadow:0 0 0 3px rgba(255,193,7,0.1)}
+    .flash-message{position:fixed;top:20px;right:20px;background:var(--success-color);color:white;padding:12px 20px;border-radius:8px;font-weight:600;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.15);transform:translateX(100%);transition:transform 0.3s ease;z-index:1000}
+    .flash-message.show{transform:translateX(0)}
+    button{cursor:pointer;background:#fff;color:var(--primary-color);font-weight:600;transition:all 0.2s ease;position:relative}
+    button:hover:not(:disabled){background:#f1f5f9;border-color:#94a3b8;transform:translateY(-1px);box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+    button:active:not(:disabled){transform:translateY(0);box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+    input[type="search"]:hover{background:#f8fafc;border-color:#94a3b8}
+    button.primary{background:#fff;color:var(--primary-color);border-color:#dfe8f3;font-size:14px;font-weight:600}
+    button.primary:hover:not(:disabled){background:#f1f5f9;border-color:#94a3b8;transform:translateY(-1px);box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+    button.primary:active:not(:disabled){background:#f1f5f9;transform:translateY(0);box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+    button:disabled{opacity:0.5;cursor:not-allowed}
+    .faq{padding:10px}
+    details{border:1px solid #dfe8f3;border-radius:12px;background:#fff;margin:8px 0}
+    details[open]{background:#e8f1ff}
+    summary{cursor:pointer;padding:12px 14px;font-weight:500;display:flex;justify-content:space-between;align-items:center;color:#51607a}
+    summary::-webkit-details-marker{display:none}
+    .pill{font-size:12px;color:var(--primary-color);background:#eef5ff;border:1px solid #dfe8f3;border-radius:999px;padding:2px 8px}
+    .grid{display:flex;flex-direction:column;gap:8px;padding:0 14px 14px}
+    .chip{display:flex;align-items:flex-start;gap:10px;text-align:left;border:1px solid #dfe8f3;background:#fff;border-radius:8px;padding:12px;font-size:14px;cursor:pointer;transition:all 0.2s ease}
+    .chip:hover{background:#f8fafc;border-color:#94a3b8}
+    .chip[aria-pressed="true"]{background:#dbeafe;border-color:var(--primary-color)}
+    .chip input[type="checkbox"]{margin:0;width:16px;height:16px;cursor:pointer;accent-color:var(--primary-color)}
+    .chip-content{flex:1}
+    .chip strong{display:block;font-weight:700;margin-bottom:4px;color:var(--primary-color)}
+    .chip strong a{color:var(--primary-color);text-decoration:underline}
+    .chip ul{margin:0;padding-left:16px;color:#51607a;font-size:13px;line-height:1.4}
+    .highlight{background-color:var(--accent-color);padding:1px 2px;border-radius:2px;font-weight:600}
+    .go-top{text-align:center;padding:8px 14px;border-top:1px solid #e5e7eb;margin-top:8px}
+    .go-top a{color:var(--primary-color);text-decoration:none;font-size:13px;font-weight:500}
+    .go-top a:hover{text-decoration:underline}
+    .footer{padding:12px 18px;border-top:1px solid #dfe8f3;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .badge{font-weight:700;color:#0a2d62;background:#dbeafe;border:1px solid #bfdbfe;padding:3px 8px;border-radius:999px;font-size:13px}
+    pre{background:#fff;border:1px solid #dfe8f3;border-radius:8px;padding:10px;overflow:auto;max-height:200px;font-size:12px;margin-top:8px}
+    
+    /* Brand Name Styling */
+    .brand-name {
+      color: #ff6b35;
+      font-weight: 800;
+      font-size: 1.15em;
+      text-shadow: 0 1px 3px rgba(255, 107, 53, 0.3);
+      letter-spacing: 0.5px;
+    }
+    
+    .brand-name-large {
+      color: #ffc107;
+      font-weight: 900;
+      font-size: 1.4em;
+      text-shadow: 0 2px 4px rgba(255, 193, 7, 0.5);
+      letter-spacing: 1px;
+    }
+    
+    /* Lead Generation Styling */
+    .cta-contact {
+      background: var(--success-color);
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+    
+    .cta-contact:hover {
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+    
+    .intro-section {
+      background: linear-gradient(135deg, #e8f1ff 0%, #f0f8ff 100%);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      border: 1px solid #dfe8f3;
+    }
+    
+    .contact-footer {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 12px;
+      margin-top: 1rem;
+      border: 1px solid #dfe8f3;
+    }
+    
+    @media (max-width: 768px) {
+      .controls { flex-direction: column; align-items: stretch; }
+      .controls button, .controls input { width: 100%; margin: 2px 0; }
+      .wrap { padding: 0 10px; margin: 10px auto; }
+      .brand-name-large { font-size: 1.2em; }
+    }
+    
+    /* Tooltip Styling */
+    .tooltip {
+      position: relative;
+      cursor: help;
+    }
+    
+    .tooltip::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a1a1a;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      line-height: 1.4;
+      max-width: 280px;
+      white-space: normal;
+      width: max-content;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      /* Smart positioning to avoid edge cutoff */
+      right: auto;
+    }
+    
+    /* Position tooltip to the right when near left edge */
+    .tooltip:nth-child(-n+2)::before {
+      left: 0;
+      transform: translateX(0);
+    }
+    
+    /* Position tooltip to the left when near right edge */
+    .tooltip:nth-last-child(-n+2)::before {
+      left: auto;
+      right: 0;
+      transform: translateX(0);
+    }
+    
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: 115%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: #1a1a1a;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    /* Adjust arrow for repositioned tooltips */
+    .tooltip:nth-child(-n+2)::after {
+      left: 20px;
+      transform: translateX(0);
+    }
+    
+    .tooltip:nth-last-child(-n+2)::after {
+      left: auto;
+      right: 20px;
+      transform: translateX(0);
+    }
+    
+    .tooltip:hover::before,
+    .tooltip:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hdr">
+        <h1 class="title"><span class="brand-name-large">MicroOffice Automation</span> Solutions Assessment</h1>
+        <p class="muted">Explore our automation solutions • Select items that could solve problems for your business • Get your custom quote</p>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search solutions…" />
+          <button id="expandAll">Expand all</button>
+          <button id="collapseAll">Collapse all</button>
+          <button id="reset">Reset</button>
+          <button id="exportJson" class="primary">Export JSON</button>
+          <button id="copyJson">Copy JSON</button>
+          <button id="exportCsv">Export CSV</button>
+          <button id="copyMd">Copy Markdown</button>
+        </div>
+      </div>
+      
+      <div class="intro-section">
+        <h2 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.3em;">🚀 Enterprise Power for Small Business Budgets</h2>
+        <p style="margin-bottom: 1rem; font-size: 15px; line-height: 1.6; font-weight: 500;">
+          <strong>What Fortune 500 companies spent millions on just 10 years ago is now available to your small business for dollars per month.</strong>
+        </p>
+        <p style="margin-bottom: 1.5rem; font-size: 14px; line-height: 1.5;">
+          Below you'll discover powerful automation tools that can transform your daily business struggles into competitive advantages. Each solution shows a common pain point you might recognize, followed by the dramatic improvements possible when you implement the right technology. Most tools cost $10-100/month and can save 10+ hours weekly while eliminating errors and stress.
+        </p>
+        <p style="margin-bottom: 1.5rem; font-size: 14px; line-height: 1.5; color: var(--primary-color); font-weight: 600;">
+          ✅ Select the solutions that solve your current challenges<br>
+          ✅ We'll show you exactly how to implement them<br>
+          ✅ Start competing like a Fortune 500 company next month
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="mailto:info@microofficeautomation.com?subject=Tech Stack Quote Request" class="cta-contact">📧 Email for Quote</a>
+          <a href="tel:+13309195744" class="cta-contact">📞 Call (330) 919-5744</a>
+        </div>
+      </div>
+      
+      <div class="faq" id="faq"></div>
+      <div class="footer">
+        <span class="badge" id="count">0 selected</span>
+        <span class="muted" id="status">No package yet.</span>
+      </div>
+      <pre id="preview"></pre>
+      
+      <div class="contact-footer">
+        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Ready to Transform Your Business? 🚀</h3>
+        <p style="margin-bottom: 1rem; font-size: 14px;">Selected <strong id="count-footer">0</strong> solutions? Let's discuss how <span class="brand-name">MicroOffice Automation</span> can implement these for your business.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="mailto:info@microofficeautomation.com?subject=Tech Stack Implementation Quote" class="cta-contact">Get Custom Quote</a>
+          <a href="tel:+13309195744" class="cta-contact">Schedule Call</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 12px; color: #666;">Serving Northeast Ohio and businesses nationwide • Free consultation • 100% satisfaction guaranteed</p>
+      </div>
+    </div>
+  </div>
+<script>
+// Data from your tech stack
+const DATA = [
+  {
+    "title": "AI / Automation - Smart workflow engines",
+    "items": [
+      {
+        "name": "Custom GPTs",
+        "bullets": [
+          "Making the same decisions over and over → AI remembers your preferences and applies them consistently",
+          "Juggling multiple disconnected processes → One intelligent system that connects everything",
+          "Your team overwhelmed by routine tasks → AI handles the boring stuff, humans focus on growth"
+        ]
+      },
+      {
+        "name": "[OpenAI (Assistants, Whisper, ChatGPT)](https://openai.com)",
+        "tooltip": "OpenAI provides enterprise-grade AI tools. ChatGPT for writing, Whisper for speech-to-text, and custom Assistants for your specific business needs. Starting at $20/month.",
+        "bullets": [
+          "Important phone calls lost to poor notes → Perfect transcripts of every conversation automatically",
+          "Staring at blank documents not knowing what to write → AI generates first drafts in seconds",
+          "Slow email responses losing customers → AI-assisted replies that sound like you but faster"
+        ]
+      },
+      {
+        "name": "[Make.com](https://www.make.com)",
+        "tooltip": "Make.com (formerly Integromat) connects your apps automatically. When something happens in one app, it triggers actions in others. No coding required. Plans start at $9/month.",
+        "bullets": [
+          "Copying data between apps for hours weekly → Apps talk to each other automatically",
+          "Following up with leads slipping through cracks → Automatic reminders and scheduled touchpoints",
+          "Typos and mistakes when moving data manually → Computer-perfect transfers every time"
+        ]
+      },
+      {
+        "name": "[Pipedream](https://pipedream.com)",
+        "tooltip": "Pipedream is a developer-friendly automation platform that can connect any API or service. More technical than Make.com but incredibly powerful. Free tier available, paid plans start at $20/month.",
+        "bullets": [
+          "Missing important events because you can\'t track everything → Instant notifications when anything important happens",
+          "Your software doesn\\'t connect to that other software → Custom bridges between any business tools",
+          "Waiting hours to respond to urgent situations → Real-time automated responses to critical events"
+        ]
+      },
+      {
+        "name": "[IFTTT](https://ifttt.com)",
+        "tooltip": "If This Then That - Simple automation for everyday tasks. Connect your phone, smart devices, and popular apps with easy recipes. Free version available, Pro at $3.99/month.",
+        "bullets": [
+          "Your business apps don\'t work together → Simple bridges that connect everything",
+          "Forgetting daily routines that keep business running → Set-once rules that work forever",
+          "Your phone, computer, and devices acting separately → Everything working as one system"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Voice / Telephony / Messaging - Enterprise-grade communications",
+    "items": [
+      {
+        "name": "[Twilio](https://www.twilio.com)",
+        "tooltip": "Twilio powers communications for Uber, Airbnb, and Netflix. Send automated SMS, make calls, and build phone systems with simple APIs. Pay-per-use pricing starts at $0.0075 per SMS.",
+        "bullets": [
+          "Customers not showing up for appointments → Automatic reminder calls and texts that cut no-shows by 80%",
+          "Spending hours manually calling prospects → Send hundreds of personalized messages instantly",
+          "Small team can\'t handle call volume → Programmable phone system that scales like a Fortune 500 company"
+        ]
+      },
+      {
+        "name": "[Bria](https://www.counterpath.com/bria/)",
+        "tooltip": "Bria is a professional softphone that turns any device into a business phone system. Make calls from your computer, tablet, or mobile with consistent caller ID and features.",
+        "bullets": [
+          "Tied to your desk to make professional calls → Make business calls from anywhere with perfect quality",
+          "Different phone numbers confusing customers → One consistent business identity across all devices",
+          "Managing multiple communication devices → Single app handles all your business communications"
+        ]
+      },
+      {
+        "name": "[OpenPhone](https://www.openphone.com)",
+        "tooltip": "OpenPhone provides business phone numbers that work on any device. Shared inboxes, auto-replies, and CRM integration. Plans start at $15/month per user.",
+        "bullets": [
+          "Using personal phone for business calls → Professional business line that protects your privacy",
+          "Missing important customer texts → Shared team inbox where nothing falls through cracks",
+          "Lost call context hurting relationships → Every conversation automatically logged with customer details"
+        ]
+      },
+      {
+        "name": "[Vapi.ai](https://www.vapi.ai)",
+        "tooltip": "Vapi.ai creates AI phone agents that answer calls, qualify leads, and book appointments 24/7. Like having a perfect receptionist that never sleeps. Starting at $45/month.",
+        "bullets": [
+          "Losing customers because no one answers after hours → AI receptionist available 24/7/365",
+          "Inconsistent phone screening wasting time → Perfectly scripted AI that qualifies every lead",
+          "Missing hot leads while you\'re busy → Instant response captures opportunities before competitors"
+        ]
+      },
+      {
+        "name": "[Retell.ai](https://www.retell.ai)",
+        "tooltip": "Retell.ai builds conversational AI agents for phone calls. Perfect for appointment setting, customer service, and sales calls. Custom pricing based on usage.",
+        "bullets": [
+          "Sales team giving different pitches → AI delivers your perfect sales script every single time",
+          "Limited by business hours for outreach → AI agents making calls around the clock",
+          "Months training new phone staff → Deploy trained AI agents in days, not months"
+        ]
+      },
+      {
+        "name": "[Textline](https://www.textline.com)",
+        "tooltip": "Textline brings business texting to your existing phone number. Shared inbox, auto-responses, and CRM integration. Plans start at $30/month.",
+        "bullets": [
+          "Email taking days when customers want instant answers → Text responses in minutes instead of hours",
+          "Important customer messages getting lost → All texts synced to your CRM automatically",
+          "Customers preferring text but you only offer phone → Meet customers on their preferred channel"
+        ]
+      },
+      {
+        "name": "WhatsApp Business / Facebook Messenger",
+        "tooltip": "WhatsApp Business and Facebook Messenger let you communicate with customers where they already are. Rich media, automated responses, and verified business profiles. Free to start.",
+        "bullets": [
+          "Customers abandoning cart because support is hard to reach → Instant help through their favorite messaging app",
+          "Limited to boring text when you need to show photos/videos → Rich media messages with images, videos, and documents",
+          "Customers unsure if you\'re legitimate → Verified business profile builds instant trust"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Web / Digital Presence - Professional online presence that converts",
+    "items": [
+      {
+        "name": "Search Engine Optimization (SEO)",
+        "tooltip": "SEO makes your business discoverable when customers search for your services. Proper SEO can increase website traffic by 300-500% within 6 months. Implementation varies by scope.",
+        "bullets": [
+          "Potential customers can\'t find you online → Ranking #1 when people search for your services",
+          "Losing local business to competitors → Dominating map pack results in your area",
+          "Website visitors bouncing immediately → Rich snippets that showcase your expertise and prices"
+        ]
+      },
+      {
+        "name": "[Google Business Profile / Reviews](https://www.google.com/business)",
+        "tooltip": "Your Google Business Profile is often the first thing customers see. 87% of consumers read reviews before visiting a business. Free to set up and manage.",
+        "bullets": [
+          "Invisible on Google Maps while competitors show up → Optimized profile that dominates local search results",
+          "Few reviews making you look unprofessional → Automated system that generates 5-star reviews consistently",
+          "Customer questions going unanswered → Managed Q&A that builds trust and showcases expertise"
+        ]
+      },
+      {
+        "name": "[WordPress](https://wordpress.org)",
+        "tooltip": "WordPress powers 40% of all websites, from small businesses to Fortune 500 companies. Easy to update, thousands of plugins available. Hosting starts at $5/month.",
+        "bullets": [
+          "Website looks outdated and unprofessional → Modern, mobile-friendly site that builds instant credibility",
+          "Can't update website without paying a developer → Easy content management you can handle yourself",
+          "Site lacking key features → Professional plugins that add e-commerce, booking, and more"
+        ]
+      },
+      {
+        "name": "Next.js / Astro (Modern Web Frameworks)",
+        "tooltip": "Next.js and Astro are cutting-edge web technologies that create lightning-fast websites. Used by Netflix, TikTok, and major e-commerce sites. Custom development required.",
+        "bullets": [
+          "Website loads slowly, losing customers → Blazing-fast sites that load in under 1 second",
+          "Poor Google rankings due to slow performance → Perfect Core Web Vitals scores that boost SEO",
+          "Mobile experience frustrating customers → Responsive design that works perfectly on any device"
+        ]
+      },
+      {
+        "name": "Custom HTML/CSS/JavaScript Development",
+        "tooltip": "Custom web development gives you complete control over your online presence. No monthly SaaS fees, unlimited customization, and you own all the code forever.",
+        "bullets": [
+          "Template websites that look like everyone else's → Unique design that perfectly represents your brand",
+          "Limited by what your platform allows → Complete creative freedom with unlimited features",
+          "Monthly fees adding up year after year → One-time investment, you own it forever"
+        ]
+      },
+      {
+        "name": "Smart Web Forms & Lead Capture",
+        "tooltip": "Intelligent forms that adapt based on user responses, qualify leads automatically, and integrate with your CRM. Can increase conversion rates by 30-60%.",
+        "bullets": [
+          "Website visitors leaving without contacting you → Smart forms that capture leads before they bounce",
+          "Unqualified leads wasting your time → Forms that pre-qualify prospects automatically",
+          "Manual data entry from website inquiries → Direct integration with your CRM and follow-up systems"
+        ]
+      },
+      {
+        "name": "QR Code Integration & Marketing",
+        "tooltip": "QR codes bridge the gap between physical and digital marketing. Track engagement, update content instantly, and provide seamless customer experiences.",
+        "bullets": [
+          "Business cards and flyers that lead nowhere → Instant access to your portfolio, contact info, and booking",
+          "Confusing instructions that lose customers → Simple scan-to-action that guides customers perfectly",
+          "Slow customer onboarding processes → Instant access to forms, menus, and information"
+        ]
+      },
+      {
+        "name": "[YouTube](https://www.youtube.com)",
+        "tooltip": "YouTube is the 2nd largest search engine. Video content gets 50x more organic reach than text. Business accounts are free, with optional advertising starting at $1/day.",
+        "bullets": [
+          "Customers don\'t trust you because they can\'t see your work → Video portfolio that proves your expertise",
+          "Website not ranking despite SEO efforts → YouTube videos that rank for your target keywords",
+          "Cold prospects not understanding your value → Educational content that positions you as the expert"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Data / Storage / Productivity - Centralized work hub",
+    "items": [
+      {
+        "name": "[Airtable](https://airtable.com)",
+        "tooltip": "Airtable combines the simplicity of a spreadsheet with the power of a database. Perfect for tracking customers, projects, inventory, and more. Free plan available, paid plans start at $20/month.",
+        "bullets": [
+          "Important data scattered across multiple spreadsheets → Everything organized in one searchable database",
+          "Manually checking project status every day → Automated views that show exactly what needs attention",
+          "Making business decisions based on gut feeling → Real dashboards with rollup data and trends"
+        ]
+      },
+      {
+        "name": "[Notion](https://www.notion.so)",
+        "tooltip": "Notion is an all-in-one workspace that combines notes, tasks, wikis, and databases. Replace multiple tools with one organized system. Free for personal use, team plans start at $8/month per user.",
+        "bullets": [
+          "Documents stored everywhere from email to desktop → One organized workspace for everything",
+          "Team members working in isolation → Shared pages where everyone stays aligned",
+          "Standard operating procedures lost in old emails → Living documentation that's always up-to-date"
+        ]
+      },
+      {
+        "name": "[Google Drive](https://www.google.com/drive)",
+        "tooltip": "Google Drive provides cloud storage with real-time collaboration. Share files securely, edit documents together, and access from anywhere. 15GB free, paid plans start at $1.99/month.",
+        "bullets": [
+          "Important files scattered across devices and getting lost → Everything organized in searchable cloud folders",
+          "Multiple people editing the same document creating confusion → Real-time collaboration where everyone sees changes instantly",
+          "Can't access files when traveling or working remotely → All your business files available from any device anywhere"
+        ]
+      },
+      {
+        "name": "[JotForm](https://www.jotform.com)",
+        "tooltip": "JotForm creates professional online forms that integrate with over 150 apps. Collect payments, automate workflows, and eliminate paperwork. Free plan available, paid plans start at $34/month.",
+        "bullets": [
+          "Still using paper forms and manually entering data → Professional online forms that feed directly into your systems",
+          "Spending hours typing information from paper → Automatic data capture and validation",
+          "Approval processes stuck in email chains → Automated routing with notifications and tracking"
+        ]
+      },
+      {
+        "name": "[Google Maps Integration](https://maps.google.com)",
+        "tooltip": "Google Maps APIs let you embed maps, calculate routes, and provide location services. Essential for service businesses. Pay-per-use pricing starts at $2 per 1,000 requests.",
+        "bullets": [
+          "Customers can\'t find your location → Interactive maps embedded right on your website",
+          "Wasting fuel and time on inefficient routes → Optimized routing that saves hours and gas money",
+          "Customers frustrated by late arrivals → Real-time ETA sharing that builds trust"
+        ]
+      },
+      {
+        "name": "[Google Photos](https://photos.google.com)",
+        "tooltip": "Google Photos automatically organizes and backs up photos with powerful search. Perfect for documenting work, creating before/after portfolios. 15GB free, unlimited at $1.99/month.",
+        "bullets": [
+          "Losing proof of completed work when phones break → Automatic backup of every job photo to the cloud",
+          "Can't find specific project photos when you need them → AI-powered search finds any photo instantly",
+          "Warranty claims and disputes without visual evidence → Timestamped photo documentation that protects your business"
+        ]
+      },
+      {
+        "name": "[Diarium](https://www.diariumapp.com)",
+        "tooltip": "Diarium is a digital journal app that helps track daily activities, insights, and business progress. Sync across devices with powerful search and tagging. One-time purchase around $10-30.",
+        "bullets": [
+          "Forgetting important business lessons and wins → Daily journal that captures every insight and success",
+          "Can't identify patterns in customer behavior or business cycles → Tagged entries reveal trends over time",
+          "Important thoughts and ideas scattered across random notes → Unified log of all business-related insights"
+        ]
+      },
+      {
+        "name": "[Dropbox](https://www.dropbox.com)",
+        "tooltip": "Dropbox provides secure file storage and sharing with enterprise-grade security. Advanced version control and team collaboration features. Plans start at $10/month per user.",
+        "bullets": [
+          "Emailing large files that bounce or take forever → Instant secure links that work for files of any size",
+          "Files out of sync between team members → Automatic sync ensures everyone has the latest version",
+          "Large client deliverables failing to transfer → Reliable delivery of multi-gigabyte files"
+        ]
+      },
+      {
+        "name": "[Evernote](https://www.evernote.com)",
+        "tooltip": "Evernote is a digital note-taking system that captures ideas, documents, and research. OCR makes handwritten notes searchable. Free plan available, premium at $7.99/month.",
+        "bullets": [
+          "Important ideas written on sticky notes that get lost → Searchable digital vault that never loses anything",
+          "Project information scattered across different notebooks → Organized system with tags and powerful search",
+          "Brilliant ideas forgotten because you couldn't write them down fast enough → Quick capture from any device, anytime"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Finance / Payments - Enterprise financial management",
+    "items": [
+      {
+        "name": "[QuickBooks Online](https://quickbooks.intuit.com)",
+        "tooltip": "QuickBooks Online is the leading small business accounting software. Automatic bank syncing, invoicing, expense tracking, and tax preparation. Plans start at $15/month.",
+        "bullets": [
+          "Shoebox full of receipts and no idea if you\'re profitable → Clean, organized books that show exactly where your money goes",
+          "Tax season panic trying to find missing documents → Tax-ready reports generated automatically throughout the year",
+          "Not knowing if projects are profitable until it\'s too late → Live profit & loss tracking for every job and service"
+        ]
+      },
+      {
+        "name": "[Stripe](https://stripe.com)",
+        "tooltip": "Stripe powers online payments for millions of businesses. Accept credit cards, create subscriptions, and automate billing. 2.9% + 30¢ per successful charge.",
+        "bullets": [
+          "Waiting weeks for checks to arrive → Instant payment links that customers can pay immediately",
+          "Lost revenue from failed payment attempts → Smart retry logic that recovers 20% more revenue",
+          "One-time customers only → Subscription billing that creates predictable recurring income"
+        ]
+      },
+      {
+        "name": "[PayPal](https://www.paypal.com)",
+        "tooltip": "PayPal is trusted by over 400 million users worldwide. Instant payments, buyer protection, and global reach. 2.9% + fixed fee per transaction.",
+        "bullets": [
+          "Customers hesitant to pay unknown businesses → Trusted PayPal checkout that customers recognize and trust",
+          "Can't serve international customers → Global payment processing in 200+ countries",
+          "Cash flow problems waiting for payments → Fast settlements, often next business day"
+        ]
+      },
+      {
+        "name": "Cash App / Zelle (Instant Transfers)",
+        "tooltip": "Cash App and Zelle enable instant peer-to-peer payments. Perfect for small transactions, tips, and quick payments between businesses. Usually free or low-cost.",
+        "bullets": [
+          "Waiting days for checks to clear → Instant money transfers between bank accounts",
+          "High credit card fees eating into small transactions → Low-cost or free transfer options",
+          "Complicated payment requests → Simple text or email payment requests"
+        ]
+      },
+      {
+        "name": "Advanced Online Banking & Cash Flow Management",
+        "tooltip": "Modern business banking with real-time tracking, automated categorization, and fraud protection. Features that used to require enterprise banking relationships.",
+        "bullets": [
+          "Never knowing your real cash position → Real-time balance tracking across all accounts",
+          "Vulnerable to fraud and unauthorized transactions → Instant alerts and spending limits that protect your money",
+          "No idea where money is actually going → Automatic expense categorization and spending insights"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Security / Access - Enterprise-grade protection",
+    "items": [
+      {
+        "name": "[RoboForm](https://www.roboform.com)",
+        "tooltip": "RoboForm is a business password manager that secures and manages all your company passwords. Team sharing, security audits, and breach monitoring. Plans start at $2.95/month per user.",
+        "bullets": [
+          "Team sharing passwords through insecure text messages → Encrypted vault that safely shares credentials",
+          "Using weak, repeated passwords that hackers can crack → Military-grade password generation and storage",
+          "Former employees still having access to accounts → Instant access revocation when team members leave"
+        ]
+      },
+      {
+        "name": "Two-Factor Authentication (2FA) Systems",
+        "tooltip": "2FA adds an extra security layer that prevents 99.9% of account takeovers. Essential for protecting business accounts, customer data, and financial information.",
+        "bullets": [
+          "Accounts vulnerable to password breaches → Multi-factor protection that stops 99.9% of hacks",
+          "One compromised password exposing entire business → Each account protected individually with unique codes",
+          "No control over who accesses what → Centralized access management with audit trails"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Media / Content - Professional development & automation",
+    "items": [
+      {
+        "name": "[Podcast Learning Systems](https://pocketcasts.com)",
+        "tooltip": "Professional podcast apps like Pocket Casts help you stay current with industry trends and business education. Smart playlists and speed controls maximize learning. Usually $3-5/month.",
+        "bullets": [
+          "Falling behind on industry trends and best practices → Curated learning content that keeps you ahead of competitors",
+          "Wasted commute and downtime → Transform travel time into professional development sessions",
+          "Information overload from too many sources → Smart playlists that deliver exactly what you need to know"
+        ]
+      },
+      {
+        "name": "[Amazon Alexa for Business](https://www.amazon.com/alexa)",
+        "tooltip": "Alexa for Business provides voice-controlled office automation. Control smart devices, get instant information, and automate routines. Device costs vary, many features are free.",
+        "bullets": [
+          "Hands dirty but need to check business info → Voice commands that give instant answers without touching anything",
+          "Slow manual lookups interrupting workflow → Instant voice access to weather, traffic, appointments, and more",
+          "Repetitive office tasks eating up time → Voice-activated routines that handle multiple actions with one command"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Remote Access / Security - Professional monitoring & support",
+    "items": [
+      {
+        "name": "[RustDesk](https://rustdesk.com)",
+        "tooltip": "RustDesk provides secure remote desktop access for technical support and file transfers. Self-hosted option available for maximum security. Free open-source version available.",
+        "bullets": [
+          "Driving across town to fix simple computer problems → Remote support that solves issues instantly from anywhere",
+          "Travel expenses and time lost on basic tech support → Zero-travel assistance that saves hours and gas money",
+          "Email back-and-forth trying to transfer files → Secure direct file transfer during support sessions"
+        ]
+      },
+      {
+        "name": "[Blue Iris](https://blueirissoftware.com)",
+        "tooltip": "Blue Iris is professional video surveillance software that manages multiple security cameras. Motion detection, alerts, and remote viewing. One-time purchase around $60.",
+        "bullets": [
+          "No way to verify what really happened during incidents → Recorded proof that protects against false claims",
+          "Property vulnerable when you\'re not there → Smart alerts notify you instantly of any suspicious activity",
+          "Single camera leaving dangerous blind spots → Multi-camera system that monitors every angle professionally"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Development / Automation Tools - Technical solutions",
+    "items": [
+      {
+        "name": "[FileZilla](https://filezilla-project.org)",
+        "tooltip": "FileZilla is professional FTP software for secure file transfers and website management. Essential for maintaining websites and transferring large files safely. Free open-source software.",
+        "bullets": [
+          "Website updates breaking things because of risky manual edits → Safe file transfer protocols that prevent disasters",
+          "Website crashes with no way to restore quickly → Quick backup restoration that gets you back online fast",
+          "Updating websites one file at a time taking forever → Batch uploads that deploy entire updates instantly"
+        ]
+      },
+      {
+        "name": "[MySQL](https://www.mysql.com)",
+        "tooltip": "MySQL is the world's most popular database system, powering everything from small business apps to Facebook. Reliable, fast, and scalable. Free open-source version available.",
+        "bullets": [
+          "Spreadsheets crashing because they can\'t handle your data volume → Professional database that scales to millions of records",
+          "Slow searches through thousands of rows → Lightning-fast queries with professional indexing",
+          "Data growing beyond what simple tools can handle → Scalable storage that grows with your business"
+        ]
+      },
+      {
+        "name": "[PowerShell](https://microsoft.com/powershell)",
+        "tooltip": "PowerShell is Microsoft's powerful automation framework. Automate Windows administration, file management, and repetitive tasks. Free and included with Windows.",
+        "bullets": [
+          "Spending hours on repetitive computer administration tasks → Scripted automation that runs complex tasks in seconds",
+          "Fixing the same problems on multiple computers one-by-one → Bulk actions that update entire systems simultaneously",
+          "Human errors causing system problems → Repeatable scripts that work perfectly every time"
+        ]
+      },
+      {
+        "name": "[AutoHotkey](https://www.autohotkey.com)",
+        "tooltip": "AutoHotkey automates repetitive tasks and creates custom shortcuts for Windows. Perfect for eliminating repetitive clicking and data entry. Free open-source software.",
+        "bullets": [
+          "Hand strain from thousands of repetitive clicks daily → Hotkey macros that do complex tasks with single keystrokes",
+          "Slow workflows requiring dozens of manual steps → Complete automation of multi-step processes",
+          "Software without APIs or automation features → Scripted control of any Windows application"
+        ]
+      },
+      {
+        "name": "Advanced Spreadsheet Automation (VBA/Google Apps Script)",
+        "tooltip": "Custom programming within spreadsheets that automates calculations, data processing, and report generation. Turns spreadsheets into powerful business applications.",
+        "bullets": [
+          "Manual calculations that take hours and are error-prone → Coded logic that processes complex data instantly and perfectly",
+          "Copy-paste errors corrupting important business data → Automated functions with built-in error checking",
+          "Creating the same reports manually every week/month → Reusable scripts that generate reports with one click"
+        ]
+      },
+      {
+        "name": "[Cursor IDE](https://www.cursor.com)",
+        "tooltip": "Cursor is an AI-powered code editor that accelerates software development. Built-in AI assistance for writing, debugging, and explaining code. Subscription-based pricing.",
+        "bullets": [
+          "Custom software development stalling on technical challenges → AI assistance that suggests solutions and writes code",
+          "Spending days on repetitive coding tasks → AI scaffolding that generates boilerplate code instantly",
+          "Code reviews taking weeks to get feedback → Inline AI feedback that catches issues as you type"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mapping / Routing - Professional logistics",
+    "items": [
+      {
+        "name": "Professional Route Optimization Software",
+        "tooltip": "Advanced routing software that calculates the most efficient paths for multiple stops, considering traffic, time windows, and vehicle constraints. Used by delivery companies and service businesses. Various pricing models.",
+        "bullets": [
+          "Driving unnecessary miles because routes aren\'t optimized → Professional route planning that cuts driving time by 20-40%",
+          "Customers frustrated by late arrivals and poor estimates → Accurate ETAs that build trust and improve satisfaction",
+          "High fuel costs from inefficient routing → Smart sequencing that minimizes fuel consumption and vehicle wear"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Scheduling / Communication - Professional coordination",
+    "items": [
+      {
+        "name": "[Google Calendar](https://calendar.google.com)",
+        "tooltip": "Google Calendar provides professional scheduling with team integration, automatic reminders, and smart scheduling. Free for basic use, business features in Google Workspace from $6/month per user.",
+        "bullets": [
+          "Accidentally double-booking appointments and disappointing customers → Shared calendars that prevent conflicts automatically",
+          "Customers not showing up because they forgot → Automatic email and SMS reminders that reduce no-shows by 60%",
+          "Scheduling chaos with remote team members → Smart timezone handling and availability sharing"
+        ]
+      },
+      {
+        "name": "[Discord](https://discord.com)",
+        "tooltip": "Discord provides organized team communication with voice, video, and text channels. Perfect for remote teams and project coordination. Free for basic use, premium features start at $5/month.",
+        "bullets": [
+          "Team communication scattered across texts, emails, and calls → Organized channels that keep every conversation in its place",
+          "Scheduling meetings for simple questions → Instant voice rooms for quick collaborative discussions",
+          "Remote team feeling disconnected → Always-on communication hub that maintains team culture"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Document & Process Automation - Digital transformation",
+    "items": [
+      {
+        "name": "OCR (Optical Character Recognition)",
+        "tooltip": "OCR technology converts scanned documents and images into searchable, editable text. Essential for digitizing paper records and automating data entry. Various pricing models available.",
+        "bullets": [
+          "Thousands of paper documents that can\'t be searched → Every document becomes instantly searchable and indexable",
+          "Hours spent manually retyping information from papers → Automatic text extraction that's 99%+ accurate",
+          "Critical information lost in unsearchable files → Full-text search across every document in your system"
+        ]
+      },
+      {
+        "name": "Professional Document Scanning & Digitization",
+        "tooltip": "Professional scanning services and equipment that convert paper records into organized digital archives. Mobile apps can scan receipts instantly. Costs vary by volume and service level.",
+        "bullets": [
+          "Drowning in paper files taking up expensive office space → Organized digital archive accessible from anywhere",
+          "Lost receipts causing tax and expense tracking nightmares → Every receipt captured and organized automatically",
+          "Audit anxiety because records are scattered everywhere → Professionally organized records that auditors love"
+        ]
+      },
+      {
+        "name": "Automated File Organization & Naming",
+        "tooltip": "Smart systems that automatically name, organize, and file documents based on content and rules. Eliminates manual filing and makes retrieval instant. Custom implementation required.",
+        "bullets": [
+          "Files named randomly making them impossible to find → Intelligent naming that makes every file instantly identifiable",
+          "Important documents lost in messy folder structures → Automatic filing that puts everything in the right place",
+          "Wasting time hunting for files → Predictable organization where you always know where to look"
+        ]
+      },
+      {
+        "name": "Barcode & QR Code Inventory Systems",
+        "tooltip": "Professional inventory tracking using scannable codes linked to database records. Eliminates manual counting errors and provides real-time inventory data. System costs vary by complexity.",
+        "bullets": [
+          "Inventory counts that are always wrong → Scannable systems that provide perfect accuracy",
+          "Items getting misplaced or mixed up → Every item linked to its digital record permanently",
+          "Hours spent on manual inventory counts → Quick scans that update everything automatically"
+        ]
+      },
+      {
+        "name": "Digital Workflow & Approval Systems",
+        "tooltip": "Automated routing systems that move documents and requests through approval processes. Track status, send reminders, and eliminate bottlenecks. Implementation costs vary by complexity.",
+        "bullets": [
+          "Requests getting stuck and forgotten in email chains → Tracked workflows that never let anything fall through cracks",
+          "Email overload from approval processes → Clean workflow queues with automatic routing and reminders",
+          "No one knows who's supposed to approve what → Clear assignment and escalation rules that keep things moving"
+        ]
+      },
+      {
+        "name": "Business Intelligence Dashboards",
+        "tooltip": "Real-time visual displays of key business metrics and KPIs. Transform data from multiple sources into actionable insights. Costs range from $10/month to custom enterprise solutions.",
+        "bullets": [
+          "Flying blind with no visibility into key business metrics → Real-time dashboards that show exactly how your business is performing",
+          "Making important decisions with outdated information → Live data that updates automatically throughout the day",
+          "Problems blindsiding you because you had no warning → Early alert systems that flag issues before they become crises"
+        ]
+      },
+      {
+        "name": "AI Chatbots & Customer Service Automation",
+        "tooltip": "Intelligent chatbots that handle customer inquiries, qualify leads, and provide 24/7 support. Can reduce support workload by 60-80%. Various platforms available from $20-200/month.",
+        "bullets": [
+          "Losing customers because no one answers questions after hours → 24/7 AI assistant that never sleeps or takes breaks",
+          "Wasting time on unqualified leads who aren\'t serious → Smart intake that qualifies prospects before they reach you",
+          "Answering the same basic questions over and over → Instant AI responses that free up your time for real work"
+        ]
+      }
+    ]
+  }
+];
+
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+
+// Persist selections - Using in-memory storage
+let state = {};
+
+function render(){
+  try {
+    console.log('Starting render...');
+    const faq = document.getElementById('faq');
+    if (!faq) {
+      console.error('FAQ container not found!');
+      return;
+    }
+    
+    faq.innerHTML = '';
+    
+    DATA.forEach(cat => {
+      const catId = slug(cat.title);
+      const d = document.createElement('details');
+      d.className = 'cat';
+      d.id = `cat-${catId}`;
+      d.open = false;
+
+      const selected = (state[catId]||[]).length;
+      d.innerHTML = `
+        <summary>
+          <span>${cat.title}</span>
+          <span class="pill" title="Selected in this category">${selected}/${cat.items.length}</span>
+        </summary>
+        <div class="grid"></div>
+      `;
+
+      const grid = d.querySelector('.grid');
+cat.items.forEach(it => {
+  const key = slug(it.name);
+  const pressed = (state[catId]||[]).includes(key);
+  const el = document.createElement('label');
+  el.className = 'chip';
+  el.setAttribute('aria-pressed', pressed);
+  el.dataset.cat = catId;
+  el.dataset.key = key;
+
+  // Detect Markdown link pattern [text](url) and render clickable link with tooltip
+  let linkHtml = '';
+  const match = it.name.match(/^\[(.+?)\]\((https?:\/\/[^\s]+)\)$/);
+  if (match) {
+    const tooltipAttr = it.tooltip ? `class="tooltip" data-tooltip="${it.tooltip.replace(/"/g, '&quot;')}"` : '';
+    linkHtml = `<a href="${match[2]}" target="_blank" rel="noopener noreferrer" ${tooltipAttr}>${match[1]}</a>`;
+  } else {
+    linkHtml = it.name;
+  }
+
+  el.innerHTML = `
+    <input type="checkbox" ${pressed ? 'checked' : ''}>
+    <div class="chip-content">
+      <strong>${linkHtml}</strong>
+      <ul>${it.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+    </div>
+  `;
+  grid.appendChild(el);
+});
+		
+
+
+      // Add "Go to top" link
+      const goTop = document.createElement('div');
+      goTop.className = 'go-top';
+      goTop.innerHTML = '<a href="#" onclick="window.scrollTo({top:0,behavior:\'smooth\'});return false;">↑ Go to top</a>';
+      d.appendChild(goTop);
+
+      faq.appendChild(d);
+    });
+
+    console.log('Render complete, binding events...');
+    bind();
+    updatePreview();
+    console.log('All done!');
+  } catch (error) {
+    console.error('Error in render:', error);
+  }
+}
+
+function bind(){
+  try {
+    // Toggle selection by clicking chip or checkbox
+    const allChips = document.querySelectorAll('#faq .chip');
+    for(let i = 0; i < allChips.length; i++){
+      const label = allChips[i];
+      label.addEventListener('click', function(e) {
+        // Prevent double-firing when clicking checkbox directly
+        if(e.target.type === 'checkbox') return;
+        
+        const checkbox = label.querySelector('input[type="checkbox"]');
+        checkbox.checked = !checkbox.checked;
+        toggleSelection(label, checkbox.checked);
+      });
+      
+      // Handle direct checkbox clicks
+      const checkbox = label.querySelector('input[type="checkbox"]');
+      checkbox.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleSelection(label, e.target.checked);
+      });
+    }
+  } catch (error) {
+    console.error('Error in bind:', error);
+  }
+}
+
+function toggleSelection(label, isChecked) {
+  const cat = label.dataset.cat;
+  const key = label.dataset.key;
+  state[cat] = state[cat] || [];
+  const i = state[cat].indexOf(key);
+  
+  if(isChecked && i === -1) {
+    state[cat].push(key);
+  } else if(!isChecked && i !== -1) {
+    state[cat].splice(i, 1);
+  }
+  
+  label.setAttribute('aria-pressed', isChecked);
+  
+  // Update the pill counter for this category
+  updateCategoryPill(cat);
+  updatePreview();
+}
+
+function updateCategoryPill(catId) {
+  const categoryElement = document.querySelector(`#cat-${catId}`);
+  if (categoryElement) {
+    const pill = categoryElement.querySelector('.pill');
+    const catObj = DATA.find(c => slug(c.title) === catId);
+    const selectedCount = (state[catId] || []).length;
+    pill.textContent = `${selectedCount}/${catObj.items.length}`;
+  }
+}
+
+// Simple search - no highlighting for now
+document.getElementById('search').addEventListener('input', function(e) {
+  const query = e.target.value.trim().toLowerCase();
+  console.log('Searching for:', query);
+  
+  const allChips = document.querySelectorAll('.chip');
+  const allDetails = document.querySelectorAll('details');
+  
+  if(query === '') {
+    for(let i = 0; i < allChips.length; i++) {
+      allChips[i].style.display = '';
+    }
+    for(let i = 0; i < allDetails.length; i++) {
+      allDetails[i].style.display = '';
+    }
+    return;
+  }
+  
+  // Expand all when searching
+  for(let i = 0; i < allDetails.length; i++) {
+    allDetails[i].open = true;
+  }
+  
+  let totalMatches = 0;
+  
+  for(let i = 0; i < allDetails.length; i++) {
+    const categoryDetails = allDetails[i];
+    let categoryHasMatches = false;
+    
+    const chipsInCategory = categoryDetails.querySelectorAll('.chip');
+    for(let j = 0; j < chipsInCategory.length; j++) {
+      const chip = chipsInCategory[j];
+      const text = chip.textContent.toLowerCase();
+      
+      if(text.includes(query)) {
+        chip.style.display = '';
+        categoryHasMatches = true;
+        totalMatches++;
+      } else {
+        chip.style.display = 'none';
+      }
+    }
+    
+    categoryDetails.style.display = categoryHasMatches ? '' : 'none';
+  }
+  
+  console.log('Found', totalMatches, 'matches');
+});
+
+// Button events
+document.getElementById('expandAll').addEventListener('click', function(){
+  const allDetails = document.querySelectorAll('#faq details');
+  for(let i = 0; i < allDetails.length; i++) {
+    allDetails[i].open = true;
+  }
+});
+
+document.getElementById('collapseAll').addEventListener('click', function(){
+  const allDetails = document.querySelectorAll('#faq details');
+  for(let i = 0; i < allDetails.length; i++) {
+    allDetails[i].open = false;
+  }
+});
+
+document.getElementById('reset').addEventListener('click', function(){
+  for(const k in state) delete state[k]; 
+  render(); 
+});
+
+function gather(){
+  const out = [];
+  DATA.forEach(cat=>{
+    const picked = (state[slug(cat.title)]||[]);
+    if(!picked.length) return;
+    out.push({
+      category: cat.title,
+      items: cat.items.filter(it=>picked.includes(slug(it.name))).map(it=>({ name: it.name, bullets: it.bullets }))
+    });
+  });
+  return out;
+}
+
+function toCSV(selection){
+  const rows = [['category','name','bullets']];
+  selection.forEach(cat=>cat.items.forEach(it=>rows.push([cat.category,it.name,it.bullets.join(' | ')])));
+  return rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+}
+
+function toMarkdown(selection){
+  let md = '# Product Package\n\n';
+  selection.forEach(cat=>{
+    md += `## ${cat.category}\n`;
+    cat.items.forEach(it=>{ md += `- **${it.name}**\n`; it.bullets.forEach(b=> md += `  - ${b}\n`); });
+    md += '\n';
+  });
+  return md;
+}
+
+function updatePreview(){
+  const selection = gather();
+  const json = JSON.stringify({ id:`product-${Date.now()}`, created_at:new Date().toISOString(), selection }, null, 2);
+  document.getElementById('preview').textContent = json;
+  const total = selection.reduce((n,c)=>n+c.items.length,0);
+  document.getElementById('count').textContent = `${total} selected`;
+  
+  // Update footer counter
+  const footerCounter = document.getElementById('count-footer');
+  if(footerCounter) footerCounter.textContent = total;
+  
+  document.getElementById('status').textContent = total? 'Ready to export or get quote.' : 'No package yet.';
+  const disabled = total===0;
+  const buttons = ['exportJson','copyJson','exportCsv','copyMd'];
+  for(let i = 0; i < buttons.length; i++) {
+    document.getElementById(buttons[i]).disabled = disabled;
+  }
+  
+  // Update email links with selected items
+  updateEmailLinks(selection);
+}
+
+function updateEmailLinks(selection) {
+  const emailLinks = document.querySelectorAll('a[href^="mailto:info@microofficeautomation.com"]');
+  if(selection.length > 0) {
+    const selectedItems = selection.map(cat => 
+      `${cat.category}: ${cat.items.map(item => item.name).join(', ')}`
+    ).join('\n\n');
+    
+    const emailBody = `Hi MicroOffice Automation,\n\nI'm interested in getting a quote for the following solutions from your tech stack assessment:\n\n${selectedItems}\n\nPlease contact me to discuss implementation and pricing.\n\nThanks!`;
+    
+    emailLinks.forEach(link => {
+      const baseHref = link.href.split('?')[0];
+      link.href = `${baseHref}?subject=Tech Stack Quote Request&body=${encodeURIComponent(emailBody)}`;
+    });
+  }
+}
+
+function showFlashMessage(message) {
+  const existing = document.querySelector('.flash-message');
+  if(existing) existing.remove();
+  
+  const flash = document.createElement('div');
+  flash.className = 'flash-message';
+  flash.textContent = message;
+  document.body.appendChild(flash);
+  
+  setTimeout(() => flash.classList.add('show'), 10);
+  setTimeout(() => {
+    flash.classList.remove('show');
+    setTimeout(() => flash.remove(), 300);
+  }, 2000);
+}
+
+function download(filename, content, type){
+  const blob = new Blob([content], {type});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  URL.revokeObjectURL(a.href);
+  a.remove();
+}
+
+// Export functions
+document.getElementById('exportJson').addEventListener('click', function(){
+  const selection = gather();
+  const payload = { id:`product-${new Date().toISOString().replace(/[^0-9]/g,'')}`, created_at:new Date().toISOString(), selection };
+  download(`${payload.id}.json`, JSON.stringify(payload, null, 2), 'application/json');
+  showFlashMessage('JSON file exported!');
+});
+
+document.getElementById('copyJson').addEventListener('click', function(){
+  const selection = gather();
+  const payload = { id:`product-${new Date().toISOString().replace(/[^0-9]/g,'')}`, created_at:new Date().toISOString(), selection };
+  const json = JSON.stringify(payload, null, 2);
+  navigator.clipboard.writeText(json).then(function() {
+    showFlashMessage('JSON copied to clipboard!');
+  }).catch(function() {
+    showFlashMessage('Failed to copy JSON');
+  });
+});
+
+document.getElementById('exportCsv').addEventListener('click', function(){
+  const selection = gather();
+  if(selection.length === 0) return;
+  download(`product-${Date.now()}.csv`, toCSV(selection), 'text/csv');
+  showFlashMessage('CSV file exported!');
+});
+
+document.getElementById('copyMd').addEventListener('click', function(){
+  const selection = gather();
+  if(selection.length === 0) return;
+  const md = toMarkdown(selection);
+  navigator.clipboard.writeText(md).then(function() {
+    showFlashMessage('Markdown copied to clipboard!');
+  }).catch(function() {
+    showFlashMessage('Failed to copy Markdown');
+  });
+});
+
+// Initialize the app
+console.log('Initializing app...');
+render();
+</script>
+</body>
+</html>
