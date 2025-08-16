@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- GA4: replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // pageview
+
+    // Basic conversion events
+    document.addEventListener('DOMContentLoaded', function () {
+      // Form submit tracking
+      const form = document.querySelector('form[action="https://formspree.io/f/mblkboaz"]');
+      if (form) {
+        form.addEventListener('submit', function () {
+          gtag('event', 'generate_lead', { method: 'contact_form' });
+        });
+      }
+      // mailto: and tel: click tracking
+      document.body.addEventListener('click', function (e) {
+        const a = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
+        if (a) {
+          const href = a.getAttribute('href') || '';
+          const type = href.startsWith('mailto:') ? 'email_click' : 'phone_click';
+          gtag('event', type, { link: href });
+        }
+      });
+    });
+  </script>
+
+  <!-- Primary SEO (singular brand + domain) -->
+  <title>Micro Office Automation | Business & Process Automation in Northeast Ohio</title>
+  <meta name="description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
+  <link rel="canonical" href="https://microofficeautomation.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Micro Office Automation | Business & Process Automation in Northeast Ohio" />
+  <meta property="og:description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
+  <meta property="og:url" content="https://microofficeautomation.com/" />
+  <meta property="og:image" content="https://microofficeautomation.com/after_image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Micro Office Automation | Business & Process Automation in Northeast Ohio" />
+  <meta name="twitter:description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
+  <meta name="twitter:image" content="https://microofficeautomation.com/after_image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/ACg8ocJG6ADpoEbmkKBGNjDImN17oJAWT9-KmGVUr6M2jB5x3IeQ3Nsa=s192-c-rg-br100">
+
+  <!-- LocalBusiness Schema (service-area business; no street address required) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Micro Office Automation",
+    "url": "https://microofficeautomation.com/",
+    "telephone": "+1-330-919-5744",
+    "description": "Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services.",
+    "image": "https://microofficeautomation.com/after_image.png",
+    "areaServed": ["Northeast Ohio", "United States"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Northeast Ohio",
+      "addressRegion": "OH",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.google.com/search?q=Micro+Office+Automation"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --accent-color: #ffc107;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 20px; }
+    header { background-color: var(--primary-color); color: white; padding: 2rem 1rem; text-align: center; }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    header p { font-size: 1.1rem; }
+    .cta-primary {
+      display: inline-block; margin-top: 1rem;
+      background: var(--accent-color); color: #1b1b1b; font-weight: 600;
+      padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none;
+    }
+    main { max-width: 800px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    section { margin-bottom: 2rem; }
+    p { margin-bottom: 2em; }
+    h2 { color: var(--primary-color); margin-bottom: 0.75rem; }
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 0.5rem; }
+    form input, form textarea {
+      width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 1rem;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    form button {
+      background-color: var(--primary-color); color: white;
+      padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer;
+    }
+    form button:hover { background-color: #00307d; }
+    footer { text-align: center; font-size: 0.95rem; color: #444; margin-top: 3rem; }
+    @media (max-width: 600px) { header h1 { font-size: 1.6rem; } }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- SEO-optimized H1 (singular) -->
+    <h1>Business Automation & AI Integration for Small Businesses in Northeast Ohio</h1>
+    <p>We’re doing complete website redesign!</p>
+    <p>But don't hesitate to submit our form, text, email or call, <strong>Micro Office Automation</strong> is 100% ready to help your business prosper and flourish.</p>
+    <p>Accomplish more and better work with far less effort. That, we promise.</p>
+    <!-- New primary CTA: scrolls straight to the form -->
+    <a href="#contact-form" class="cta-primary">Request Your Free 2‑Hour Consultation</a>
+  </header>
+
+  <main>
+    <h2>About Our Business Automation Services</h2>
+    <section></section>
+
+    <section style="text-align: center; margin: 2rem 0;">
+      <img src="after_image.png" alt="Stressed manager at work" style="max-width: 600px; width: 70%; height: auto; border-radius: 5px;">
+      <p style="margin-top: 0.5rem; font-style: italic; color: #555;">
+        We work with you non-stop. You get to test and approve every change.
+      </p>
+    </section>
+
+    <h2>Automation Solutions for Small Businesses Nationwide</h2>
+    <blockquote style="border-left: 4px solid #004aad; padding-left: 1rem; margin: 1.5rem 0; color: #333;">
+      <p>Micro Office Automation gives Northeast Ohio businesses and businesses across the USA a 10x return of value from their phones and computers. We show you how to turn your business data into gold. We automate instantaneous app-to-app flows of business information. We help you 'punch above your weight' as they say!</p> 
+      
+      </p>In short, we help small businesses slay the paper dragon! Many use their smartphones for a single purpose. They're not aware that a cell phone can do far more than simply call, text, and email. In the right hands, a smartphone is a business powerhouse, a Swiss Army knife. </p>
+      <p>We help small businesses succeed at the things most do poorly -- manage information and data, paper and electronic documents, and communications. We make it almost fun.</p>
+      <p>Automation and AI make timely follow-ups a breeze. Put an end to phone tag. Be proud of effortless letter-perfect documents. Capabilities just 10 years ago reserved for Fortune 100 companies now make your small business shine. The ROI is off the charts. We rescue you from repetitive admin work, reducing mistakes, cutting stress, and giving you more time for customers, growth, and the work you enjoy.</p>
+      
+      <footer style="margin-top: 1rem;">
+        — <a href="https://www.google.com/search?q=Micro+Office+Automation" target="_blank" rel="noopener noreferrer">View on Google</a>
+      </footer>
+    </blockquote>
+
+    <section style="text-align: center; margin: 2rem 0;">
+      <img src="stressed_manager.png" alt="Stressed manager at work" style="max-width: 600px; width: 50%; height: auto; border-radius: 5px;">
+      <p style="margin-top: 0.5rem; font-style: italic; color: #555;">
+        Running a small business doesn't have to look like this.
+      </p>
+    </section>
+
+    <section>
+      <h2>Free 2 Hour Business Automation Audit</h2>
+      <p> Our initial conversation and audit costs you nothing. We'll uncover weaknesses and areas for your business to grow and improve. We'll explain process automation, integration, and AI. Imagine your front and back office going from gasping on life support to thriving on steroids!!</p>
+      <p>There's no risk. If either of us decides we're not a good match you don't owe us a dime. If together we're a good fit, we promise 100% satisfaction or you don't pay.</p>
+      <p>We specialize in automating small to mid-sized office workflows, forms, records, and data processes — saving you time and reducing manual work. Whether it's Airtable automation, form workflows, or internal dashboards, we're here to help.</p>
+    </section>
+
+    <section>
+      <h2>Get in Touch with Our Automation Experts</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+13309195744">330-919-5744</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Request Your Free Automation Consultation</h2>
+      <form id="contact-form" action="https://formspree.io/f/mblkboaz" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Your Message:</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div style="margin-bottom: 0.25rem;"><strong>Micro Office Automation</strong></div>
+    <div>Service Area: Northeast Ohio, USA</div>
+    <div><a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a> &nbsp;|&nbsp; <a href="tel:+13309195744">+1 (330) 919‑5744</a></div>
+    <div style="margin-top: 0.5rem;">&copy; 2025 Micro Office Automation | All rights reserved</div>
+  </footer>
+
+</body>
+</html>

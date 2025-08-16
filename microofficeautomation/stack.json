@@ -1,0 +1,510 @@
+[
+  {
+    "title": "AI / Automation — Smart workflow engines",
+    "items": [
+      {
+        "name": "Custom GPTs",
+        "bullets": [
+          "Repetitive decisions → consistent auto-rules",
+          "Scattered processes → unified workflows",
+          "Staff overload → AI co-pilot"
+        ]
+      },
+      {
+        "name": "[OpenAI (Assistants, Whisper, ChatGPT)](https://openai.com)",
+        "bullets": [
+          "Untranscribed calls → accurate transcripts",
+          "Blank page syndrome → instant drafts",
+          "Slow responses → AI assistance"
+        ]
+      },
+      {
+        "name": "[Make.com](https://www.make.com)",
+        "bullets": [
+          "Manual copy-paste → hands-free syncing",
+          "Missed follow-ups → scheduled automations",
+          "Entry errors → validated transfers"
+        ]
+      },
+      {
+        "name": "[Pipedream](https://pipedream.com)",
+        "bullets": [
+          "Event chaos → trigger-based flows",
+          "API gaps → custom connectors",
+          "Slow reactions → real-time handlers"
+        ]
+      },
+      {
+        "name": "[IFTTT](https://ifttt.com)",
+        "bullets": [
+          "Disconnected apps → simple bridges",
+          "Forgotten routines → set-and-forget rules",
+          "Device silos → unified triggers"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Voice / Telephony / Messaging — Scalable communications",
+    "items": [
+      {
+        "name": "[Twilio](https://www.twilio.com)",
+        "bullets": [
+          "No-shows → automated reminders",
+          "Slow outreach → bulk SMS/voice",
+          "Tiny team → programmable comms"
+        ]
+      },
+      {
+        "name": "Bria",
+        "bullets": [
+          "Deskbound calling → mobile softphone",
+          "Inconsistent caller ID → pro presence",
+          "Scattered devices → one client"
+        ]
+      },
+      {
+        "name": "[OpenPhone](https://www.openphone.com)",
+        "bullets": [
+          "Personal number use → business line",
+          "Missed texts → shared inbox",
+          "Untracked calls → CRM notes"
+        ]
+      },
+      {
+        "name": "[Vapi.ai](https://www.vapi.ai)",
+        "bullets": [
+          "Missed calls → 24/7 AI answer",
+          "Uneven intake → scripted flows",
+          "Lead leakage → instant triage"
+        ]
+      },
+      {
+        "name": "[Retell.ai](https://www.retell.ai)",
+        "bullets": [
+          "Inconsistent pitches → scripted agents",
+          "Limited staff hours → always-on calls",
+          "Training time → deployable bots"
+        ]
+      },
+      {
+        "name": "[Textline](https://www.textline.com)",
+        "bullets": [
+          "Slow email chains → fast SMS",
+          "Lost threads → CRM-synced texts",
+          "Channel friction → native messaging"
+        ]
+      },
+      {
+        "name": "WhatsApp / Messenger",
+        "bullets": [
+          "Customer drop-off → preferred channels",
+          "Plain text only → rich media replies",
+          "Trust gap → verified profiles"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Web / Digital Presence — Findable modern sites",
+    "items": [
+      {
+        "name": "SEO",
+        "bullets": [
+          "Invisible pages → keyword wins",
+          "Low local reach → map pack boosts",
+          "Thin snippets → rich metadata"
+        ]
+      },
+      {
+        "name": "[Google Business Listing / Reviews](https://www.google.com/business)",
+        "bullets": [
+          "Low map visibility → profile optimization",
+          "Few reviews → request workflows",
+          "Unanswered Q&A → managed responses"
+        ]
+      },
+      {
+        "name": "[WordPress](https://wordpress.org)",
+        "bullets": [
+          "Stale site → easy updates",
+          "DIY look → pro themes",
+          "Plugin sprawl → curated stack"
+        ]
+      },
+      {
+        "name": "Next.js / Astro",
+        "bullets": [
+          "Slow loads → blazing SSR/SSG",
+          "Poor Core Web Vitals → optimized build",
+          "Mobile friction → responsive by default"
+        ]
+      },
+      {
+        "name": "HTML/CSS/JS",
+        "bullets": [
+          "One-size SaaS → custom UX",
+          "Locked features → full control",
+          "Monthly fees → own your code"
+        ]
+      },
+      {
+        "name": "Misc Webforms",
+        "bullets": [
+          "Unqualified leads → smart forms",
+          "Data re-entry → direct capture",
+          "Unknown intent → conditional logic"
+        ]
+      },
+      {
+        "name": "QR Codes",
+        "bullets": [
+          "Paper dead ends → instant links",
+          "Confusing signage → scannable actions",
+          "Slow onboarding → quick access"
+        ]
+      },
+      {
+        "name": "[YouTube](https://www.youtube.com)",
+        "bullets": [
+          "Low trust → proof by video",
+          "Cold traffic → helpful demos",
+          "SEO plateau → video rankings"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Data / Storage / Productivity — Centralized work hub",
+    "items": [
+      {
+        "name": "[Airtable](https://airtable.com)",
+        "bullets": [
+          "Scattered spreadsheets → one source",
+          "Manual status checks → filtered views",
+          "Guesswork → rollup dashboards"
+        ]
+      },
+      {
+        "name": "[Notion](https://www.notion.so)",
+        "bullets": [
+          "Docs everywhere → single workspace",
+          "Team drift → shared pages",
+          "Lost SOPs → living wiki"
+        ]
+      },
+      {
+        "name": "[Google Drive](https://www.google.com/drive)",
+        "bullets": [
+          "File chaos → structured folders",
+          "Version confusion → real-time edits",
+          "Local-only files → cloud access"
+        ]
+      },
+      {
+        "name": "[JotForm](https://www.jotform.com)",
+        "bullets": [
+          "Paper intake → online forms",
+          "Manual typing → auto-sync",
+          "Slow approvals → routed steps"
+        ]
+      },
+      {
+        "name": "[Google Maps / Embedded Map](https://maps.google.com)",
+        "bullets": [
+          "Hard-to-find office → accurate pin",
+          "Inefficient routes → smart planning",
+          "Service delays → ETA sharing"
+        ]
+      },
+      {
+        "name": "[Google Photos](https://photos.google.com)",
+        "bullets": [
+          "Lost job photos → organized albums",
+          "No proof-of-work → timestamped logs",
+          "Warranty disputes → visual records"
+        ]
+      },
+      {
+        "name": "[Diarium](https://www.diariumapp.com)",
+        "bullets": [
+          "Forgotten wins → daily journal",
+          "Unclear patterns → tag insights",
+          "Scattered notes → unified log"
+        ]
+      },
+      {
+        "name": "[Dropbox](https://www.dropbox.com)",
+        "bullets": [
+          "Emailing files → shared links",
+          "Device mismatch → sync everywhere",
+          "Large transfers → reliable delivery"
+        ]
+      },
+      {
+        "name": "[Evernote](https://www.evernote.com)",
+        "bullets": [
+          "Sticky notes → searchable vault",
+          "Project clutter → notebooks & tags",
+          "Idea loss → quick capture"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Finance / Payments — Faster accurate money",
+    "items": [
+      {
+        "name": "[QuickBooks Online](https://quickbooks.intuit.com)",
+        "bullets": [
+          "Messy books → clean ledgers",
+          "Tax panic → ready reports",
+          "Unknown margins → live P&L"
+        ]
+      },
+      {
+        "name": "[Stripe](https://stripe.com)",
+        "bullets": [
+          "Slow invoices → instant pay links",
+          "Dunning churn → smart retries",
+          "One-time only → subscriptions"
+        ]
+      },
+      {
+        "name": "[PayPal](https://www.paypal.com)",
+        "bullets": [
+          "Buyer hesitation → trusted checkout",
+          "Cross-border issues → global reach",
+          "Cash flow gaps → quick settlements"
+        ]
+      },
+      {
+        "name": "Cash App / Zelle",
+        "bullets": [
+          "Waiting on checks → instant P2P",
+          "Fees shock → low/no-cost options",
+          "Small transfers → simple requests"
+        ]
+      },
+      {
+        "name": "Online Banking / Hand Checking",
+        "bullets": [
+          "Blind cash flow → real-time balances",
+          "Fraud risk → alerts & limits",
+          "Untracked spend → categorized feeds"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Security / Access — Identity and secrets",
+    "items": [
+      {
+        "name": "[RoboForm](https://www.roboform.com)",
+        "bullets": [
+          "Shared passwords → secure vault",
+          "Weak creds → strong generators",
+          "Offboarding gaps → revoke access"
+        ]
+      },
+      {
+        "name": "Clear Token",
+        "bullets": [
+          "Single-factor logins → 2FA enforced",
+          "Account takeovers → step-up auth",
+          "Access sprawl → centralized control"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Media / Content — Learn and share",
+    "items": [
+      {
+        "name": "[Pocket Casts](https://pocketcasts.com)",
+        "bullets": [
+          "Falling behind → curated shows",
+          "Idle time → on-the-go learning",
+          "Info overload → smart playlists"
+        ]
+      },
+      {
+        "name": "[Alexa](https://www.amazon.com/alexa)",
+        "bullets": [
+          "Hands busy → voice commands",
+          "Slow lookups → instant answers",
+          "Office friction → routine automations"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Remote Access / Surveillance — Remote control and eyes",
+    "items": [
+      {
+        "name": "[RustDesk](https://rustdesk.com)",
+        "bullets": [
+          "On-site fixes → remote support",
+          "Travel costs → zero-visit help",
+          "File hurdles → secure transfer"
+        ]
+      },
+      {
+        "name": "[Blue Iris](https://blueirissoftware.com)",
+        "bullets": [
+          "Unverified incidents → recorded proof",
+          "Theft risk → smart alerts",
+          "Blind spots → multi-cam monitoring"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Development / Tools — Build and ship",
+    "items": [
+      {
+        "name": "[FileZilla](https://filezilla-project.org)",
+        "bullets": [
+          "Risky edits → safe transfers",
+          "No backups → quick restores",
+          "Slow updates → batch deploys"
+        ]
+      },
+      {
+        "name": "[MySQL](https://www.mysql.com)",
+        "bullets": [
+          "Spreadsheet limits → real database",
+          "Slow queries → indexed speed",
+          "Data growth → scalable storage"
+        ]
+      },
+      {
+        "name": "[PowerShell](https://microsoft.com/powershell)",
+        "bullets": [
+          "Manual admin → scripted tasks",
+          "One-by-one fixes → bulk actions",
+          "Human error → repeatable runs"
+        ]
+      },
+      {
+        "name": "[AutoHotkey](https://www.autohotkey.com)",
+        "bullets": [
+          "Click fatigue → hotkey macros",
+          "Slow workflows → automation",
+          "UI-only apps → scripted control"
+        ]
+      },
+      {
+        "name": "VBA in Google Sheets & Docs",
+        "bullets": [
+          "Manual math → coded logic",
+          "Copy errors → functions & checks",
+          "One-off reports → reusable scripts"
+        ]
+      },
+      {
+        "name": "[Cursor IDE](https://www.cursor.com)",
+        "bullets": [
+          "Coding stalls → AI suggestions",
+          "Boilerplate time → quick scaffolds",
+          "Review lag → inline feedback"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mapping / Routing — Efficient routes",
+    "items": [
+      {
+        "name": "Routing Software (Distance/Time/ETA)",
+        "bullets": [
+          "Wasted miles → optimized paths",
+          "Late arrivals → accurate ETAs",
+          "Fuel burn → smarter sequencing"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Scheduling / Communication — Time and team sync",
+    "items": [
+      {
+        "name": "[Google Calendar](https://calendar.google.com)",
+        "bullets": [
+          "Double-bookings → shared calendars",
+          "No-shows → auto reminders",
+          "Timezone misses → smart invites"
+        ]
+      },
+      {
+        "name": "[Discord](https://discord.com)",
+        "bullets": [
+          "Scattered chats → team hub",
+          "Meeting friction → voice rooms",
+          "Remote drift → always-on comms"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Document & File Processing — Paper to data",
+    "items": [
+      {
+        "name": "OCR",
+        "bullets": [
+          "Unsearchable scans → indexed text",
+          "Manual retyping → auto extract",
+          "Lost info → full-text find"
+        ]
+      },
+      {
+        "name": "Scanning (Receipts, Invoices, etc.)",
+        "bullets": [
+          "Paper piles → digital archive",
+          "Missing receipts → captured images",
+          "Audit stress → organized records"
+        ]
+      },
+      {
+        "name": "Automated File Naming/Filing",
+        "bullets": [
+          "Random filenames → rules-based names",
+          "Lost docs → auto folders",
+          "Slow retrieval → predictable paths"
+        ]
+      },
+      {
+        "name": "Barcode File Labeling",
+        "bullets": [
+          "Inventory guesswork → scannable IDs",
+          "Mismatched items → linked records",
+          "Count errors → quick scans"
+        ]
+      },
+      {
+        "name": "Forms Routing / Approval",
+        "bullets": [
+          "Stalled requests → tracked steps",
+          "Email backlogs → workflow queues",
+          "Unclear owners → assigned approvers"
+        ]
+      },
+      {
+        "name": "Dashboards",
+        "bullets": [
+          "Blind spots → KPI visibility",
+          "Slow decisions → live metrics",
+          "Surprises → early alerts"
+        ]
+      },
+      {
+        "name": "Chatbot",
+        "bullets": [
+          "After-hours silence → 24/7 answers",
+          "Unqualified leads → guided intake",
+          "Repetitive FAQs → instant replies"
+        ]
+      }
+    ]
+  }
+]

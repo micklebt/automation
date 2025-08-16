@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>QR Sheet – POC (Absolute URLs)</title>
+<style>
+  :root { font-family: system-ui, Arial; }
+  body { margin:24px; }
+  .grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+  .card { border:1px solid #ddd; border-radius:12px; padding:16px; }
+  .title { font-weight:700; margin-bottom:6px; }
+  .muted { color:#555; font-size:.9rem; margin-bottom:10px; word-break:break-all; }
+  .qr { width: 220px; height: 220px; image-rendering: pixelated; }
+  @media print { .muted { color:#000; } }
+</style>
+<h1>Truck Walkaround – QR Sheet (POC)</h1>
+<p class="muted">Print, cut, and place each sticker at the corresponding checkpoint.</p>
+<div class="grid">
+  
+    <div class="card">
+      <div class="title">1) Left Front Tire</div>
+      <div class="muted">https://microofficeautomation.com/inspection.html?cp=cp1&v=TRK-POC</div>
+      <img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACWUlEQVR4nO2a4YrcMAyEvyn7/q88/SHJ9hVaHGjr6LCP5bKbgUSDLI0ky2yuH7vAi7zIv4b8gOLKAgMICwOyPO62seg4nwuLQWUQK4zn3TYWvQApCcDGGCETHspy9wXv2QD5mZeyrGQURwCYrLax6D1IWTZIILR46H95+vdAfmA6oRwpyDIGxe/+d0//fkhcZPo3fwXrYtFZpOamFlM0ZaJfd3wXi44jRcbLyEKhOEN/IkkRT8+/ZwukIk4Ko+mceIj54Nen37ML8gNKNoNXYawgl1U0dbHouH/+QlwWmEuCD3HfxaLjSIMJiSRFlVQV6CiObvzcXLXNHZEUgNKg6bG6+/2p/kytWa6Z/8NxE3X1596ysb0I97hKfh2kXj2/u0Iv5T6vDFRbPyRTyqguFr1DLymrImDpgGZ8vf26beQoKZM4R09kJKbhuW0sOh8/cbVF7AqoZEgdt2/83FrRT7ZSxae8FwyxVNOkLhad5zMI01IQ5TQOMMofu1h0ns8x4RgdEC/CvtJUF4vOIyVh54DD2fg0KvHpW29uI2u/55YfHRBjjR2Prv7cXKXYnd+UFbtmELj9uqf6MxV8hs2Zm740RLpY9AI+i1HGuGPkItenjUXHkcpBXOj4ai4pLm999Ay5zjdX9uYgnqs/n/ZDgDl4CxJH2ByEd7HoOJ/rKUVVuZkJ6uajh8gPsFRHY5ZUx2w0kF0seg2y6kxhaU6Tauj5mvdshByERh8kjy/69ue3kev5umx9lOQcw0/fenMb+fV83TLTzK4yY+TZxaLX6M8DT7/Ii/zz+gmLoWA9Sp6nngAAAABJRU5ErkJggg==" alt="QR for 1) Left Front Tire" />
+      <div class="muted">Vehicle: TRK-POC · Sticker: cp1</div>
+    </div>
+    
+    <div class="card">
+      <div class="title">2) Front Lights/Signals</div>
+      <div class="muted">https://microofficeautomation.com/inspection.html?cp=cp2&v=TRK-POC</div>
+      <img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACY0lEQVR4nO1aYWvsMAyTHvf//7L2wbLTwt5IYbfERzIGPSpoLJxIdkJhcvybBR7kQf4aEsoEFSBBkB/jR71Vl4jWIl8ABACEyFr8Ahjc5ts2Ea3nE4SZIyACFCjREL/tEtEGfMZgUKlkUISz821f/2wkBQkkAYKE/ot8x9c/A/kCLkkoigJFQYC3U73v65+HvOr7938J6xLRWuSQdBCZoKH2EK8rvktEy9c7ZS0ye0yXRCE0XqDaRLRBfqaQ0/tnMFhP8bZLRMuRpCDbTqRZou2nSO+xy+fZAknFXgnRfjNt/BB48OTnA6RAWYiEKOKzAkW40VNvTiNZ1FFjjY9fLuSXz7MLMnLR/xKuKSqUAdXxnw+QgsJvMjikxUlVIJ31PjmoYZluDtTuPtVq9Ty7IF+oTifdAC0GCfPN9fPsgrQeBWvD06cwGXX85/SQUn+uYqQ8+0hdOno0N2KHLBM/evRwCQo4cbtEtH7/lAv2WOxAFfMIsdcG8+yCdD85nFKSeTP2aei7RLQBkpQUhWXoEuUq1Kb++M/ZYaupaCB70bt0x+iQHP85OVgcwqY+mUwes9HcJaLlfMKLvHIVI00vDZEuES33n5JtJ24XbG6dknMeN48k3Q6JAzg3l/w4nOjyebZA3s43VaU7xkE8jv985j9dG5lYnxjXtlmEd4loOZ/jfh1Upxs+Ujp69BB5uV9HH3v4HkPkZRX2bSLaBmmdj5ug2VJGtUW2mWcfJOXLdYo+SIi+S86N5rk7UnlAXFfAYiOlqiOyxTwbIO/36y5nmu4ql68/fn5q3K7Q/fnXD/Igfx5fI3h1C26YRe4AAAAASUVORK5CYII=" alt="QR for 2) Front Lights/Signals" />
+      <div class="muted">Vehicle: TRK-POC · Sticker: cp2</div>
+    </div>
+    
+    <div class="card">
+      <div class="title">3) Right Front Tire</div>
+      <div class="muted">https://microofficeautomation.com/inspection.html?cp=cp3&v=TRK-POC</div>
+      <img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACYElEQVR4nO1a7WrkMAycKXn/V577MZLsK7T4jm5tLVa7wSQDsYQ+J6awKB+rwIu8yB9DPgC9EgAQECiAgi/1tItG2+1ZlgQlypbMG+NpF43229NeCQqUIAoQiclDtX2fLZER3owlSX2BfMXb3w7JvJB2Som/9/b3QD5ApEhAFOEMSgiQY14n7LMLEsqQ1hd/Ceui0Xb/HDlSAMTMoap7L3v7+yGh9EEJkhD/iE4pn13/XBQ54KW04mxJuSoB156rokygsvGQBp0sjJs/V+UBYF9k5k+5m3ep9+B556NlkR00whqIQq9cVwbtotFepAfK8EE3nFSxIp5BT9hnI6QN5yYpAjwIJhJgXPfvswVyTOiEByPA41H4ZzWiXTTajyQxUx8CY4Rn5E/yiH12QD4AFcakghGZWCUq7rbRaLs9wyMzZ9o9szC5XJGXn1+TrO+ZKAfB5BSaXOi156JoGoFqOhpDU7ajt/9ckwfVZMZABHhWqi9yXrXRaH+8o4ZNZir1QkT+bryvCTXKThLyY+VPIHbfLhptj3fTHojAzv5diE/HCKt20egA/5yOL2SxF/UJ2UWjA5DM4wvI0ciWjfteHLDPBsj6vmneUyoixOLkes8zLIsG8zmo0LxboMt/LsqUJvOzOzWSKAY92kWj7fGeJ+hE5VGwrFCmQz2KdtFouz2z07Q7unFyDihq+fJ1qzKdr8uzDEUw/dWXttHoAHuG5Ew0kSHwwHn5pf9B5skGmJsH6lDTjfd/QkaflGGOwS4xU8AR+2yAfFAFvnzSZcgM8zhC30WjY/rPDW+/yIv8Xv4ADYtiOZ/jGuoAAAAASUVORK5CYII=" alt="QR for 3) Right Front Tire" />
+      <div class="muted">Vehicle: TRK-POC · Sticker: cp3</div>
+    </div>
+    
+    <div class="card">
+      <div class="title">4) Rear Lights/Signals</div>
+      <div class="muted">https://microofficeautomation.com/inspection.html?cp=cp4&v=TRK-POC</div>
+      <img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACYklEQVR4nO2aYcvbMAyEnxv9/3/59kGS7bK9I4EVR8UuLWlyEOuQ7JNkmYvj11XgQR7kf0O+QHFlAQZZFiauxtM2Fm3nEwMIC8uieMV4Pm1j0X4+Ecmc4kdGdnpmPe1i0WOQwSM4vdKS9FfkJ97+JcjX+sdyLqeymB76sbd/H/IFuUSSMe7YhwyK+/7c278PGdEN4B8+Beti0Xb/XBS9PH1TwEJoG4u286mFPlWYh/5M9Wl09Oe1Uf6p8kOVarKmfsK759kFGfmRTYj5cE+rHHZkTbvn2QUpI+Kbwr1E0tzgj3/eQkZYSyk+7dzzg+OQ9CffvDg0Vs+og0DsSvUvE/nt8+yCxHZl70M6pYt66iUf/XkZKRvjsYwaKVzWI0E68X4PKSsDO8g1KISSiCT0GfN8PDLrIQ7NDmQltHb6WEr3z7MLEscCaiAcc8navYK6WLR9f1fmmWtyWX7pKtzvnmcXZNU/M8gzZRez65F0trFoP5+WplcCVQ0JSpU3u1i0Pd6BKnxUVSmonP3N45+3kBJ29YqizRkOW6L+6M+rI+ufGe4sCag1Ih6d/ejiUDHpasAztvShQk/+fhmpWYiv7qYZiomlINLFogfw+eaJYxlNkvPbxqLtSClK8hnXWVzKekhp/AfMswVy9I2qVK+hPrOHxNGfN/f3uCopHySOZXMQ3sWi7Xy+na+rdLOyz7Mf3UMu5+tkpW+ODvzszu2eZ0NkJe1amnPj/oPm2QnpCHdHHcSqaujJjy6Ot/N1SWUun5U8ZQrVxaK9yD/P141j3q5ivTnn666ORX9uePtBHuS/x28jOFhQoe8R9wAAAABJRU5ErkJggg==" alt="QR for 4) Rear Lights/Signals" />
+      <div class="muted">Vehicle: TRK-POC · Sticker: cp4</div>
+    </div>
+    
+</div>

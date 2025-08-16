@@ -1,0 +1,32 @@
+{
+  "id": "product-20250815134815101",
+  "created_at": "2025-08-15T13:48:15.101Z",
+  "selection": [
+    {
+      "category": "AI / Automation",
+      "items": [
+        {
+          "name": "Custom GPTs",
+          "bullets": [
+            "Task-specific agents",
+            "API-integrated workflows"
+          ]
+        },
+        {
+          "name": "OpenAI (Assistants, Whisper, ChatGPT)",
+          "bullets": [
+            "STT and intent parsing",
+            "Content generation"
+          ]
+        },
+        {
+          "name": "Make.com",
+          "bullets": [
+            "Multi-app integration",
+            "Schedulers and error handling"
+          ]
+        }
+      ]
+    }
+  ]
+}

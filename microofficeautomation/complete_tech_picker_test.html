@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test - Business Solutions Assessment</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .card { background: white; border: 1px solid #ccc; border-radius: 8px; padding: 20px; }
+    .hdr { background: #004aad; color: white; padding: 15px; margin: -20px -20px 20px -20px; }
+    details { border: 1px solid #ddd; border-radius: 8px; margin: 10px 0; padding: 10px; }
+    .chip { border: 1px solid #ddd; padding: 10px; margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hdr">
+      <h1>TEST: Business Solutions Assessment</h1>
+      <p>Testing basic functionality</p>
+    </div>
+    <div id="faq"></div>
+    <div>Status: <span id="status">Loading...</span></div>
+  </div>
+
+<script>
+// Simple test data
+const DATA = [
+  {
+    "title": "Test Section",
+    "items": [
+      {
+        "name": "Test Tool",
+        "bullets": [
+          "Problem A → Solution A",
+          "Problem B → Solution B"
+        ]
+      }
+    ]
+  }
+];
+
+function render() {
+  console.log('Starting render...');
+  const faq = document.getElementById('faq');
+  const status = document.getElementById('status');
+  
+  if (!faq) {
+    console.error('FAQ container not found!');
+    status.textContent = 'ERROR: FAQ container not found';
+    return;
+  }
+  
+  status.textContent = 'Rendering...';
+  faq.innerHTML = '';
+  
+  DATA.forEach(cat => {
+    const d = document.createElement('details');
+    d.innerHTML = `
+      <summary>${cat.title}</summary>
+      <div>
+        ${cat.items.map(item => `
+          <div class="chip">
+            <strong>${item.name}</strong>
+            <ul>
+              ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    faq.appendChild(d);
+  });
+  
+  status.textContent = 'Render complete!';
+  console.log('Render complete!');
+}
+
+// Initialize
+console.log('Initializing...');
+document.addEventListener('DOMContentLoaded', render);
+</script>
+</body>
+</html>

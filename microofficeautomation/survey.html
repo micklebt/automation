@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micro-Office Automation Survey</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1, h2 {
+    color: #1d4ed8;
+  }
+  .form-section {
+    display: none;
+    margin-top: 20px;
+  }
+  .form-section.active {
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .options label {
+    font-weight: normal;
+    display: block;
+  }
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  textarea {
+    height: 80px;
+  }
+  button {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .navigation {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Micro-Office Automation Survey</h1>
+<h2>Where Small Businesses Automate Big Wins</h2>
+
+<form id="surveyForm">
+
+  <!-- Section 1 -->
+  <div class="form-section active" id="section1">
+    <h3>Section 1: Intro & Business Type</h3>
+    <div class="form-group">
+      <label>1. What type of business do you operate?</label>
+      <div class="options">
+        <label><input type="radio" name="q1"> Tech / SaaS / Digital Product</label>
+        <label><input type="radio" name="q1"> Service Provider</label>
+        <label><input type="radio" name="q1"> Retail / E-commerce</label>
+        <label><input type="radio" name="q1"> Other</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>2. How often do you manually move data between tools?</label>
+      <div class="options">
+        <label><input type="radio" name="q2"> Daily</label>
+        <label><input type="radio" name="q2"> Weekly</label>
+        <label><input type="radio" name="q2"> Rarely</label>
+        <label><input type="radio" name="q2"> Never</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>3. Do you currently automate any business processes?</label>
+      <div class="options">
+        <label><input type="radio" name="q3"> Yes</label>
+        <label><input type="radio" name="q3"> No</label>
+        <label><input type="radio" name="q3"> Not sure</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>4. Are follow-ups with clients tracked consistently?</label>
+      <div class="options">
+        <label><input type="radio" name="q4"> Always</label>
+        <label><input type="radio" name="q4"> Sometimes</label>
+        <label><input type="radio" name="q4"> Rarely</label>
+        <label><input type="radio" name="q4"> Never</label>
+      </div>
+    </div>
+    <div class="navigation">
+      <button type="button" onclick="nextSection(1)">Next</button>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="form-section" id="section2">
+    <h3>Section 2: Operations & Workflow</h3>
+    <div class="form-group">
+      <label>5. Do clients complain about slow responses?</label>
+      <div class="options">
+        <label><input type="radio" name="q5"> Often</label>
+        <label><input type="radio" name="q5"> Sometimes</label>
+        <label><input type="radio" name="q5"> Rarely</label>
+        <label><input type="radio" name="q5"> Never</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>6. How are appointments booked?</label>
+      <div class="options">
+        <label><input type="radio" name="q6"> Manual email/text</label>
+        <label><input type="radio" name="q6"> Online scheduler</label>
+        <label><input type="radio" name="q6"> Staff-managed calendar</label>
+      </div>
+    </div>
+    <!-- Add Q7 to Q10 here -->
+    <div class="navigation">
+      <button type="button" onclick="prevSection(2)">Back</button>
+      <button type="button" onclick="nextSection(2)">Next</button>
+    </div>
+  </div>
+
+  <!-- Repeat for Section 3, 4, 5 with grouped questions -->
+
+  <!-- Section 6 -->
+  <div class="form-section" id="section6">
+    <h3>Section 6: Final Insights</h3>
+    <div class="form-group">
+      <label>28. What’s blocking you from automating more?</label>
+      <textarea name="q28"></textarea>
+    </div>
+    <div class="form-group">
+      <label>29. If you could fix one system instantly, what would it be?</label>
+      <textarea name="q29"></textarea>
+    </div>
+    <div class="form-group">
+      <label>30. Your Email (for results):</label>
+      <input type="email" name="q30">
+    </div>
+    <div class="navigation">
+      <button type="button" onclick="prevSection(6)">Back</button>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+
+</form>
+
+<script>
+function nextSection(current) {
+  document.getElementById("section" + current).classList.remove("active");
+  document.getElementById("section" + (current + 1)).classList.add("active");
+}
+function prevSection(current) {
+  document.getElementById("section" + current).classList.remove("active");
+  document.getElementById("section" + (current - 1)).classList.add("active");
+}
+document.getElementById("surveyForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Survey submitted! Thank you.");
+});
+</script>
+
+</body>
+</html>

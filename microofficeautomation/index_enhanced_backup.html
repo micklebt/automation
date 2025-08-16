@@ -51,7 +51,7 @@
   <meta name="twitter:title" content="Micro Office Automation | Business & Process Automation in Northeast Ohio" />
   <meta name="twitter:description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
   <meta name="twitter:image" content="https://microofficeautomation.com/after_image.png" />
-
+ar
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/ACg8ocJG6ADpoEbmkKBGNjDImN17oJAWT9-KmGVUr6M2jB5x3IeQ3Nsa=s192-c-rg-br100">
 
@@ -127,7 +127,12 @@
     }
     form button:hover { background-color: #00307d; }
     footer { text-align: center; font-size: 0.95rem; color: #444; margin-top: 3rem; }
-    @media (max-width: 600px) { header h1 { font-size: 1.6rem; } }
+    @media (max-width: 768px) { 
+      header h1 { font-size: 1.6rem; }
+      .brand-name-large { font-size: 1.2em; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.1rem; }
+    }
     html { scroll-behavior: smooth; }
     
     /* Brand Name Styling */
@@ -145,6 +150,23 @@
       font-size: 1.4em;
       text-shadow: 0 2px 4px rgba(255, 193, 7, 0.5);
       letter-spacing: 1px;
+    }
+    
+    /* Standardized Typography Hierarchy */
+    h2 { 
+      color: var(--primary-color); 
+      margin-bottom: 1rem; 
+      font-size: 1.8rem; 
+    }
+    h3 { 
+      color: var(--success-color); 
+      margin-bottom: 0.75rem; 
+      font-size: 1.3rem; 
+    }
+    h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
   </style>
 </head>
@@ -202,6 +224,148 @@
       <li><strong>Cloud synchronization:</strong> Access everything from anywhere, anytime</li>
     </ul>
 
+    <!-- ROI Calculation Breakdown -->
+    <section style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin: 3rem 0;">
+      <h3 style="color: var(--primary-color); margin-bottom: 1rem; text-align: center;">🧮 "Show Your Work" - How We Calculate These Savings</h3>
+      
+      <p style="text-align: center; margin-bottom: 1.5rem; color: #555; font-style: italic;">
+        <strong>Skeptical about the numbers?</strong> Good! I use conservative assumptions and real-world data. Here's exactly how I calculated each savings category:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+
+        <!-- Communication Efficiency Breakdown -->
+        <details style="background: white; border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">
+            📞 Communication Efficiency: $23,575/year ⬇️
+          </summary>
+          <div style="padding-top: 1rem; font-size: 14px; line-height: 1.5;">
+            <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+              <strong>Conservative Assumptions:</strong><br>
+              • 3-person team • $25/hour average wage • 250 work days/year
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>📞 Phone Tag Elimination:</strong><br>
+              4 cycles/day × 6 minutes each × 3 people = 72 min/day<br>
+              72 min × 250 days ÷ 60 = <strong>300 hours/year</strong><br>
+              300 hours × $25 = <strong>$7,500 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📧 Voicemail Transcription:</strong><br>
+              8 voicemails/day × 3 min each × 90% time waste × 3 people = 65 min/day<br>
+              65 min × 250 days ÷ 60 = <strong>271 hours/year</strong><br>
+              271 hours × $25 = <strong>$6,775 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📁 File Sharing:</strong><br>
+              12 requests/day × 5 min search × 3 people = 180 min/day<br>
+              180 min × 250 days ÷ 60 = <strong>750 hours/year</strong><br>
+              750 hours × $25 = <strong>$18,750 saved</strong>
+            </div>
+
+            <div style="background: #ecfdf5; padding: 0.5rem; border-radius: 4px; text-align: center; font-weight: 600;">
+              Total: $7,500 + $6,775 + $18,750 = <strong>$33,025/year</strong>
+            </div>
+          </div>
+        </details>
+
+        <!-- Workflow Optimization Breakdown -->
+        <details style="background: white; border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">
+            💼 Workflow Optimization: $26,975/year ⬇️
+          </summary>
+          <div style="padding-top: 1rem; font-size: 14px; line-height: 1.5;">
+            <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+              <strong>Conservative Assumptions:</strong><br>
+              • 3-person team • $25/hour average wage • 250 work days/year
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>❓ "Quick Question" Interruptions:</strong><br>
+              15 interruptions/day × 5 min each (including refocus) × 3 people = 225 min/day<br>
+              225 min × 250 days ÷ 60 = <strong>938 hours/year</strong><br>
+              938 hours × $25 = <strong>$23,450 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📅 Meeting Scheduling:</strong><br>
+              4 meetings/week × 8 email exchanges × 2 min each × 3 people = 192 min/week<br>
+              192 min × 50 weeks ÷ 60 = <strong>160 hours/year</strong><br>
+              160 hours × $25 = <strong>$4,000 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>🔐 Password/WiFi Issues:</strong><br>
+              5 requests/day × 3 min each × 3 people = 45 min/day<br>
+              45 min × 250 days ÷ 60 = <strong>188 hours/year</strong><br>
+              188 hours × $25 = <strong>$4,700 saved</strong>
+            </div>
+
+            <div style="background: #ecfdf5; padding: 0.5rem; border-radius: 4px; text-align: center; font-weight: 600;">
+              Total: $23,450 + $4,000 + $4,700 = <strong>$32,150/year</strong>
+            </div>
+          </div>
+        </details>
+
+        <!-- Mobile Liberation Breakdown -->
+        <details style="background: white; border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">
+            📱 Mobile Liberation: $17,500/year ⬇️
+          </summary>
+          <div style="padding-top: 1rem; font-size: 14px; line-height: 1.5;">
+            <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+              <strong>Conservative Assumptions:</strong><br>
+              • 3-person team • $25/hour average wage • 250 work days/year
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>💻 "Not at Computer" Delays:</strong><br>
+              6 times/day × 20 min delay × 3 people = 360 min/day<br>
+              360 min × 250 days ÷ 60 = <strong>1,500 hours/year</strong><br>
+              1,500 hours × $25 = <strong>$37,500 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📄 Document Hunting:</strong><br>
+              Annual receipt organization + daily photo chaos<br>
+              Estimated time savings: <strong>150 hours/year</strong><br>
+              150 hours × $25 = <strong>$3,750 saved</strong>
+            </div>
+
+            <div style="background: #ecfdf5; padding: 0.5rem; border-radius: 4px; text-align: center; font-weight: 600;">
+              Total: $37,500 + $3,750 = <strong>$41,250/year</strong>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+      <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 1px solid #f87171; border-radius: 8px; padding: 1.5rem; text-align: center;">
+        <h4 style="color: #dc2626; margin-bottom: 1rem;">📊 Total Conservative Calculation</h4>
+        <p style="font-size: 18px; font-weight: 700; color: #7f1d1d; margin-bottom: 0.5rem;">
+          $33,025 + $32,150 + $41,250 = <strong>$106,425/year wasted</strong>
+        </p>
+        <p style="font-size: 14px; color: #7f1d1d; margin-bottom: 1rem;">
+          <em>Note: Homepage shows more conservative estimates. Most businesses waste even more than these calculations.</em>
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="value_calculator.html" style="background: var(--danger-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+            🧮 Use Interactive Calculator
+          </a>
+          <a href="mailto:info@microofficeautomation.com?subject=ROI Calculation Discussion" style="background: var(--primary-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+            📧 Verify These Numbers
+          </a>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin-top: 1rem; font-size: 13px; color: #666; font-style: italic;">
+        <strong>My methodology:</strong> 22 years of Air Force program management + 5 small business ownership experiences + Master's in Information Architecture = conservative, data-driven estimates you can trust.
+      </p>
+    </section>
+
     <h3 style="color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem;">Why Small Businesses Choose Us:</h3>
     
     <ul style="list-style: none; padding-left: 0;">
@@ -231,15 +395,50 @@
       </p>
     </section>
 
-    <section>
-      <h2>Free 2 Hour Business Automation Audit</h2>
-      <p> Our initial conversation and audit costs you nothing. We'll uncover weaknesses and areas for your business to grow and improve. We'll explain process automation, integration, and AI. Imagine your front and back office going from gasping on life support to thriving on steroids!!</p>
-      <p>There's no risk. If either of us decides we're not a good match you don't owe us a dime. If together we're a good fit, we promise 100% satisfaction or you don't pay.</p>
-      <p>We specialize in automating small to mid-sized office workflows, forms, records, and data processes — saving you time and reducing manual work. Whether it's Airtable automation, form workflows, or internal dashboards, we're here to help.</p>
+    <section id="about" style="background: #f8fafc; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+      <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Why Small Businesses Trust Me</h2>
+      
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+        I'm <strong>Bert Mickle</strong>, and I've been eliminating business inefficiencies for over two decades. 
+        As a former Air Force Director of Command and Control for European and African Theaters, I learned how to design 
+        systems that work flawlessly under pressure.
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--success-color);">
+          <h4 style="color: var(--success-color); margin-bottom: 0.5rem;">🎯 Real-World Experience</h4>
+          <p style="font-size: 14px; margin: 0;">Since 2004, I've owned and operated <strong>five small businesses</strong>, 
+          giving me firsthand experience with the daily chaos you face. I know what it's like to lose money to inefficiencies.</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">💻 40-Year Technology Pioneer</h4>
+          <p style="font-size: 14px; margin: 0;">I've been using computers since 1984 - one of the earliest adopters. 
+          I've watched technology evolve and know which tools actually deliver ROI vs. expensive distractions.</p>
+        </div>
+        
+      </div>
+      
+      <p style="margin-bottom: 1rem;">
+        <strong>My mission:</strong> Help Northeast Ohio small businesses reclaim the <strong>$70,000+ they lose annually</strong> 
+        to fixable communication and workflow friction. Every solution I recommend has been battle-tested in real business environments.
+      </p>
+      
+      <p style="font-style: italic; color: #666; font-size: 14px;">
+        Master's in Information Architecture • Microsoft Expert • 22-Year Military Leadership • 5-Time Business Owner
+      </p>
     </section>
 
     <section>
-      <h2>Get in Touch with Our Automation Experts</h2>
+      <h2>Free 2 Hour Business Automation Audit</h2>
+      <p>My initial conversation and audit costs you nothing. I'll uncover weaknesses and areas for your business to grow and improve. I'll explain process automation, integration, and AI. Imagine your front and back office going from gasping on life support to thriving on steroids!</p>
+      <p>There's no risk. If either of us decides we're not a good match you don't owe me a dime. If together we're a good fit, I promise 100% satisfaction or you don't pay.</p>
+      <p>I specialize in automating small to mid-sized office workflows, forms, records, and data processes — saving you time and reducing manual work. Whether it's Airtable automation, form workflows, or internal dashboards, I'm here to help.</p>
+    </section>
+
+    <section>
+      <h2>Get in Touch with Me</h2>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a></li>
         <li><strong>Phone:</strong> <a href="tel:+13309195744">330-919-5744</a></li>

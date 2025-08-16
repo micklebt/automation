@@ -1,0 +1,130 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Truck Walkaround – POC</title>
+<style>
+  :root { font-family: system-ui, Arial; }
+  body { margin: 0; padding: 16px; background:#f7f7f8; }
+  header { margin-bottom: 12px; }
+  .card { background:#fff; border-radius:12px; padding:16px; box-shadow:0 1px 6px rgba(0,0,0,.06); margin-bottom:12px; }
+  .title { font-weight:700; font-size:1.1rem; }
+  .muted { color:#666; font-size:.9rem; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  button { flex:1; padding:14px; font-size:1rem; border:none; border-radius:10px; cursor:pointer; }
+  .ok { background:#e8f7ee; }
+  .warn { background:#fff4e5; }
+  .primary { background:#222; color:#fff; }
+  .chip { display:inline-block; background:#eaeef3; border-radius:999px; padding:6px 10px; font-size:.85rem; margin-right:6px; }
+  .foot { margin-top:18px; font-size:.9rem; color:#444; }
+  .toast { position:fixed; left:50%; transform:translateX(-50%); bottom:20px; background:#222; color:#fff; padding:10px 14px; border-radius:8px; opacity:0; transition:opacity .2s; }
+  .toast.show { opacity:1; }
+</style>
+<header>
+  <div class="chip" id="vehicleChip">Vehicle: —</div>
+  <div class="chip" id="dateChip"></div>
+  <div class="chip" id="progressChip">0/0</div>
+</header>
+
+<main id="app"></main>
+<div class="toast" id="toast">Logged</div>
+
+<script>
+/* --------- CONFIG (edit) --------- */
+const VEHICLE_FALLBACK = "TRK-POC";
+const ITEMS = [
+  { id:"cp1", label:"Left Front Tire" },
+  { id:"cp2", label:"Front Lights/Signals" },
+  { id:"cp3", label:"Right Front Tire" },
+  { id:"cp4", label:"Rear Lights/Signals" }
+];
+// Add a Make.com webhook URL to enable server logging:
+const WEBHOOK_URL = ""; // e.g., "https://hook.integromat.com/xxxx"
+
+/* --------- Helpers --------- */
+const qs = new URLSearchParams(location.search);
+const vehicle = qs.get("v") || VEHICLE_FALLBACK;
+const cp = qs.get("cp"); // when present, single-checkpoint mode
+document.getElementById("vehicleChip").textContent = `Vehicle: ${vehicle}`;
+document.getElementById("dateChip").textContent = new Date().toLocaleDateString();
+const progressChip = document.getElementById("progressChip");
+
+const state = { completed:new Set() };
+
+function toast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("show");
+  setTimeout(()=>t.classList.remove("show"),1200);
+}
+
+function getGPS(){
+  return new Promise(res=>{
+    if(!navigator.geolocation) return res(null);
+    navigator.geolocation.getCurrentPosition(
+      p=>res({ lat:p.coords.latitude, lng:p.coords.longitude, acc_m:p.coords.accuracy }),
+      _=>res(null), { enableHighAccuracy:true, timeout:2500, maximumAge:0 }
+    );
+  });
+}
+
+async function logEvent({checkpoint_id,status,note=""}){
+  const payload = {
+    inspection_id: new Date().toISOString().slice(0,10) + "_" + vehicle,
+    vehicle_id: vehicle,
+    driver_id: "DRV_POC", // replace with real driver auth later
+    checkpoint_id,
+    ts: new Date().toISOString(),
+    status,
+    note,
+    gps: await getGPS()
+  };
+  console.log("EVENT", payload);
+  if(WEBHOOK_URL){
+    try {
+      await fetch(WEBHOOK_URL, { method:"POST", headers:{ "Content-Type":"application/json" }, body:JSON.stringify(payload) });
+    } catch(e){ console.warn("Webhook failed (offline or URL missing)", e); }
+  }
+  state.completed.add(checkpoint_id);
+  render();
+  toast("Logged ✓");
+}
+
+/* --------- UI --------- */
+function itemCard(item, single=false){
+  const done = state.completed.has(item.id);
+  return `
+    <div class="card" id="card-${item.id}">
+      <div class="title">${item.label}</div>
+      <div class="muted">ID: ${item.id}${single ? "" : " · scan or tap to log"}</div>
+      <div class="row">
+        <button class="ok" onclick="logEvent({checkpoint_id:'${item.id}',status:'Pass'})">Pass</button>
+        <button class="warn" onclick="logEvent({checkpoint_id:'${item.id}',status:'Needs Attention'})">Needs Attention</button>
+      </div>
+      ${done ? '<div class="foot">Status recorded.</div>' : ""}
+    </div>`;
+}
+
+function render(){
+  const app = document.getElementById("app");
+  if(cp){
+    const item = ITEMS.find(x=>x.id===cp);
+    if(!item){
+      app.innerHTML = `<div class="card"><div class="title">Unknown checkpoint</div><div class="muted">cp=${cp}</div></div>`;
+    } else {
+      app.innerHTML = itemCard(item,true) + `
+        <div class="card"><button class="primary" onclick="location.href='inspection.html'">Back to list</button></div>`;
+    }
+    progressChip.textContent = `${state.completed.size}/${ITEMS.length}`;
+    return;
+  }
+  app.innerHTML = `
+    <div class="card">
+      <div class="title">Walkaround – Quick Checklist</div>
+      <div class="muted">Scan a QR to deep-link to a specific item, or tap below to log.</div>
+    </div>
+    ${ITEMS.map(i=>itemCard(i,false)).join("")}
+    <div class="card"><div class="muted">Tip: print the QR sheet labeled 1–4 and place at each checkpoint.</div></div>
+  `;
+  progressChip.textContent = `${state.completed.size}/${ITEMS.length}`;
+}
+render();
+</script>

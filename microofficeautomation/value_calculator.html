@@ -81,9 +81,29 @@
       letter-spacing: 1px;
     }
     
+    /* Standardized Typography Hierarchy */
+    h2 { 
+      color: var(--primary-color); 
+      margin-bottom: 1rem; 
+      font-size: 1.8rem; 
+    }
+    h3 { 
+      color: var(--success-color); 
+      margin-bottom: 0.75rem; 
+      font-size: 1.3rem; 
+    }
+    h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
     @media (max-width: 768px) {
       .calculator-grid { grid-template-columns: 1fr; }
       header h1 { font-size: 1.6rem; }
+      .brand-name-large { font-size: 1.2em; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.1rem; }
       .total-waste { font-size: 2rem; }
     }
   </style>
@@ -99,7 +119,45 @@
     <section>
       <h2 style="color: var(--danger-color); text-align: center; margin-bottom: 1rem;">⚠️ The Shocking Truth About Business Efficiency</h2>
       <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
-        Most businesses have no idea they're hemorrhaging <strong>$50,000-100,000+ annually</strong> to easily fixable communication and workflow friction. Use our calculator to see your actual losses.
+        Most businesses have no idea they're hemorrhaging <strong>$50,000-100,000+ annually</strong> to easily fixable communication and workflow friction. Use this calculator to see your actual losses.
+      </p>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #0ea5e9; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+      <h3 style="color: #0369a1; margin-bottom: 1rem; text-align: center;">📊 About This Calculator</h3>
+      
+      <p style="text-align: center; font-size: 15px; margin-bottom: 1.5rem;">
+        I'm <strong>Bert Mickle</strong>, and I built this calculator based on 22 years of Air Force program management 
+        experience and real data from the five small businesses I've owned since 2004.
+      </p>
+      
+      <div style="background: white; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
+        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎯 Why These Numbers Are Accurate</h4>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+          <div>
+            <h5 style="color: var(--success-color); font-size: 0.9em; margin-bottom: 0.5rem;">📈 Data-Driven Analysis</h5>
+            <p style="font-size: 13px; margin: 0;">My Master's in Information Architecture taught me how to measure 
+            and quantify business processes. These aren't guesses - they're based on real time studies.</p>
+          </div>
+          
+          <div>
+            <h5 style="color: var(--success-color); font-size: 0.9em; margin-bottom: 0.5rem;">💼 Personal Experience</h5>
+            <p style="font-size: 13px; margin: 0;">I've personally lost money to every inefficiency listed here. 
+            The pain is real, and so are the solutions that fix them.</p>
+          </div>
+          
+          <div>
+            <h5 style="color: var(--success-color); font-size: 0.9em; margin-bottom: 0.5rem;">⚡ 40 Years of Tech Evolution</h5>
+            <p style="font-size: 13px; margin: 0;">Since using computers in 1984, I've seen which technologies actually 
+            save time vs. create more complexity. I only recommend what works.</p>
+          </div>
+        </div>
+      </div>
+      
+      <p style="text-align: center; font-size: 14px; color: #0c4a6e; margin: 0;">
+        <strong>Conservative estimates:</strong> Most businesses actually waste more than these calculations show. 
+        The real savings are often 2-3x higher once you factor in reduced stress and improved focus.
       </p>
     </section>
 

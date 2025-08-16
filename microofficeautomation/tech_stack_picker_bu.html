@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Stack Picker • FAQ Accordion</title>
+  <style>
+    body{font-family:ui-sans-serif,system-ui;background:#f7fbff;margin:0;padding:0;color:#0f1a2b}
+    .wrap{max-width:1100px;margin:28px auto;padding:0 18px}
+    .card{background:#fff;border:1px solid #dfe8f3;border-radius:16px;box-shadow:0 8px 24px rgba(17, 24, 39, .08);overflow:hidden}
+    .hdr{padding:16px 18px;border-bottom:1px solid #dfe8f3}
+    .title{font-size:20px;font-weight:800;margin:0}
+    .muted{color:#51607a;font-size:14px;margin-top:4px}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    input[type="search"],button{border:1px solid #dfe8f3;border-radius:8px;padding:8px 10px;font-size:14px}
+    button{cursor:pointer;background:#fff;color:#1e3a8a;font-weight:600}
+    button.primary{background:#3b82f6;color:#fff;border-color:#3b82f6}
+    button:disabled{opacity:0.5;cursor:not-allowed}
+    .faq{padding:10px}
+    details{border:1px solid #dfe8f3;border-radius:12px;background:#fff;margin:8px 0}
+    details[open]{background:#e8f1ff}
+    summary{cursor:pointer;padding:12px 14px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+    summary::-webkit-details-marker{display:none}
+    .pill{font-size:12px;color:#1e3a8a;background:#eef5ff;border:1px solid #dfe8f3;border-radius:999px;padding:2px 8px}
+    .grid{display:flex;flex-direction:column;gap:8px;padding:0 14px 14px}
+    .chip{display:flex;align-items:flex-start;gap:10px;text-align:left;border:1px solid #dfe8f3;background:#fff;border-radius:8px;padding:12px;font-size:14px;cursor:pointer;transition:all 0.2s ease}
+    .chip:hover{background:#f8fafc;border-color:#94a3b8}
+    .chip[aria-pressed="true"]{background:#dbeafe;border-color:#3b82f6}
+    .chip input[type="checkbox"]{margin:0;width:16px;height:16px;cursor:pointer;accent-color:#3b82f6}
+    .chip-content{flex:1}
+    .chip strong{display:block;font-weight:700;margin-bottom:4px}
+    .chip ul{margin:0;padding-left:16px;color:#51607a;font-size:13px;line-height:1.4}
+    .footer{padding:12px 18px;border-top:1px solid #dfe8f3;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .badge{font-weight:700;color:#0a2d62;background:#dbeafe;border:1px solid #bfdbfe;padding:3px 8px;border-radius:999px;font-size:13px}
+    pre{background:#fff;border:1px solid #dfe8f3;border-radius:8px;padding:10px;overflow:auto;max-height:200px;font-size:12px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hdr">
+        <h1 class="title">Tech Stack Picker</h1>
+        <p class="muted">FAQ-style accordion • tap items to select • light blue / dark blue / off-white theme</p>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search items…" />
+          <button id="expandAll">Expand all</button>
+          <button id="collapseAll">Collapse all</button>
+          <button id="reset">Reset</button>
+          <button id="exportJson" class="primary">Export JSON</button>
+          <button id="exportCsv">Export CSV</button>
+          <button id="copyMd">Copy Markdown</button>
+        </div>
+      </div>
+      <div class="faq" id="faq"></div>
+      <div class="footer">
+        <span class="badge" id="count">0 selected</span>
+        <span class="muted" id="status">No package yet.</span>
+      </div>
+      <pre id="preview"></pre>
+    </div>
+  </div>
+<script>
+// Data from your tech stack
+const DATA = [
+  { title: "AI / Automation", items: [
+    { name: "Custom GPTs", bullets:["Task-specific agents","API-integrated workflows"] },
+    { name: "OpenAI (Assistants, Whisper, ChatGPT)", bullets:["STT and intent parsing","Content generation"] },
+    { name: "Make.com", bullets:["Multi-app integration","Schedulers and error handling"] },
+    { name: "Pipedream", bullets:["Event-driven flows","Custom API glue"] },
+    { name: "IFTTT", bullets:["Lightweight applets","Consumer device triggers"] },
+  ]},
+  { title: "Voice / Telephony / Messaging", items: [
+    { name: "Twilio", bullets:["Voice/SMS APIs","Studio + link shortening"] },
+    { name: "Bria", bullets:["Softphone","Desktop/mobile calling"] },
+    { name: "OpenPhone", bullets:["Business numbers","Call/SMS mgmt"] },
+    { name: "Vapi.ai", bullets:["Voice assistants","CS automation"] },
+    { name: "Retell.ai", bullets:["Real-time call agents","Scripted voice flows"] },
+    { name: "Textline", bullets:["Business SMS","CRM integration"] },
+    { name: "WhatsApp / Messenger", bullets:["Customer messaging","Media sharing"] },
+  ]},
+  { title: "Web / Digital Presence", items: [
+    { name: "SEO", bullets:["Keywords + metadata","SERP ranking"] },
+    { name: "Google Business Listing / Reviews", bullets:["Local SEO","Reputation mgmt"] },
+    { name: "WordPress", bullets:["CMS + plugins","Blog"] },
+    { name: "Next.js / Astro", bullets:["Modern sites","Static + SSR"] },
+    { name: "HTML/CSS/JS", bullets:["Custom UI","Lightweight pages"] },
+    { name: "Misc Webforms", bullets:["Data capture","Lead intake"] },
+    { name: "QR Codes", bullets:["Direct links","Checklist deep-links"] },
+    { name: "YouTube", bullets:["Video hosting","Marketing channel"] },
+  ]},
+  { title: "Data / Storage / Productivity", items: [
+    { name: "Airtable", bullets:["Structured tables","Views and filters"] },
+    { name: "Notion", bullets:["Docs + tasks","Light databases"] },
+    { name: "Google Drive", bullets:["Cloud files","Sharing"] },
+    { name: "JotForm", bullets:["Forms","Automations"] },
+    { name: "Google Maps / Embedded Map", bullets:["Lookup + routing","On-page map UI"] },
+    { name: "Google Photos", bullets:["Image archive","Share"] },
+    { name: "Diarium", bullets:["Journaling","Cross-device sync"] },
+    { name: "Dropbox", bullets:["Cloud files","Sync"] },
+    { name: "Evernote", bullets:["Notes","Searchable archive"] },
+  ]},
+  { title: "Finance / Payments", items: [
+    { name: "QuickBooks Online", bullets:["Invoicing","Reconciliation"] },
+    { name: "Stripe", bullets:["Online payments","Subscriptions"] },
+    { name: "PayPal", bullets:["Processing","Transfers"] },
+    { name: "Cash App / Zelle", bullets:["P2P","Direct bank moves"] },
+    { name: "Online Banking / Hand Checking", bullets:["Biz banking","Manual checks"] },
+  ]},
+  { title: "Security / Access", items: [
+    { name: "RoboForm", bullets:["Password mgmt","Secure sharing"] },
+    { name: "Clear Token", bullets:["Identity verify","Access mgmt"] },
+  ]},
+  { title: "Media / Content", items: [
+    { name: "Pocket Cast", bullets:["Podcasts","Subscriptions"] },
+    { name: "Alexa", bullets:["Voice control","Smart home"] },
+  ]},
+  { title: "Remote Access / Surveillance", items: [
+    { name: "RustDesk", bullets:["Remote desktop","File transfer"] },
+    { name: "Blue Iris", bullets:["Video surveillance","Motion alerts"] },
+  ]},
+  { title: "Development / Tools", items: [
+    { name: "FileZilla", bullets:["FTP/SFTP","Server file mgmt"] },
+    { name: "MySQL", bullets:["Relational DB","SQL ops"] },
+    { name: "PowerShell", bullets:["Automation scripts","Admin tasks"] },
+    { name: "AutoHotKey", bullets:["Hotkeys","UI automation"] },
+    { name: "VBA in Google Sheets & Docs", bullets:["Workspace automation","Custom logic"] },
+    { name: "Cursor IDE", bullets:["Dev environment","AI coding assist"] },
+  ]},
+  { title: "Mapping / Routing", items: [
+    { name: "Routing Software (Distance/Time/ETA)", bullets:["Optimized routes","Delivery efficiency"] },
+  ]},
+  { title: "Scheduling / Communication", items: [
+    { name: "Google Calendar", bullets:["Events","Shared calendars"] },
+    { name: "Discord", bullets:["Voice/video","Team collab"] },
+  ]},
+  { title: "Document & File Processing", items: [
+    { name: "OCR", bullets:["Text from images","Invoice/receipt parse"] },
+    { name: "Scanning (Receipts, Invoices, etc.)", bullets:["Digitize docs","Data extraction"] },
+    { name: "Automated File Naming/Filing", bullets:["Consistent taxonomy","Fewer errors"] },
+    { name: "Barcode File Labeling", bullets:["Physical↔digital link","Faster retrieval"] },
+    { name: "Forms Routing / Approval", bullets:["Workflow","Sign-offs"] },
+    { name: "Dashboards", bullets:["KPIs","Ops visibility"] },
+    { name: "Chatbot", bullets:["Self-serve help","Lead triage"] },
+  ]},
+];
+
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+const $ = sel => document.querySelector(sel);
+const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+// Persist selections - Using in-memory storage since localStorage isn't available
+let state = {};
+
+function render(){
+  const faq = $('#faq');
+  faq.innerHTML = '';
+  DATA.forEach(cat => {
+    const catId = slug(cat.title);
+    const d = document.createElement('details');
+    d.className = 'cat';
+    d.id = `cat-${catId}`;
+    d.open = true;
+
+    const selected = (state[catId]||[]).length;
+    d.innerHTML = `
+      <summary>
+        <span>${cat.title}</span>
+        <span class="pill" title="Selected in this category">${selected}/${cat.items.length}</span>
+      </summary>
+      <div class="grid"></div>
+    `;
+
+    const grid = d.querySelector('.grid');
+    cat.items.forEach(it => {
+      const key = slug(it.name);
+      const pressed = (state[catId]||[]).includes(key);
+      const el = document.createElement('label');
+      el.className = 'chip';
+      el.setAttribute('aria-pressed', pressed);
+      el.dataset.cat = catId;
+      el.dataset.key = key;
+      el.innerHTML = `
+        <input type="checkbox" ${pressed ? 'checked' : ''}>
+        <div class="chip-content">
+          <strong>${it.name}</strong>
+          <ul><li>${it.bullets[0]}</li>${it.bullets[1]?`<li>${it.bullets[1]}</li>`:''}</ul>
+        </div>
+      `;
+      grid.appendChild(el);
+    });
+
+    faq.appendChild(d);
+  });
+
+  bind();
+  updatePreview();
+}
+
+function bind(){
+  // Toggle selection by clicking chip or checkbox
+  $('#faq .chip').forEach(label=>{
+    label.addEventListener('click', e => {
+      // Prevent double-firing when clicking checkbox directly
+      if(e.target.type === 'checkbox') return;
+      
+      const checkbox = label.querySelector('input[type="checkbox"]');
+      checkbox.checked = !checkbox.checked;
+      toggleSelection(label, checkbox.checked);
+    });
+    
+    // Handle direct checkbox clicks
+    const checkbox = label.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('click', e => {
+      e.stopPropagation();
+      toggleSelection(label, e.target.checked);
+    });
+  });
+}
+
+function toggleSelection(label, isChecked) {
+  const cat = label.dataset.cat;
+  const key = label.dataset.key;
+  state[cat] = state[cat] || [];
+  const i = state[cat].indexOf(key);
+  
+  if(isChecked && i === -1) {
+    state[cat].push(key);
+  } else if(!isChecked && i !== -1) {
+    state[cat].splice(i, 1);
+  }
+  
+  label.setAttribute('aria-pressed', isChecked);
+  
+  // update pill
+  const wrap = label.closest('details');
+  const catObj = DATA.find(c=>slug(c.title)===cat);
+  const pill = wrap.querySelector('.pill');
+  pill.textContent = `${(state[cat]||[]).length}/${catObj.items.length}`;
+  updatePreview();
+}
+
+// Search filter
+$('#search').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  $$('#faq .chip').forEach(chip=>{
+    const text = chip.textContent.toLowerCase();
+    chip.style.display = text.includes(q) ? '' : 'none';
+  });
+});
+
+// Open/close all
+$('#expandAll').addEventListener('click', ()=> $$('#faq details').forEach(d=>d.open=true));
+$('#collapseAll').addEventListener('click', ()=> $$('#faq details').forEach(d=>d.open=false));
+$('#reset').addEventListener('click', ()=>{ for(const k in state) delete state[k]; render(); });
+
+function gather(){
+  const out = [];
+  DATA.forEach(cat=>{
+    const picked = (state[slug(cat.title)]||[]);
+    if(!picked.length) return;
+    out.push({
+      category: cat.title,
+      items: cat.items.filter(it=>picked.includes(slug(it.name))).map(it=>({ name: it.name, bullets: it.bullets }))
+    });
+  });
+  return out;
+}
+
+function toCSV(selection){
+  const rows = [['category','name','bullets']];
+  selection.forEach(cat=>cat.items.forEach(it=>rows.push([cat.category,it.name,it.bullets.join(' | ')])));
+  return rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+}
+
+function toMarkdown(selection){
+  let md = '# Product Package\n\n';
+  selection.forEach(cat=>{
+    md += `## ${cat.category}\n`;
+    cat.items.forEach(it=>{ md += `- **${it.name}**\n`; it.bullets.forEach(b=> md += `  - ${b}\n`); });
+    md += '\n';
+  });
+  return md;
+}
+
+function updatePreview(){
+  const selection = gather();
+  const json = JSON.stringify({ id:`product-${Date.now()}`, created_at:new Date().toISOString(), selection }, null, 2);
+  document.getElementById('preview').textContent = json;
+  const total = selection.reduce((n,c)=>n+c.items.length,0);
+  document.getElementById('count').textContent = `${total} selected`;
+  document.getElementById('status').textContent = total? 'Ready to export.' : 'No package yet.';
+  const disabled = total===0;
+  ['exportJson','exportCsv','copyMd'].forEach(id=> document.getElementById(id).disabled = disabled);
+}
+
+function download(filename, content, type){
+  const blob = new Blob([content], {type});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  URL.revokeObjectURL(a.href);
+  a.remove();
+}
+
+// Exports
+$('#exportJson').addEventListener('click', ()=>{
+  const selection = gather();
+  const payload = { id:`product-${new Date().toISOString().replace(/[^0-9]/g,'')}`, created_at:new Date().toISOString(), selection };
+  download(`${payload.id}.json`, JSON.stringify(payload, null, 2), 'application/json');
+});
+$('#exportCsv').addEventListener('click', ()=>{
+  const selection = gather();
+  download(`product-${Date.now()}.csv`, toCSV(selection), 'text/csv');
+});
+$('#copyMd').addEventListener('click', async ()=>{
+  const selection = gather();
+  const md = toMarkdown(selection);
+  try { await navigator.clipboard.writeText(md); } catch(e) {}
+  const s = document.getElementById('status');
+  const prev = s.textContent; s.textContent = 'Markdown copied to clipboard';
+  setTimeout(()=> s.textContent = prev, 1400);
+});
+
+render();
+</script>
+</body>
+</html>
