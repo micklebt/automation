@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- GA4: replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // pageview
+
+    // Basic conversion events
+    document.addEventListener('DOMContentLoaded', function () {
+      // Form submit tracking
+      const form = document.querySelector('form[action="https://formspree.io/f/mblkboaz"]');
+      if (form) {
+        form.addEventListener('submit', function () {
+          gtag('event', 'generate_lead', { method: 'contact_form' });
+        });
+      }
+      // mailto: and tel: click tracking
+      document.body.addEventListener('click', function (e) {
+        const a = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
+        if (a) {
+          const href = a.getAttribute('href') || '';
+          const type = href.startsWith('mailto:') ? 'email_click' : 'phone_click';
+          gtag('event', type, { link: href });
+        }
+      });
+    });
+  </script>
+
+  <!-- Primary SEO (singular brand + domain) -->
+  <title>Micro Office Automation | Business & Process Automation in Northeast Ohio</title>
+  <meta name="description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
+  <link rel="canonical" href="https://microofficeautomation.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Micro Office Automation | Business & Process Automation in Northeast Ohio" />
+  <meta property="og:description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
+  <meta property="og:url" content="https://microofficeautomation.com/" />
+  <meta property="og:image" content="https://microofficeautomation.com/after_image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Micro Office Automation | Business & Process Automation in Northeast Ohio" />
+  <meta name="twitter:description" content="Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services." />
+  <meta name="twitter:image" content="https://microofficeautomation.com/after_image.png" />
+ar
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/ACg8ocJG6ADpoEbmkKBGNjDImN17oJAWT9-KmGVUr6M2jB5x3IeQ3Nsa=s192-c-rg-br100">
+
+  <!-- LocalBusiness Schema (service-area business; no street address required) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Micro Office Automation",
+    "url": "https://microofficeautomation.com/",
+    "telephone": "+1-330-919-5744",
+    "description": "Helping small businesses in Northeast Ohio automate workflows, reduce admin time, and boost profits with expert office and process automation services.",
+    "image": "https://microofficeautomation.com/after_image.png",
+    "areaServed": ["Northeast Ohio", "United States"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Northeast Ohio",
+      "addressRegion": "OH",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.google.com/search?q=Micro+Office+Automation"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --accent-color: #ffc107;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 20px; }
+    header { background-color: var(--primary-color); color: white; padding: 2rem 1rem; text-align: center; max-width: 1100px; margin: 28px auto 2rem; border-radius: 8px; }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    header p { font-size: 1.1rem; }
+    .cta-primary {
+      display: inline-block; margin-top: 1rem;
+      background: var(--accent-color); color: #1b1b1b; font-weight: 600;
+      padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none;
+    }
+    .cta-secondary {
+      display: inline-block; margin-top: 0.5rem;
+      background: #10b981; color: white; font-weight: 700; font-size: 1.1rem;
+      padding: 1rem 1.5rem; border: none; border-radius: 12px; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    .cta-secondary:hover {
+      background: #059669; transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    main { max-width: 800px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    section { margin-bottom: 2rem; }
+    p { margin-bottom: 2em; }
+    h2 { color: var(--primary-color); margin-bottom: 0.75rem; }
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 0.5rem; }
+    form input, form textarea {
+      width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 1rem;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    form button {
+      background-color: var(--primary-color); color: white;
+      padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer;
+    }
+    form button:hover { background-color: #00307d; }
+    footer { text-align: center; font-size: 0.95rem; color: #444; margin-top: 3rem; }
+    @media (max-width: 768px) { 
+      header h1 { font-size: 1.6rem; }
+      .brand-name-large { font-size: 1.2em; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.1rem; }
+    }
+    html { scroll-behavior: smooth; }
+    
+    /* Brand Name Styling */
+    .brand-name {
+      color: #ff6b35;
+      font-weight: 800;
+      font-size: 1.15em;
+      text-shadow: 0 1px 3px rgba(255, 107, 53, 0.3);
+      letter-spacing: 0.5px;
+    }
+    
+    .brand-name-large {
+      color: #ffc107;
+      font-weight: 900;
+      font-size: 1.4em;
+      text-shadow: 0 2px 4px rgba(255, 193, 7, 0.5);
+      letter-spacing: 1px;
+    }
+    
+    /* Standardized Typography Hierarchy */
+    h2 { 
+      color: var(--primary-color); 
+      margin-bottom: 1rem; 
+      font-size: 1.8rem; 
+    }
+    h3 { 
+      color: var(--success-color); 
+      margin-bottom: 0.75rem; 
+      font-size: 1.3rem; 
+    }
+    h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+<!-- <strong>Micro Office Automation</strong>  -->
+  <header>
+    <!-- SEO-optimized H1 (singular) -->
+    <h1><span class="brand-name-large">MicroOffice Automation</span></h1>
+    <!-- New primary CTA: scrolls straight to the form -->
+    <a href="#contact-form" class="cta-primary">FREE Initial Consult - $400 Value</a>
+    <div id="shared-menu-container"></div>
+  </header>
+
+  <main>
+    <H2>Enabling Small Business to Punch Above Their Weight </H2>
+
+    <section></section>
+
+    <section style="text-align: center; margin: 2rem 0;">
+      <img src="after_image.png" alt="Stressed manager at work" style="max-width: 600px; width: 70%; height: auto; border-radius: 5px;">
+      <p style="margin-top: 0.5rem; font-style: italic; color: #555;">
+        We involve you non-stop. You test and approve every change.
+      </p>
+    </section>
+
+    <h2> Solutions for Small Businesses</h2>
+    
+    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🚀 Transform Your Small Business Into a Powerhouse</h3>
+    
+    <p><strong>Break Free from Administrative Chaos!</strong> <span class="brand-name">MicroOffice Automation</span> empowers Northeast Ohio small businesses to compete like Fortune 500 companies. We turn your everyday devices into profit-generating automation machines that work 24/7.</p>
+
+    <h3 style="color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem;">What We Automate for Small Businesses:</h3>
+
+    <h4 style="color: #10b981; margin-bottom: 0.5rem;">📞 Communication Efficiency (Save $23,575/year):</h4>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
+      <li><strong>Eliminate phone tag:</strong> Real-time status updates save $7,800 annually</li>
+      <li><strong>Smart voicemail transcription:</strong> 10-second scans vs 3-minute listening saves $7,000</li>
+      <li><strong>Instant file sharing:</strong> Stop "send me that file" hunting, save $7,950</li>
+      <li><strong>Live location dashboards:</strong> End "where are you?" calls, save $3,900</li>
+    </ul>
+
+    <h4 style="color: #10b981; margin-bottom: 0.5rem;">💼 Workflow Optimization (Save $26,975/year):</h4>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
+      <li><strong>Stop "quick question" interruptions:</strong> Async messaging saves $12,200</li>
+      <li><strong>End meeting scheduling tennis:</strong> Auto-calendar coordination saves $6,775</li>
+      <li><strong>Password/WiFi automation:</strong> QR codes and smart access save $3,025</li>
+      <li><strong>Digital receipt organization:</strong> Auto-categorized scanning saves $1,250</li>
+    </ul>
+
+    <h4 style="color: #10b981; margin-bottom: 0.5rem;">📱 Mobile Liberation (Save $17,500/year):</h4>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
+      <li><strong>End desktop dependency:</strong> Mobile workflows save $16,250 annually</li>
+      <li><strong>Smart document capture:</strong> Instant scanning and organization saves $1,250</li>
+      <li><strong>Real-time approvals:</strong> No more "I'll do it when I get back" delays</li>
+      <li><strong>Cloud synchronization:</strong> Access everything from anywhere, anytime</li>
+    </ul>
+
+    <!-- ROI Calculation Breakdown -->
+    <section style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin: 3rem 0;">
+      <h3 style="color: var(--primary-color); margin-bottom: 1rem; text-align: center;">🧮 "Show Your Work" - How We Calculate These Savings</h3>
+      
+      <p style="text-align: center; margin-bottom: 1.5rem; color: #555; font-style: italic;">
+        <strong>Skeptical about the numbers?</strong> Good! I use conservative assumptions and real-world data. Here's exactly how I calculated each savings category:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+
+        <!-- Communication Efficiency Breakdown -->
+        <details style="background: white; border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">
+            📞 Communication Efficiency: $23,575/year ⬇️
+          </summary>
+          <div style="padding-top: 1rem; font-size: 14px; line-height: 1.5;">
+            <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+              <strong>Conservative Assumptions:</strong><br>
+              • 3-person team • $25/hour average wage • 250 work days/year
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>📞 Phone Tag Elimination:</strong><br>
+              4 cycles/day × 6 minutes each × 3 people = 72 min/day<br>
+              72 min × 250 days ÷ 60 = <strong>300 hours/year</strong><br>
+              300 hours × $25 = <strong>$7,500 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📧 Voicemail Transcription:</strong><br>
+              8 voicemails/day × 3 min each × 90% time waste × 3 people = 65 min/day<br>
+              65 min × 250 days ÷ 60 = <strong>271 hours/year</strong><br>
+              271 hours × $25 = <strong>$6,775 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📁 File Sharing:</strong><br>
+              12 requests/day × 5 min search × 3 people = 180 min/day<br>
+              180 min × 250 days ÷ 60 = <strong>750 hours/year</strong><br>
+              750 hours × $25 = <strong>$18,750 saved</strong>
+            </div>
+
+            <div style="background: #ecfdf5; padding: 0.5rem; border-radius: 4px; text-align: center; font-weight: 600;">
+              Total: $7,500 + $6,775 + $18,750 = <strong>$33,025/year</strong>
+            </div>
+          </div>
+        </details>
+
+        <!-- Workflow Optimization Breakdown -->
+        <details style="background: white; border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">
+            💼 Workflow Optimization: $26,975/year ⬇️
+          </summary>
+          <div style="padding-top: 1rem; font-size: 14px; line-height: 1.5;">
+            <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+              <strong>Conservative Assumptions:</strong><br>
+              • 3-person team • $25/hour average wage • 250 work days/year
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>❓ "Quick Question" Interruptions:</strong><br>
+              15 interruptions/day × 5 min each (including refocus) × 3 people = 225 min/day<br>
+              225 min × 250 days ÷ 60 = <strong>938 hours/year</strong><br>
+              938 hours × $25 = <strong>$23,450 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📅 Meeting Scheduling:</strong><br>
+              4 meetings/week × 8 email exchanges × 2 min each × 3 people = 192 min/week<br>
+              192 min × 50 weeks ÷ 60 = <strong>160 hours/year</strong><br>
+              160 hours × $25 = <strong>$4,000 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>🔐 Password/WiFi Issues:</strong><br>
+              5 requests/day × 3 min each × 3 people = 45 min/day<br>
+              45 min × 250 days ÷ 60 = <strong>188 hours/year</strong><br>
+              188 hours × $25 = <strong>$4,700 saved</strong>
+            </div>
+
+            <div style="background: #ecfdf5; padding: 0.5rem; border-radius: 4px; text-align: center; font-weight: 600;">
+              Total: $23,450 + $4,000 + $4,700 = <strong>$32,150/year</strong>
+            </div>
+          </div>
+        </details>
+
+        <!-- Mobile Liberation Breakdown -->
+        <details style="background: white; border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">
+            📱 Mobile Liberation: $17,500/year ⬇️
+          </summary>
+          <div style="padding-top: 1rem; font-size: 14px; line-height: 1.5;">
+            <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+              <strong>Conservative Assumptions:</strong><br>
+              • 3-person team • $25/hour average wage • 250 work days/year
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>💻 "Not at Computer" Delays:</strong><br>
+              6 times/day × 20 min delay × 3 people = 360 min/day<br>
+              360 min × 250 days ÷ 60 = <strong>1,500 hours/year</strong><br>
+              1,500 hours × $25 = <strong>$37,500 saved</strong>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <strong>📄 Document Hunting:</strong><br>
+              Annual receipt organization + daily photo chaos<br>
+              Estimated time savings: <strong>150 hours/year</strong><br>
+              150 hours × $25 = <strong>$3,750 saved</strong>
+            </div>
+
+            <div style="background: #ecfdf5; padding: 0.5rem; border-radius: 4px; text-align: center; font-weight: 600;">
+              Total: $37,500 + $3,750 = <strong>$41,250/year</strong>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+      <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 1px solid #f87171; border-radius: 8px; padding: 1.5rem; text-align: center;">
+        <h4 style="color: #dc2626; margin-bottom: 1rem;">📊 Total Conservative Calculation</h4>
+        <p style="font-size: 18px; font-weight: 700; color: #7f1d1d; margin-bottom: 0.5rem;">
+          $33,025 + $32,150 + $41,250 = <strong>$106,425/year wasted</strong>
+        </p>
+        <p style="font-size: 14px; color: #7f1d1d; margin-bottom: 1rem;">
+          <em>Note: Homepage shows more conservative estimates. Most businesses waste even more than these calculations.</em>
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="value_calculator.html" style="background: var(--danger-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+            🧮 Use Interactive Calculator
+          </a>
+          <a href="mailto:info@microofficeautomation.com?subject=ROI Calculation Discussion" style="background: var(--primary-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+            📧 Verify These Numbers
+          </a>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin-top: 1rem; font-size: 13px; color: #666; font-style: italic;">
+        <strong>My methodology:</strong> 22 years of Air Force program management + 5 small business ownership experiences + Master's in Information Architecture = conservative, data-driven estimates you can trust.
+      </p>
+    </section>
+
+    <h3 style="color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem;">Why Small Businesses Choose Us:</h3>
+    
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="margin-bottom: 0.5rem;">✅ <strong>10x ROI Guaranteed</strong> - Our clients typically see returns within 30 days</li>
+      <li style="margin-bottom: 0.5rem;">✅ <strong>No Technical Skills Required</strong> - We handle everything, you focus on growing</li>
+      <li style="margin-bottom: 0.5rem;">✅ <strong>Scalable Solutions</strong> - Grows with your business from startup to enterprise</li>
+      <li style="margin-bottom: 0.5rem;">✅ <strong>Local Northeast Ohio Support</strong> - Personal service when you need it</li>
+    </ul>
+
+    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-color);"><strong>Ready to reclaim $68,050+ annually?</strong> Join 200+ Northeast Ohio businesses who've eliminated communication friction and workflow waste with our automation solutions!</p>
+
+    <!-- Tech Stack CTA Section -->
+    <section style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #0ea5e9; border-radius: 12px;">
+      <h3 style="color: #0369a1; margin-bottom: 1rem; font-size: 1.4em;">🚀 Explore Our Complete Technology Solutions</h3>
+      <p style="color: #0c4a6e; margin-bottom: 1.5rem; font-size: 15px;">
+        <strong>Discover 200+ automation tools</strong> organized by implementation ease. See exactly what's possible for your business and get custom pricing.
+      </p>
+      <button onclick="openTechStackPicker()" style="background: var(--success-color); color: white; font-weight: 700; font-size: 1.1rem; padding: 1rem 2rem; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); transition: all 0.3s ease;">
+        🚀 Open Tech Stack Assessment
+      </button>
+    </section>
+
+    <section style="text-align: center; margin: 2rem 0;">
+      <img src="stressed_manager.png" alt="Stressed manager at work" style="max-width: 600px; width: 50%; height: auto; border-radius: 5px;">
+      <p style="margin-top: 0.5rem; font-style: italic; color: #555;">
+        Running a small business doesn't have to look like this.
+      </p>
+    </section>
+
+    <section id="about" style="background: #f8fafc; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+      <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Why Small Businesses Trust Me</h2>
+      
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+        I'm <strong>Brian Mickley</strong>, and I've been eliminating business inefficiencies for over two decades. 
+        As a former Air Force Director of Command and Control for European and African Theaters, I learned how to design 
+        systems that work flawlessly under pressure.
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--success-color);">
+          <h4 style="color: var(--success-color); margin-bottom: 0.5rem;">🎯 Real-World Experience</h4>
+          <p style="font-size: 14px; margin: 0;">Since 2004, I've owned and operated <strong>five small businesses</strong>, 
+          giving me firsthand experience with the daily chaos you face. I know what it's like to lose money to inefficiencies.</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">💻 40-Year Technology Pioneer</h4>
+          <p style="font-size: 14px; margin: 0;">I've been using computers since 1984 - one of the earliest adopters. 
+          I've watched technology evolve and know which tools actually deliver ROI vs. expensive distractions.</p>
+        </div>
+        
+      </div>
+      
+      <p style="margin-bottom: 1rem;">
+        <strong>My mission:</strong> Help Northeast Ohio small businesses reclaim the <strong>$70,000+ they lose annually</strong> 
+        to fixable communication and workflow friction. Every solution I recommend has been battle-tested in real business environments.
+      </p>
+      
+      <p style="font-style: italic; color: #666; font-size: 14px;">
+        Master's in Information Architecture • Microsoft Expert • 22-Year Military Leadership • 5-Time Business Owner
+      </p>
+    </section>
+
+    <section>
+      <h2>Free 2 Hour Business Automation Audit</h2>
+      <p>My initial conversation and audit costs you nothing. I'll uncover weaknesses and areas for your business to grow and improve. I'll explain process automation, integration, and AI. Imagine your front and back office going from gasping on life support to thriving on steroids!</p>
+      <p>There's no risk. If either of us decides we're not a good match you don't owe me a dime. If together we're a good fit, I promise 100% satisfaction or you don't pay.</p>
+      <p>I specialize in automating small to mid-sized office workflows, forms, records, and data processes — saving you time and reducing manual work. Whether it's Airtable automation, form workflows, or internal dashboards, I'm here to help.</p>
+    </section>
+
+    <section>
+      <h2>Get in Touch with Me</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+13309195744">330-919-5744</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Request Your Free Automation Consultation</h2>
+      <form id="contact-form" action="https://formspree.io/f/mblkboaz" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Your Message:</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div style="margin-bottom: 0.25rem;"><span class="brand-name">MicroOffice Automation</span></div>
+    <div>Service Area: Northeast Ohio, USA</div>
+    <div><a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a> &nbsp;|&nbsp; <a href="tel:+13309195744">+1 (330) 919‑5744</a></div>
+    <div style="margin-top: 0.5rem;">&copy; 2025 <span class="brand-name">MicroOffice Automation</span> | All rights reserved</div>
+  </footer>
+
+  <script>
+    function openTechStackPicker() {
+      const width = 1200;
+      const height = 800;
+      const left = (screen.width - width) / 2;
+      const top = (screen.height - height) / 2;
+      
+      window.open(
+        'complete_tech_picker.html',
+        'techStackPicker',
+        `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+      );
+    }
+  </script>
+  
+  <script src="../shared/scripts.js"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

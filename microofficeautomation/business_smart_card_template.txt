@@ -1,0 +1,85 @@
+BUSINESS SMART CARD TEMPLATE
+=====================================
+
+Instructions: Fill in your business information below, then copy this entire text and paste it into Claude AI or ChatGPT with the conversion prompt (see separate file).
+
+BUSINESS BASICS
+---------------
+Business Name: [Your Business Name]
+Business Phone: [Main phone number]
+Business Email: [Main email address]
+Website: [Your website URL]
+Address: [Full business address]
+
+IDENTIFICATION NUMBERS
+----------------------
+Federal Tax ID (EIN): [XX-XXXXXXX]
+State Tax ID: [If applicable]
+Business License #: [License number]
+Professional License #: [If applicable]
+Workers Comp Policy #: [Policy number]
+General Liability Policy #: [Policy number]
+
+BANKING & FINANCIAL
+-------------------
+Primary Bank: [Bank name]
+Account Type: [Checking/Business account type]
+Routing Number: [9-digit routing number]
+Account Number: [Leave blank for security - you can add later]
+Credit Line Account #: [Business credit line]
+Business Credit Card: [Last 4 digits only]
+Accountant Name: [CPA/Accountant name]
+Accountant Phone: [Phone number]
+
+TECHNOLOGY & PASSWORDS
+----------------------
+WiFi Network Name: [Network SSID]
+WiFi Password: [Network password]
+Website Admin Login: [Username only - not password]
+Email Provider: [Gmail, Outlook, etc.]
+Cloud Storage: [Google Drive, Dropbox, etc.]
+Backup Service: [If applicable]
+
+SOFTWARE LICENSES
+-----------------
+Microsoft Office: [License type/key if safe to store]
+Accounting Software: [QuickBooks, etc.]
+Industry Software: [Specific to your business]
+Security Software: [Antivirus, etc.]
+
+EMERGENCY CONTACTS
+------------------
+Key Employee #1: [Name] - [Phone] - [Role]
+Key Employee #2: [Name] - [Phone] - [Role]
+IT Support: [Company/Person] - [Phone]
+Legal Counsel: [Lawyer name] - [Phone]
+Insurance Agent: [Agent name] - [Phone]
+Landlord/Property Mgmt: [Name] - [Phone]
+
+VENDOR QUICK REFERENCE
+----------------------
+Primary Supplier: [Company] - [Contact] - [Phone]
+Secondary Supplier: [Company] - [Contact] - [Phone]
+Office Supplies: [Company] - [Account #] - [Phone]
+Utilities: [Electric, Gas, Internet providers with account numbers]
+
+FREQUENTLY NEEDED LINKS
+-----------------------
+Business Bank Login: [URL]
+Accounting Software: [URL]
+Email Admin: [URL]
+Website Admin: [URL]
+Cloud Storage: [URL]
+Industry Portal: [URL]
+
+NOTES & REMINDERS
+-----------------
+[Any other frequently forgotten information specific to your business]
+[License renewal dates]
+[Important deadlines]
+[Emergency procedures]
+[Common troubleshooting steps]
+
+=====================================
+SECURITY NOTE: This file contains sensitive information. Store it securely and consider what information you're comfortable keeping in a browser bookmark.
+=====================================

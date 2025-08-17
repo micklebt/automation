@@ -1,111 +1,48 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Business Automation Insights | Real-World Strategies from 5 Businesses</title>
-    <meta name="description" content="Proven business automation strategies from a 5x entrepreneur and military veteran. Discover what works, what fails, and why 67% of automation projects don't succeed.">
-    <meta name="keywords" content="business automation strategies, automation project failure, small business efficiency, automation ROI, business process automation">
-    <meta name="author" content="Brian Mickley">
-    <meta property="og:title" content="Business Automation Insights | Real-World Strategies from 5 Businesses">
-    <meta property="og:description" content="Proven business automation strategies tested across 5 businesses. Learn what works, what fails, and the real ROI of automation.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mickleybusinessautomation.com/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Business Automation Insights | Real-World Strategies from 5 Businesses">
-    <meta name="twitter:description" content="Proven automation strategies from a 5x entrepreneur. Learn what works and why 67% of projects fail.">
-    <link rel="canonical" href="https://mickleybusinessautomation.com/">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Business Automation Insights",
-      "description": "Real-world business automation strategies and insights from implementing solutions across 5 different businesses",
-      "url": "https://mickleybusinessautomation.com/",
-      "author": {
-        "@type": "Person",
-        "name": "Brian Mickley",
-        "url": "https://brianmickleyautomation.com/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "MicroOffice Automation",
-        "url": "https://microofficeautomation.com/"
-      },
-      "mainEntity": {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Why do 67% of automation projects fail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most automation projects fail due to three main reasons: starting too big, ignoring employee adoption, and choosing tools before understanding processes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the 80/20 rule of business automation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "80% of efficiency gains come from just 20% of available automation options, with communication and scheduling providing 60% of time savings."
-            }
-          }
-        ]
-      }
-    }
-    </script>
-    
-    <!-- Shared CSS Framework -->
-    <link rel="stylesheet" href="../shared/main.css">
-    
-    <!-- Page-specific styles -->
-    <style>
-        .hero-animation::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-            animation: float 20s infinite linear;
-            pointer-events: none;
-        }
-        
-        @keyframes float {
-            0% { transform: translateX(-100px) translateY(-100px); }
-            100% { transform: translateX(100px) translateY(100px); }
-        }
-        
-        .insight-icon {
-            font-size: 1.5rem;
-        }
-    </style>
-</head>
-<body>
-    <div id="breadcrumb-container"></div>
-    <div id="shared-menu-container"></div>
-    
-    <nav class="navigation">
-        <div class="nav-links">
-            <a href="#insights">Business Insights</a>
-            <a href="#case-studies">Case Studies</a>
-            <a href="#about">About This Site</a>
-        </div>
-    </nav>
+<?php get_header(); ?>
 
-    <section class="hero hero-animation">
-        <div class="hero-content">
-            <div class="hero-image" style="width: 120px; height: 120px; border-radius: 15px; background: linear-gradient(135deg, var(--accent-color), #FFA500); margin: 0 auto var(--spacing-xl); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--primary-light); font-weight: bold; border: 3px solid rgba(255,255,255,0.3);">📊</div>
-            <h1>Business Automation Insights</h1>
-            <p>Real-world strategies from 10 successful businesses and 22 years of operational excellence</p>
-            <p>Discover what actually works, what doesn't, and <a href="#insights" style="color: var(--accent-color); text-decoration: underline;">why most automation projects fail</a></p>
-        </div>
-    </section>
+<nav class="navigation">
+    <div class="nav-links">
+        <a href="#insights">Business Insights</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#about">About This Site</a>
+    </div>
+</nav>
 
+<section class="hero hero-animation">
+    <div class="hero-content">
+        <div class="hero-image" style="width: 120px; height: 120px; border-radius: 15px; background: linear-gradient(135deg, var(--accent-color), #FFA500); margin: 0 auto var(--spacing-xl); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--primary-light); font-weight: bold; border: 3px solid rgba(255,255,255,0.3);">📊</div>
+        
+        <h1><?php 
+            if (is_home() || is_front_page()) {
+                echo get_post_meta(get_option('page_on_front'), '_hero_title', true) ?: 'Business Automation Insights';
+            } else {
+                the_title();
+            }
+        ?></h1>
+        
+        <p><?php 
+            if (is_home() || is_front_page()) {
+                echo get_post_meta(get_option('page_on_front'), '_hero_subtitle', true) ?: 'Real-world strategies from 10 successful businesses and 22 years of operational excellence';
+            } else {
+                echo get_the_excerpt() ?: bloginfo('description');
+            }
+        ?></p>
+        
+        <p><?php 
+            if (is_home() || is_front_page()) {
+                $hero_desc = get_post_meta(get_option('page_on_front'), '_hero_description', true);
+                if ($hero_desc) {
+                    echo $hero_desc;
+                } else {
+                    echo 'Discover what actually works, what doesn\'t, and <a href="#insights" style="color: var(--accent-color); text-decoration: underline;">why most automation projects fail</a>';
+                }
+            }
+        ?></p>
+    </div>
+</section>
+
+<?php if (is_home() || is_front_page()): ?>
+    <!-- Static homepage content -->
     <section id="insights" class="insights-grid">
         <div class="insight-card">
             <h3><span class="insight-icon">💡</span>The 80/20 Rule of Business Automation</h3>
@@ -241,8 +178,41 @@
         </div>
     </section>
 
-    <!-- Enhanced footer will be auto-injected by shared scripts -->
-    
-    <script src="../shared/scripts.js"></script>
-</body>
-</html>
+<?php else: ?>
+    <!-- Blog/post listing or individual post content -->
+    <div class="content-area">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <header class="entry-header">
+                        <h1 class="entry-title"><?php the_title(); ?></h1>
+                        <div class="entry-meta">
+                            <span class="posted-on">Posted on <?php echo get_the_date(); ?></span>
+                            <span class="byline"> by <?php the_author(); ?></span>
+                        </div>
+                    </header>
+
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <?php if (get_the_tags()): ?>
+                            <span class="tags-links">
+                                Tags: <?php the_tags('', ', ', ''); ?>
+                            </span>
+                        <?php endif; ?>
+                    </footer>
+                </article>
+            <?php endwhile; ?>
+            
+            <div class="pagination">
+                <?php echo paginate_links(); ?>
+            </div>
+        <?php else : ?>
+            <p>No posts found.</p>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+
+<?php get_footer(); ?>

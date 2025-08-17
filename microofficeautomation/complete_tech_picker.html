@@ -221,20 +221,7 @@
       <div class="hdr">
         <h1 class="title"><span class="brand-name-large">MicroOffice Automation</span> Solutions Assessment</h1>
         <p class="muted">Explore our automation solutions • Select items that could solve problems for your business • Get your custom quote</p>
-        <div style="margin-top: 1rem;">
-          <a href="index.html" style="display: inline-block; background: var(--accent-color); color: #1b1b1b; font-weight: 600; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; font-size: 14px; margin-right: 0.5rem;">🏠 Home</a>
-          <a href="freebies.html" style="display: inline-block; background: var(--success-color); color: white; font-weight: 600; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; font-size: 14px;">🎁 Free Tools</a>
-        </div>
-        <div class="controls">
-          <input id="search" type="search" placeholder="Search solutions…" />
-          <button id="expandAll">Expand all</button>
-          <button id="collapseAll">Collapse all</button>
-          <button id="reset">Reset</button>
-          <button id="exportJson" class="primary">Export JSON</button>
-          <button id="copyJson">Copy JSON</button>
-          <button id="exportCsv">Export CSV</button>
-          <button id="copyMd">Copy Markdown</button>
-        </div>
+        <div id="shared-menu-container"></div>
       </div>
       
       <div class="intro-section">
@@ -332,6 +319,21 @@
             <a href="mailto:info@microofficeautomation.com?subject=Instant ROI Package - Low Hanging Fruit" class="cta-contact" style="background: #059669;">🎯 Get Instant ROI Package</a>
             <a href="tel:+13309195744" class="cta-contact" style="background: #0369a1;">📞 Discuss Quick Wins</a>
           </div>
+        </div>
+      </div>
+      
+      <!-- Controls section moved from header -->
+      <div style="padding: 16px 18px; border-bottom: 1px solid #dfe8f3; background: #f8f9fa;">
+        <h3 style="color: var(--primary-color); margin: 0 0 12px 0; font-size: 1.1em;">🔧 Assessment Tools</h3>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search solutions…" />
+          <button id="expandAll">Expand all</button>
+          <button id="collapseAll">Collapse all</button>
+          <button id="reset">Reset</button>
+          <button id="exportJson" class="primary">Export JSON</button>
+          <button id="copyJson">Copy JSON</button>
+          <button id="exportCsv">Export CSV</button>
+          <button id="copyMd">Copy Markdown</button>
         </div>
       </div>
       
@@ -1167,5 +1169,8 @@ window.addEventListener('resize', function() {
   setTimeout(adjustTooltipPositions, 100);
 });
 </script>
+
+<script src="../shared/scripts.js"></script>
+
 </body>
 </html>

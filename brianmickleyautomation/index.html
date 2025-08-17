@@ -15,6 +15,8 @@
     <meta name="twitter:title" content="Brian Mickley | Military Veteran Business Automation Expert">
     <meta name="twitter:description" content="22-year Air Force veteran with 5 successful businesses and dual Masters degrees. Military precision meets business efficiency.">
     <link rel="canonical" href="https://brianmickleyautomation.com/">
+    
+    <!-- Structured Data Schemas -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,6 +51,7 @@
       ]
     }
     </script>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -81,205 +84,12 @@
       ]
     }
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://brianmickleyautomation.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About Brian",
-          "item": "https://brianmickleyautomation.com/#about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Experience",
-          "item": "https://brianmickleyautomation.com/#experience"
-        }
-      ]
-    }
-    </script>
+    
+    <!-- Shared CSS Framework -->
     <link rel="stylesheet" href="../shared/main.css">
-    <style>
-        .microoffice-automation {
-            color: #2E5BBA;
-            font-weight: 700;
-            font-size: 1.1em;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .credentials {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px auto;
-            max-width: 600px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .credential-item {
-            text-align: center;
-            flex: 1;
-            min-width: 120px;
-        }
-        
-        .credential-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #FFD700;
-        }
-        
-        .content-section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid #2E5BBA;
-        }
-        
-        .feature-card h3 {
-            color: #2E5BBA;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        
-        .about-section {
-            background: #f8f9fa;
-            padding: 60px 20px;
-        }
-        
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .about-content h2 {
-            color: #2E5BBA;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #333;
-            text-align: left;
-        }
-        
-        .cta-section {
-            background: #2E5BBA;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        .cta-button {
-            background: #FFD700;
-            color: #2E5BBA;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background: #FFC107;
-            transform: translateY(-2px);
-        }
-        
-        .navigation {
-            background: #1a1a1a;
-            padding: 15px 20px;
-            text-align: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            background: #2E5BBA;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .credentials {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
+    <div id="breadcrumb-container"></div>
     <div id="shared-menu-container"></div>
     
     <nav class="navigation">
@@ -291,34 +101,36 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-image" style="width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #FFD700, #FFA500); margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #2E5BBA; font-weight: bold; border: 4px solid rgba(255,255,255,0.3);" role="img" aria-label="Brian Mickley profile image placeholder">BM</div>
-        <h1>Brian Mickley</h1>
-        <p>Military Veteran ⭐ Business Automation Expert ⭐ 5x Entrepreneur</p>
-        <p>Bringing 22 years of Air Force precision to small business efficiency through <a href="#experience" style="color: #FFD700; text-decoration: underline;">proven automation solutions</a></p>
-        
-        <div class="credentials">
-            <div class="credential-item">
-                <div class="credential-number">22</div>
-                <div>Years Military</div>
-            </div>
-            <div class="credential-item">
-                <div class="credential-number">10</div>
-                <div>Businesses Total</div>
-            </div>
-            <div class="credential-item">
-                <div class="credential-number">20</div>
-                <div>Years Instructor</div>
-            </div>
-            <div class="credential-item">
-                <div class="credential-number">2,500+</div>
-                <div>Google Reviews</div>
+        <div class="hero-content">
+            <div class="hero-image" style="width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-color), #FFA500); margin: 0 auto var(--spacing-xl); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary-light); font-weight: bold; border: 4px solid rgba(255,255,255,0.3);" role="img" aria-label="Brian Mickley profile image placeholder">BM</div>
+            <h1>Brian Mickley</h1>
+            <p>Military Veteran ⭐ Business Automation Expert ⭐ 5x Entrepreneur</p>
+            <p>Bringing 22 years of Air Force precision to small business efficiency through <a href="#experience" style="color: var(--accent-color); text-decoration: underline;">proven automation solutions</a></p>
+            
+            <div class="credentials">
+                <div class="credential-item">
+                    <div class="credential-number">22</div>
+                    <div>Years Military</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-number">10</div>
+                    <div>Businesses Total</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-number">20</div>
+                    <div>Years Instructor</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-number">2,500+</div>
+                    <div>Google Reviews</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="content-section">
-        <h2 style="text-align: center; color: #2E5BBA; font-size: 1.8rem; margin-bottom: 20px;">Why Military Experience Matters in Business Automation</h2>
-        <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 800px; margin: 0 auto 40px;">The same systematic thinking that manages complex military operations can transform your business efficiency.</p>
+    <section class="section">
+        <h2 style="text-align: center; color: var(--primary-light); font-size: 1.8rem; margin-bottom: var(--spacing-lg);">Why Military Experience Matters in Business Automation</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: var(--text-light); max-width: 800px; margin: 0 auto var(--spacing-2xl);">The same systematic thinking that manages complex military operations can transform your business efficiency.</p>
         
         <div class="section-grid">
             <div class="feature-card">
@@ -338,12 +150,12 @@
             
             <div class="feature-card">
                 <h3>📊 Data-Driven Decisions</h3>
-                <p>Military success depends on accurate intelligence. The same systematic evaluation process I used as an instructor pilot now helps me <a href="https://mickleybusinessautomation.com/" style="color: #2E5BBA; text-decoration: underline;">analyze why 67% of automation projects fail</a> and develop strategies backed by data from 10 successful businesses.</p>
+                <p>Military success depends on accurate intelligence. The same systematic evaluation process I used as an instructor pilot now helps me <a href="https://mickleybusinessautomation.com/" style="color: var(--primary-light); text-decoration: underline;">analyze why 67% of automation projects fail</a> and develop strategies backed by data from 10 successful businesses.</p>
             </div>
             
             <div class="feature-card">
                 <h3>🛠️ Practical Implementation</h3>
-                <p>Having built and operated 10 successful businesses over 21 years, I understand the real-world challenges small business owners face. My solutions are practical, affordable, and immediately actionable. <a href="#about" style="color: #2E5BBA; text-decoration: underline;">Learn about my business portfolio</a>.</p>
+                <p>Having built and operated 10 successful businesses over 21 years, I understand the real-world challenges small business owners face. My solutions are practical, affordable, and immediately actionable. <a href="#about" style="color: var(--primary-light); text-decoration: underline;">Learn about my business portfolio</a>.</p>
             </div>
             
             <div class="feature-card">
@@ -370,12 +182,12 @@
         </div>
     </section>
 
-    <section id="experience" class="content-section">
-        <h2 style="text-align: center; color: #2E5BBA; font-size: 1.8rem; margin-bottom: 40px;">Proven Track Record</h2>
+    <section id="experience" class="section">
+        <h2 style="text-align: center; color: var(--primary-light); font-size: 1.8rem; margin-bottom: var(--spacing-2xl);">Proven Track Record</h2>
         
         <div class="section-grid">
             <div class="feature-card">
-                <div class="card-image" style="width: 100%; height: 120px; background: linear-gradient(135deg, #2E5BBA, #4A90E2); border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">🏢</div>
+                <div class="card-image" style="width: 100%; height: 120px; background: linear-gradient(135deg, var(--primary-light), #4A90E2); border-radius: 8px; margin-bottom: var(--spacing-lg); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">🏢</div>
                 <h3>🏢 Business Development</h3>
                 <p><strong>10 Total Businesses:</strong> From paper-driven service companies to digital startups, I've built and transformed companies from concept to profitability. Each earned 250+ five-star reviews by focusing on systematic improvements.</p>
             </div>
@@ -392,18 +204,19 @@
             
             <div class="feature-card">
                 <h3>🔧 Technical Expertise</h3>
-                <p><strong>100+ Tools Tested:</strong> Hands-on experience across 10 businesses with everything from basic productivity apps to enterprise automation platforms. See my <a href="https://mickleyofficeautomation.com/" style="color: #2E5BBA; text-decoration: underline;">detailed analysis and ratings</a> of tools that actually deliver results.</p>
+                <p><strong>100+ Tools Tested:</strong> Hands-on experience across 10 businesses with everything from basic productivity apps to enterprise automation platforms. See my <a href="https://mickleyofficeautomation.com/" style="color: var(--primary-light); text-decoration: underline;">detailed analysis and ratings</a> of tools that actually deliver results.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
-        <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Ready to Transform Your Business Operations?</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Let's apply military precision and proven business experience to eliminate inefficiency in your daily operations. Discover the automation solutions that will save you time, reduce stress, and increase profitability.</p>
-        <a href="../microofficeautomation/index.html" class="cta-button">Explore <span class="microoffice-automation" style="color: #2E5BBA;">MicroOffice Automation</span> Solutions</a>
+        <h2 style="font-size: 1.8rem; margin-bottom: var(--spacing-lg);">Ready to Transform Your Business Operations?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: var(--spacing-xl); max-width: 600px; margin-left: auto; margin-right: auto;">Let's apply military precision and proven business experience to eliminate inefficiency in your daily operations. Discover the automation solutions that will save you time, reduce stress, and increase profitability.</p>
+        <a href="../microofficeautomation/index.html" class="cta-button">Explore <span class="microoffice-automation" style="color: var(--primary-light);">MicroOffice Automation</span> Solutions</a>
     </section>
 
+    <!-- Enhanced footer will be auto-injected by shared scripts -->
+    
     <script src="../shared/scripts.js"></script>
 </body>
 </html>
-

@@ -14,49 +14,70 @@ function createSharedMenu() {
     baseURL = 'https://microofficeautomation.com/';  // Cross-domain absolute paths
   }
   
-  // Define menu items with cross-domain support (cleaned up - removed cluttered buttons)
+  // Define menu items with cross-domain support and priorities
   const menuItems = [
+    { 
+      text: '🏠 Main Site', 
+      href: baseURL + 'index.html', 
+      description: 'MicroOffice Automation main site',
+      domain: 'microofficeautomation.com',
+      priority: 1
+    },
     { 
       text: '⚙️ Tech Stack', 
       href: baseURL + 'complete_tech_picker.html', 
       description: 'Explore automation solutions',
       domain: 'microofficeautomation.com',
-      priority: 1
+      priority: 2
     },
     { 
       text: '📊 ROI Calculator', 
       href: baseURL + 'value_calculator.html', 
       description: 'Calculate your efficiency losses',
       domain: 'microofficeautomation.com',
-      priority: 2
+      priority: 3
     },
     { 
       text: '🎁 Free Tools', 
       href: baseURL + 'freebies.html', 
       description: 'Free efficiency boosters',
       domain: 'microofficeautomation.com',
-      priority: 3
+      priority: 4
     },
     { 
       text: '👤 About Brian', 
       href: 'https://brianmickleyautomation.com/', 
       description: 'Military veteran & business expert',
       domain: 'brianmickleyautomation.com',
-      priority: 4
+      priority: 5
     },
     { 
       text: '📈 Business Insights', 
       href: 'https://mickleybusinessautomation.com/', 
       description: 'Real-world automation strategies',
       domain: 'mickleybusinessautomation.com',
-      priority: 5
+      priority: 6
     },
     { 
       text: '🔧 Tool Reviews', 
       href: 'https://mickleyofficeautomation.com/', 
       description: 'Expert tool analysis & guides',
       domain: 'mickleyofficeautomation.com',
-      priority: 6
+      priority: 7
+    },
+    { 
+      text: '✉️ Contact', 
+      href: 'mailto:info@microofficeautomation.com?subject=Website Inquiry', 
+      description: 'Get in touch',
+      domain: 'contact',
+      priority: 8
+    },
+    { 
+      text: '📞 Call', 
+      href: 'tel:+13309195744', 
+      description: '(330) 919-5744',
+      domain: 'contact',
+      priority: 9
     }
   ];
 
@@ -126,6 +147,14 @@ function createSharedMenu() {
         color: 'white',
         borderColor: '#2E5BBA',
         boxShadow: '0 4px 12px rgba(46,91,186,0.3)'
+      });
+    } else if (item.domain === 'contact') {
+      // Contact buttons - green gradient
+      Object.assign(link.style, {
+        background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+        color: 'white',
+        borderColor: '#10b981',
+        boxShadow: '0 4px 12px rgba(16,185,129,0.3)'
       });
     } else if (item.text.includes('🎁')) {
       // Free tools special styling - gold gradient
@@ -275,16 +304,12 @@ function initializeSharedMenu() {
     window.requestIdleCallback(() => {
       addSharedMenuCSS();
       injectSharedMenu();
-      injectBreadcrumb();
-      injectEnhancedFooter();
     });
   } else {
     // Fallback for browsers that don't support requestIdleCallback
     setTimeout(() => {
       addSharedMenuCSS();
       injectSharedMenu();
-      injectBreadcrumb();
-      injectEnhancedFooter();
     }, 0);
   }
 }
@@ -301,140 +326,12 @@ function domReady(callback) {
 // Auto-initialize when DOM is ready
 domReady(initializeSharedMenu);
 
-// Create breadcrumb navigation
-function createBreadcrumb() {
-  const currentDomain = window.location.hostname;
-  const currentPath = window.location.pathname;
-  
-  // Determine current location
-  let breadcrumbData = { domain: 'Home', page: '' };
-  
-  if (currentDomain.includes('brianmickleyautomation')) {
-    breadcrumbData = { domain: 'About Brian', page: 'Military Veteran & Business Expert' };
-  } else if (currentDomain.includes('mickleybusinessautomation')) {
-    breadcrumbData = { domain: 'Business Insights', page: 'Real-World Automation Strategies' };
-  } else if (currentDomain.includes('mickleyofficeautomation')) {
-    breadcrumbData = { domain: 'Tool Reviews', page: 'Expert Analysis & Guides' };
-  } else if (currentDomain.includes('microofficeautomation')) {
-    if (currentPath.includes('complete_tech_picker')) {
-      breadcrumbData = { domain: 'MicroOffice Automation', page: 'Tech Stack Assessment' };
-    } else if (currentPath.includes('value_calculator')) {
-      breadcrumbData = { domain: 'MicroOffice Automation', page: 'ROI Calculator' };
-    } else if (currentPath.includes('freebies')) {
-      breadcrumbData = { domain: 'MicroOffice Automation', page: 'Free Tools' };
-    } else {
-      breadcrumbData = { domain: 'MicroOffice Automation', page: 'Main Site' };
-    }
-  }
-  
-  const breadcrumb = document.createElement('nav');
-  breadcrumb.className = 'breadcrumb-nav';
-  breadcrumb.setAttribute('aria-label', 'Breadcrumb navigation');
-  
-  breadcrumb.innerHTML = `
-    <div class="breadcrumb-container">
-      <a href="https://microofficeautomation.com/" class="breadcrumb-home">🏠 Home</a>
-      <span class="breadcrumb-separator">›</span>
-      <span class="breadcrumb-current">${breadcrumbData.domain}</span>
-      ${breadcrumbData.page ? `<span class="breadcrumb-separator">›</span><span class="breadcrumb-page">${breadcrumbData.page}</span>` : ''}
-    </div>
-  `;
-  
-  return breadcrumb.outerHTML;
-}
-
-// Create enhanced footer with contact information
-function createEnhancedFooter() {
-  const currentYear = new Date().getFullYear();
-  
-  return `
-    <footer class="enhanced-footer">
-      <div class="footer-content">
-        <div class="footer-section footer-brand">
-          <h3><span class="brand-name">MicroOffice Automation</span></h3>
-          <p>Enabling small businesses to punch above their weight through smart automation solutions.</p>
-        </div>
-        
-        <div class="footer-section footer-contact">
-          <h4>Get In Touch</h4>
-          <div class="contact-items">
-            <a href="mailto:info@microofficeautomation.com" class="contact-item">
-              <span class="contact-icon">✉️</span>
-              <span>info@microofficeautomation.com</span>
-            </a>
-            <a href="tel:+13309195744" class="contact-item">
-              <span class="contact-icon">📞</span>
-              <span>(330) 919-5744</span>
-            </a>
-            <div class="contact-item">
-              <span class="contact-icon">📍</span>
-              <span>Northeast Ohio, USA</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="footer-section footer-links">
-          <h4>Quick Links</h4>
-          <div class="footer-nav">
-            <a href="https://microofficeautomation.com/">Main Site</a>
-            <a href="https://microofficeautomation.com/complete_tech_picker.html">Tech Stack</a>
-            <a href="https://microofficeautomation.com/value_calculator.html">ROI Calculator</a>
-            <a href="https://microofficeautomation.com/freebies.html">Free Tools</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          <p>&copy; ${currentYear} <span class="brand-name">MicroOffice Automation</span> | All rights reserved</p>
-        </div>
-        <div class="footer-domains">
-          <a href="https://brianmickleyautomation.com/">About Brian</a>
-          <a href="https://mickleybusinessautomation.com/">Business Insights</a>
-          <a href="https://mickleyofficeautomation.com/">Tool Reviews</a>
-        </div>
-      </div>
-    </footer>
-  `;
-}
-
-// Function to inject breadcrumb
-function injectBreadcrumb(targetElementId = 'breadcrumb-container') {
-  try {
-    const container = document.getElementById(targetElementId);
-    if (container) {
-      container.innerHTML = createBreadcrumb();
-    }
-  } catch (error) {
-    console.warn('Breadcrumb container not found. Add <div id="breadcrumb-container"></div> to your page.');
-  }
-}
-
-// Function to inject enhanced footer
-function injectEnhancedFooter(targetElementId = 'enhanced-footer-container') {
-  try {
-    const container = document.getElementById(targetElementId);
-    if (container) {
-      container.innerHTML = createEnhancedFooter();
-    } else {
-      // If no specific container, append to body
-      document.body.insertAdjacentHTML('beforeend', createEnhancedFooter());
-    }
-  } catch (error) {
-    console.warn('Enhanced footer injection failed:', error);
-  }
-}
-
 // Export for manual use and testing
 window.MicroOfficeMenu = {
   create: createSharedMenu,
   inject: injectSharedMenu,
   addCSS: addSharedMenuCSS,
-  init: initializeSharedMenu,
-  createBreadcrumb: createBreadcrumb,
-  injectBreadcrumb: injectBreadcrumb,
-  createEnhancedFooter: createEnhancedFooter,
-  injectEnhancedFooter: injectEnhancedFooter
+  init: initializeSharedMenu
 };
 
 // Add basic analytics tracking for menu usage
