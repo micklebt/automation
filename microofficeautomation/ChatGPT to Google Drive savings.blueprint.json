@@ -1,0 +1,56 @@
+"flow": [
+  {
+    "id": 1,
+    "module": "gateway:CustomWebHook",
+    "version": 1,
+    "parameters": {
+      "hook": 2402706,
+      "maxResults": 1
+    },
+    "mapper": {},
+    "metadata": {
+      "designer": {
+        "x": 0,
+        "y": 0
+      },
+      "restore": {
+        "parameters": {
+          "hook": {
+            "label": "ChatGPT to Google Drive webhook",
+            "data": {
+              "url": "https://hook.us1.make.com/hysi54hlaqltg8vad37yi2pulm7hnwhh"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "module": "googleDrive:uploadAFile",
+    "version": 2,
+    "parameters": {
+      "folder": "1N038Vkk9VXF1uuJH3Z86KsUka7rb5cQL",
+      "convert": false,
+      "overwrite": false
+    },
+    "mapper": {
+      "fileName": "{{fileName}}",
+      "mimeType": "{{mimeType}}",
+      "fileContent": "{{fileContent}}"
+    },
+    "metadata": {
+      "designer": {
+        "x": 350,
+        "y": 0
+      },
+      "restore": {
+        "parameters": {
+          "folder": {
+            "label": "Target Google Drive folder"
+          }
+        }
+      }
+    }
+  }
+]

@@ -8,55 +8,41 @@ function createSharedMenu() {
   let baseURL = '';
   
   // Set base URL based on current domain
-  if (currentDomain.includes('microofficeautomation')) {
+  if (currentDomain.includes('brianmickleyautomation')) {
     baseURL = '';  // Same domain, relative paths
   } else {
-    baseURL = 'https://microofficeautomation.com/';  // Cross-domain absolute paths
+    baseURL = 'https://brianmickleyautomation.com/';  // Cross-domain absolute paths
   }
   
   // Define menu items with cross-domain support (cleaned up - removed cluttered buttons)
   const menuItems = [
     { 
-      text: '⚙️ Tech Stack', 
-      href: baseURL + 'complete_tech_picker.html', 
-      description: 'Explore automation solutions',
-      domain: 'microofficeautomation.com',
+      text: '🏠 Home', 
+      href: baseURL + 'index.html', 
+      description: 'Business Automation Insights',
+      domain: 'brianmickleyautomation.com',
       priority: 1
     },
     { 
-      text: '📊 ROI Calculator', 
-      href: baseURL + 'value_calculator.html', 
-      description: 'Calculate your efficiency losses',
-      domain: 'microofficeautomation.com',
+      text: '📊 Business Insights', 
+      href: '#insights', 
+      description: 'Real-world automation strategies',
+      domain: 'brianmickleyautomation.com',
       priority: 2
     },
     { 
-      text: '🎁 Free Tools', 
-      href: baseURL + 'freebies.html', 
-      description: 'Free efficiency boosters',
-      domain: 'microofficeautomation.com',
+      text: '📋 Case Studies', 
+      href: '#case-studies', 
+      description: 'Real business transformations',
+      domain: 'brianmickleyautomation.com',
       priority: 3
     },
     { 
-      text: '👤 About Brian', 
-      href: 'https://brianmickleyautomation.com/', 
-      description: 'Military veteran & business expert',
+      text: 'ℹ️ About', 
+      href: '#about', 
+      description: 'Why these insights matter',
       domain: 'brianmickleyautomation.com',
       priority: 4
-    },
-    { 
-      text: '📈 Business Insights', 
-      href: 'https://mickleybusinessautomation.com/', 
-      description: 'Real-world automation strategies',
-      domain: 'mickleybusinessautomation.com',
-      priority: 5
-    },
-    { 
-      text: '🔧 Tool Reviews', 
-      href: 'https://mickleyofficeautomation.com/', 
-      description: 'Expert tool analysis & guides',
-      domain: 'mickleyofficeautomation.com',
-      priority: 6
     }
   ];
 
@@ -310,12 +296,7 @@ function createBreadcrumb() {
   let breadcrumbData = { domain: 'Home', page: '' };
   
   if (currentDomain.includes('brianmickleyautomation')) {
-    breadcrumbData = { domain: 'About Brian', page: 'Military Veteran & Business Expert' };
-  } else if (currentDomain.includes('mickleybusinessautomation')) {
-    breadcrumbData = { domain: 'Business Insights', page: 'Real-World Automation Strategies' };
-  } else if (currentDomain.includes('mickleyofficeautomation')) {
-    breadcrumbData = { domain: 'Tool Reviews', page: 'Expert Analysis & Guides' };
-  } else if (currentDomain.includes('microofficeautomation')) {
+    breadcrumbData = { domain: 'Business Automation Insights', page: 'Real-World Strategies & Solutions' };
     if (currentPath.includes('complete_tech_picker')) {
       breadcrumbData = { domain: 'MicroOffice Automation', page: 'Tech Stack Assessment' };
     } else if (currentPath.includes('value_calculator')) {
