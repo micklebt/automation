@@ -3,6 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <meta name="description" content="Northeast Ohio's trusted business automation expert. Save $70,000+ annually with smart workflows, process automation, and integrated tools. Free consultation available.">
   <meta name="keywords" content="business automation Northeast Ohio, small business automation, workflow optimization, Airtable automation, business process automation, Mickley Business Automation, business efficiency tools">
   <meta name="author" content="Brian Mickley">
@@ -141,11 +163,14 @@
       margin: 0 auto 2rem auto;
       width: 300px;
       opacity: 0.9;
-      transition: transform 2s ease;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 2s ease, box-shadow 0.3s ease;
     }
 
     .gear-animation:hover {
-      transform: rotate(360deg);
+      transform: rotate(360deg) scale(1.05);
+      box-shadow: var(--shadow);
     }
 
     h1 {
@@ -601,7 +626,7 @@
   <header>
     <div class="container">
       <h1 class="company-title">Mickley Business Automation</h1>
-      <img src="../archives_backup_files/media/gear_assembly_slow.gif" alt="Spinning Gears" class="gear-animation">
+      <img src="assets/images/animations/gear_assembly_slow.gif" alt="Spinning Gears" class="gear-animation">
       <h2 class="main-headline">Stop Fighting With Spreadsheets! 🎉</h2>
       <p>We make your business run smoother than a buttered penguin on ice! ⚡</p>
     </div>
@@ -609,7 +634,7 @@
 
   <main>
     <section class="container">
-      <img src="../archives_backup_files/media/stressed_manager.png" alt="Stressed Manager Before Automation" class="stressed-manager">
+      <img src="assets/images/content/stressed_manager.png" alt="Stressed Manager Before Automation" class="stressed-manager">
       <h2>Life's Too Short for Manual Data Entry 🤪</h2>
       <p>Remember when you said "I'll just do it manually, it's faster"? How's that working out for you? Let's fix that!</p>
       
@@ -696,7 +721,7 @@
         </div>
       </div>
 
-      <img src="../archives_backup_files/media/workflow_design.png" alt="Smooth Workflow Design" class="workflow-image">
+      <img src="assets/images/content/workflow_design.png" alt="Smooth Workflow Design" class="workflow-image">
 
       <div class="small-biz-challenges">
         <h2>Sound Familiar? 🤔</h2>

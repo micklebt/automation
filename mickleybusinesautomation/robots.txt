@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Sitemap: https://mickleybusinessautomation.com/sitemap.xml
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Allow search engines to crawl images and assets
+Allow: /images/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Optimize crawl rate
+Crawl-delay: 1
