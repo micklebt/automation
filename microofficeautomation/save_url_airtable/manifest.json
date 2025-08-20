@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Save Page to Airtable Ideas",
+  "version": "1.0",
+  "description": "Right-click to save current page into Airtable with meta summary.",
+  "permissions": ["contextMenus", "activeTab", "scripting", "notifications"],
+  "background": {
+    "service_worker": "background.js"
+  } 
+}

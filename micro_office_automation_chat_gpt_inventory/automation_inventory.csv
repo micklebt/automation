@@ -1,0 +1,11 @@
+Topic,Subtopic,Tools,Use-Case,Notes / Insights,Tags
+Automation,ETL data pipeline,"Make.com, OpenAI, Airtable, Twilio",Email→Webhook→Driver Dispatch,Tiered notification prevents downtime,"dump-trucks, webhook, tier-1, tier-2"
+SEO Content,Blog extraction,"GPT-4o, Make.com structured transformer",Blog metadata separation,Prompt bank item 'Extract Blog Sections',"SEO, WordPress, content-automation"
+Telephony,Voice agent,"Retell.ai, Twilio, Whisper, GPT",Drain cleaning service call intake,Recognizes returning numbers for personalization,"voice-bot, service-agent, plumbing"
+Finance,QBO API,"Make.com, QuickBooks Online",Auto invoice creation from dispatch,Template selection optional,"invoicing, automation, dump-trucks"
+SEO Content,Markdown → WP,"Airtable, Make.com, WordPress API",Publish SEO blog posts automatically,Requires meta fields formatted correctly via GPT,"content-lifecycle, automation, SEO"
+Monitoring,Alerting system,"Airtable, Make.com, Twilio",Expiry notifications,Master-caution system: green/yellow/red UI planned,"compliance, credentials, dispatch"
+Voice Bot,Laundromat Refund Agent,"Vapi.ai, Whisper, Twilio",Handles refund calls for laundromats,"Identifies machine number, greets by caller-ID","IVR, laundromat, refund"
+Content Ops,Blog Rewrite,"GPT, Make.com",Polish blog post before publish,"Injects CTA, hero buttons, embedded links","SEO, rewrite, call-to-action"
+SEO,Keyword Automation,"Airtable, GPT",Tag posts with SEO keywords,Planned ruleset to assign long-tail keywords,"content, taxonomy"
+Integration,QuickBooks Connector,Make.com → QBO,Invoice after dispatch completion,Requires mapped chart-of-accounts and ItemCodes,"invoicing, finance"

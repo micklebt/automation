@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Northeast Ohio's trusted business automation expert. Save $70,000+ annually with smart workflows, process automation, and integrated tools. Free consultation available.">
+  <meta name="keywords" content="business automation Northeast Ohio, small business automation, workflow optimization, Airtable automation, business process automation, Mickley Business Automation, business efficiency tools">
+  <meta name="author" content="Brian Mickley">
+  <meta name="geo.region" content="US-OH">
+  <meta name="geo.placename" content="Northeast Ohio">
+  <meta name="geo.position" content="41.4993;-81.6944">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mickleybusinessautomation.com/">
+  <meta property="og:title" content="Mickley Business Automation | Smart Solutions for Small Business">
+  <meta property="og:description" content="Transform your small business with automation. Save time, reduce costs, and grow faster with Northeast Ohio's trusted automation expert. Free consultation available.">
+  <meta property="og:image" content="https://mickleybusinessautomation.com/images/office-automation-preview.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Mickley Business Automation">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mickley Business Automation | Smart Business Solutions">
+  <meta name="twitter:description" content="Transform your small business with automation. Save time, reduce costs, and grow faster. Northeast Ohio's trusted automation expert.">
+  <meta name="twitter:image" content="https://mickleybusinessautomation.com/images/office-automation-preview.jpg">
+  
+  <title>Mickley Business Automation | Northeast Ohio's Business Automation Expert</title>
+  <link rel="canonical" href="https://mickleybusinessautomation.com/">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Mickley Business Automation",
+    "image": "https://mickleybusinessautomation.com/images/office-automation-preview.jpg",
+    "description": "Northeast Ohio's trusted business automation expert. We help small businesses save time and money through smart automation solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "OH",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.4993,
+      "longitude": -81.6944
+    },
+    "url": "https://mickleybusinessautomation.com",
+    "telephone": "+1-330-919-5744",
+    "priceRange": "$$",
+    "founder": {
+      "@type": "Person",
+      "name": "Brian Mickley",
+      "jobTitle": "Business Automation Expert",
+      "description": "Former Air Force Director of Command & Control, 5-time business owner with Master's in Information Architecture"
+    },
+    "areaServed": "Northeast Ohio",
+    "serviceType": ["Business Process Automation", "Workflow Optimization", "Systems Integration"],
+    "sameAs": [
+      "https://brianmickleyautomation.com",
+      "https://microofficeautomation.com"
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4ECDC4;
+      --accent-color: #FFE66D;
+      --text-color: #2C3E50;
+      --light-bg: #F7F9FC;
+      --white: #ffffff;
+      --shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background: var(--light-bg);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: var(--white);
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .company-title {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+      color: var(--accent-color);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .main-headline {
+      font-size: 2.8rem;
+      margin: 2rem 0;
+      color: var(--white);
+    }
+
+    .inline-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      border-bottom: 2px solid var(--accent-color);
+      transition: all 0.3s ease;
+      padding-bottom: 2px;
+    }
+
+    .inline-link:hover {
+      color: var(--secondary-color);
+      border-bottom-color: var(--secondary-color);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: var(--light-bg);
+      clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
+    }
+
+    .gear-animation {
+      display: block;
+      margin: 0 auto 2rem auto;
+      width: 300px;
+      opacity: 0.9;
+      transition: transform 2s ease;
+    }
+
+    .gear-animation:hover {
+      transform: rotate(360deg);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .value-props {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .value-prop {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .value-prop:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .joke-box {
+      background: var(--accent-color);
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 3rem 0;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .tools {
+      background: var(--white);
+      padding: 4rem 1rem;
+      margin: 3rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .tool-item {
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .tool-item:hover {
+      transform: scale(1.05);
+    }
+
+    .tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .stressed-manager {
+      max-width: 300px;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: var(--white);
+      text-align: center;
+      padding: 4rem 1rem;
+      margin: 3rem 0;
+      border-radius: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent-color);
+      color: var(--text-color);
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      background: #fff;
+    }
+
+    footer {
+      background: var(--text-color);
+      color: var(--white);
+      padding: 4rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-section {
+      padding: 1rem;
+    }
+
+    .footer-section h3 {
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section li {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-section i {
+      color: var(--accent-color);
+      width: 20px;
+      text-align: center;
+    }
+
+    .footer-section a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--accent-color);
+    }
+
+    .contact-info p {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legal {
+      text-align: center;
+    }
+
+    .tagline {
+      color: var(--accent-color);
+      font-style: italic;
+      margin: 1rem 0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      color: var(--white);
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .workflow-image {
+      display: block;
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin: 2rem auto;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .workflow-image:hover {
+      transform: scale(1.05);
+    }
+
+    .comparison-grid {
+      margin: 3rem 0;
+    }
+
+    .then-now {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .then, .now {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .then {
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .now {
+      background: #e8fff8;
+      border-radius: 10px;
+    }
+
+    .vs {
+      display: flex;
+      align-items: center;
+      color: var(--primary-color);
+    }
+
+    .then i, .now i {
+      margin: 1.5rem 0;
+      color: var(--secondary-color);
+    }
+
+    .then i {
+      color: #6c757d;
+    }
+
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .challenge-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .challenge-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .challenge-card i {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .story-card {
+      background: linear-gradient(135deg, #fff, #f8f9fa);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .story-card i {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-intro {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      font-size: 1.2rem;
+      color: var(--text-color);
+    }
+
+    .pain-points {
+      margin: 4rem auto;
+      max-width: 1200px;
+    }
+
+    .pain-points h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .small-biz-challenges {
+      margin: 6rem 0;
+    }
+
+    .success-stories {
+      margin: 6rem 0;
+    }
+
+    .small-biz-challenges h2,
+    .success-stories h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    /* Portal Modal Styles */
+    .portal-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .portal-content {
+      text-align: center;
+      color: white;
+      position: relative;
+      padding: 2rem;
+    }
+
+    .portal-content h3 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .portal-ring {
+      position: absolute;
+      border: 2px solid var(--accent-color);
+      border-radius: 50%;
+      animation: portalPulse 2s infinite;
+    }
+
+    .portal-ring:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      animation-delay: 0s;
+    }
+
+    .portal-ring:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      animation-delay: 0.5s;
+    }
+
+    .portal-ring:nth-child(3) {
+      width: 200px;
+      height: 200px;
+      animation-delay: 1s;
+    }
+
+    @keyframes portalPulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+
+      .gear-animation {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="company-title">Mickley Business Automation</h1>
+      <img src="../archives_backup_files/media/gear_assembly_slow.gif" alt="Spinning Gears" class="gear-animation">
+      <h2 class="main-headline">Stop Fighting With Spreadsheets! 🎉</h2>
+      <p>We make your business run smoother than a buttered penguin on ice! ⚡</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <img src="../archives_backup_files/media/stressed_manager.png" alt="Stressed Manager Before Automation" class="stressed-manager">
+      <h2>Life's Too Short for Manual Data Entry 🤪</h2>
+      <p>Remember when you said "I'll just do it manually, it's faster"? How's that working out for you? Let's fix that!</p>
+      
+      <div class="joke-box">
+        <p>"I used to spend hours copying data between spreadsheets. Now I spend hours watching cat videos instead! Thanks, automation!" - A Very Real Customer</p>
+      </div>
+      
+      <div class="value-props">
+        <div class="value-prop">
+          <h3>Time Machine ⏰</h3>
+          <p>We can't actually build you a time machine, but we can give you back hours each week. Close enough, right?</p>
+        </div>
+        <div class="value-prop">
+          <h3>Money Saver 💰</h3>
+          <p>Stop paying for 17 different apps that don't talk to each other. We'll make your existing tools play nice!</p>
+        </div>
+        <div class="value-prop">
+          <h3>Error Eliminator 🎯</h3>
+          <p>Because computers don't get distracted by YouTube videos like humans do. Just saying...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools">
+      <div class="container">
+        <h2>Your Favorite Tools, Now Best Friends Forever! 🤝</h2>
+        <p>We're like a digital matchmaker for your business apps.</p>
+        <div class="tool-grid">
+          <div class="tool-item">
+            <i class="fab fa-airtable tool-icon"></i>
+            <h3>Airtable</h3>
+            <p>Spreadsheets that actually make sense!</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-calculator tool-icon"></i>
+            <h3>QuickBooks</h3>
+            <p>Because money likes to be counted right</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-plug tool-icon"></i>
+            <h3>Make</h3>
+            <p>The digital duct tape of the internet</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-google tool-icon"></i>
+            <h3>Google Workspace</h3>
+            <p>Where docs go to collaborate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container pain-points text-center">
+      <h2>Small Business, Big Headaches? 🤕</h2>
+      <p class="section-intro">We get it. You're wearing 17 different hats, and none of them say "Tech Wizard" on them.</p>
+      
+      <div class="comparison-grid">
+        <div class="then-now">
+          <div class="then">
+            <h3>The Old Way 📅</h3>
+            <i class="fas fa-file-invoice fa-3x"></i>
+            <p>Drowning in paper invoices</p>
+            <i class="fas fa-clock fa-3x"></i>
+            <p>Manual data entry until midnight</p>
+            <i class="fas fa-exclamation-triangle fa-3x"></i>
+            <p>Oops, wrong spreadsheet version!</p>
+            <i class="fas fa-calculator fa-3x"></i>
+            <p>Calculator + pencil = weekend ruined</p>
+          </div>
+          <div class="vs">
+            <i class="fas fa-arrow-right fa-2x"></i>
+          </div>
+          <div class="now">
+            <h3>The Smart Way 🚀</h3>
+            <i class="fas fa-magic fa-3x"></i>
+            <p>Auto-magical invoice processing</p>
+            <i class="fas fa-robot fa-3x"></i>
+            <p>Robots do the boring stuff</p>
+            <i class="fas fa-cloud fa-3x"></i>
+            <p>Everything synced, always right</p>
+            <i class="fas fa-cocktail fa-3x"></i>
+            <p>More time for actual living</p>
+          </div>
+        </div>
+      </div>
+
+      <img src="../archives_backup_files/media/workflow_design.png" alt="Smooth Workflow Design" class="workflow-image">
+
+      <div class="small-biz-challenges">
+        <h2>Sound Familiar? 🤔</h2>
+        <div class="challenge-grid">
+          <div class="challenge-card">
+            <i class="fas fa-users fa-2x"></i>
+            <h3>"I'm a Team of One!"</h3>
+            <p>No IT department? No problem! <a href="https://brianmickleyautomation.com" class="inline-link">Our solutions</a> are so easy, even your office plant could use them. (But please don't rely on the plant for customer service.)</p>
+          </div>
+          <div class="challenge-card">
+            <i class="fas fa-brain fa-2x"></i>
+            <h3>"Tech Gives Me Headaches"</h3>
+            <p>If you can use a smartphone, you can use our solutions. We speak human, not tech-robot. Promise!</p>
+          </div>
+          <div class="challenge-card">
+            <i class="fas fa-piggy-bank fa-2x"></i>
+            <h3>"I Can't Afford Big Solutions"</h3>
+            <p>We make your existing tools work harder. <a href="https://microofficeautomation.com/#contact-form" class="inline-link">No need to buy expensive new systems</a> or hire an army of consultants.</p>
+          </div>
+          <div class="challenge-card">
+            <i class="fas fa-clock fa-2x"></i>
+            <h3>"There's Never Enough Time"</h3>
+            <p>Our automations work 24/7, never call in sick, and don't need coffee breaks. (Though we still recommend coffee for you!) <a href="https://brianmickleyautomation.com/about.html" class="inline-link">Learn about our approach</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="success-stories">
+        <h2>Real Small Business Wins 🏆</h2>
+        <div class="story-grid">
+          <div class="story-card">
+            <i class="fas fa-file-invoice-dollar fa-2x"></i>
+            <h3>From 4 Hours to 4 Minutes</h3>
+            <p>"Invoice processing used to take half my day. Now it happens while I'm at lunch!" - Sarah, Local Bakery</p>
+          </div>
+          <div class="story-card">
+            <i class="fas fa-calendar-check fa-2x"></i>
+            <h3>No More Scheduling Chaos</h3>
+            <p>"Stopped double-booking appointments! My customers think I hired an assistant. Nope, just smart automation!" - Mike, Service Pro</p>
+          </div>
+          <div class="story-card">
+            <i class="fas fa-tasks fa-2x"></i>
+            <h3>Follow-ups That Actually Follow Up</h3>
+            <p>"My leads don't fall through the cracks anymore. The system remembers so I don't have to!" - Lisa, Consultant (<a href="https://microofficeautomation.com/#contact-form" class="inline-link">Read more success stories</a>)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Make Work Fun Again? 🚀</h2>
+        <p>Let's chat! No suits, no jargon, just real solutions for real businesses.</p>
+        <p>(Warning: Side effects may include excessive free time and random outbursts of happiness)</p>
+        <a href="#" class="button">Book a Free Chat! 🎯</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-section contact-info">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:info@microofficeautomation.com">info@microofficeautomation.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+13309195744">(330) 919-5744</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Service Area: Northeast Ohio, USA</p>
+      </div>
+
+      <div class="footer-section about-brian">
+        <h3>About Brian Mickley</h3>
+        <ul>
+          <li><i class="fas fa-star"></i> Former Air Force Director of Command & Control</li>
+          <li><i class="fas fa-building"></i> 5-Time Business Owner</li>
+          <li><i class="fas fa-graduation-cap"></i> Master's in Information Architecture</li>
+          <li><i class="fas fa-medal"></i> Microsoft Expert</li>
+          <li><i class="fas fa-history"></i> 40+ Years Tech Experience</li>
+        </ul>
+      </div>
+
+      <div class="footer-section certifications">
+        <h3>Expertise</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> 22 Years Military Leadership</li>
+          <li><i class="fas fa-tools"></i> Business Process Automation</li>
+          <li><i class="fas fa-sync"></i> Workflow Optimization</li>
+          <li><i class="fas fa-database"></i> Data Integration Specialist</li>
+        </ul>
+      </div>
+
+      <div class="footer-section legal">
+        <p>© 2025 Mickley Business Automation</p>
+        <p class="tagline">Transforming small businesses with smart automation since 2004</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/mickley-business-automation" class="social-link" rel="noopener" target="_blank"><i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
+          <a href="https://www.facebook.com/mickleybusinessautomation" class="social-link" rel="noopener" target="_blank"><i class="fab fa-facebook"></i><span class="sr-only">Facebook</span></a>
+          <a href="https://twitter.com/MickleyBizAuto" class="social-link" rel="noopener" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Portal Modal -->
+  <div id="portalModal" class="portal-modal">
+    <div class="portal-content">
+      <div class="portal-ring"></div>
+      <div class="portal-ring"></div>
+      <div class="portal-ring"></div>
+      <h3>Opening Business Automation Portal... 🌀</h3>
+      <p>Transporting you to efficiency in 3... 2... 1...</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const portalModal = document.getElementById('portalModal');
+      const contactButtons = document.querySelectorAll('a.button');
+      
+      contactButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          portalModal.style.display = 'flex';
+          portalModal.style.opacity = '1';
+          
+          setTimeout(() => {
+            window.location.href = 'https://microofficeautomation.com/#contact-form';
+          }, 3000);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
