@@ -69,19 +69,18 @@
 </div>
 <div class="flex-grow px-4">
 <div class="py-3">
-<select class="form-select w-full min-w-0 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 p-[15px] text-base font-normal leading-normal">
-<option>New Project Estimate</option>
-<option>Existing Project: Johnson Driveway</option>
-<option>Existing Project: Patio Extension</option>
+<select id="projectSelector" class="form-select w-full min-w-0 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 p-[15px] text-base font-normal leading-normal">
+<option value="new">New Project Estimate</option>
 </select>
 </div>
-<div class="space-y-4 rounded-xl bg-gray-100 dark:bg-[#1C2720] p-4 mb-4">
+<div id="materialsContainer">
+<div class="space-y-4 rounded-xl bg-gray-100 dark:bg-[#1C2720] p-4 mb-4 material-card" data-material-id="0">
 <div class="flex items-start justify-between gap-4">
 <div class="flex-1 space-y-2">
 <p class="text-black dark:text-white text-base font-medium leading-normal">Material #1</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="Optional description (e.g., Concrete Slab)" value="Concrete Slab"/>
+<input class="material-description form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="Optional description (e.g., Concrete Slab)" value="Concrete Slab"/>
 </div>
-<button class="text-gray-500 dark:text-gray-400 shrink-0 mt-1">
+<button class="delete-material text-gray-500 dark:text-gray-400 shrink-0 mt-1">
 <span class="material-symbols-outlined">delete</span>
 </button>
 </div>
@@ -89,7 +88,7 @@
 <div class="flex flex-col gap-2">
 <p class="text-black dark:text-white text-base font-medium leading-normal">L</p>
 <div class="flex">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="24" value="24"/>
+<input class="length-input form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="24" value="24"/>
 <div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
 <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
 <span class="truncate">ft</span>
@@ -105,7 +104,7 @@
 <div class="flex flex-col gap-2">
 <p class="text-black dark:text-white text-base font-medium leading-normal">W</p>
 <div class="flex">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="12" value="12"/>
+<input class="width-input form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="12" value="12"/>
 <div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
 <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
 <span class="truncate">ft</span>
@@ -121,7 +120,7 @@
 <div class="flex flex-col gap-2">
 <p class="text-black dark:text-white text-base font-medium leading-normal">H</p>
 <div class="flex">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="4" value="4"/>
+<input class="height-input form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="4" value="4"/>
 <div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
 <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
 <span class="truncate">ft</span>
@@ -138,106 +137,24 @@
 <div class="mt-4 border-t border-gray-300 dark:border-[#3b5445] pt-4 space-y-3">
 <div class="flex items-center justify-between">
 <p class="text-black dark:text-white font-bold text-lg">Materials totals</p>
-<p class="text-lg font-bold text-primary">3.56 cu yd</p>
+<p class="volume-display text-lg font-bold text-primary">3.56 cu yd</p>
 </div>
 <div class="flex flex-col sm:flex-row sm:items-center gap-2">
 <label class="flex items-center gap-1 flex-1">
 <span class="text-gray-500 dark:text-gray-400 text-sm">$</span>
-<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Cost per unit" value="125 / cu yd"/>
+<input class="cost-per-unit form-input flex w-full resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Cost per unit" value="125"/>
 </label>
-<input class="form-input flex w-full sm:w-auto flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Source (optional)" value="Cemex"/>
+<input class="source-input form-input flex w-full sm:w-auto flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Source (optional)" value="Cemex"/>
 </div>
 </div>
 </div>
-<div class="space-y-4 rounded-xl bg-gray-100 dark:bg-[#1C2720] p-4 mb-4">
-<div class="flex items-start justify-between gap-4">
-<div class="flex-1 space-y-2">
-<p class="text-black dark:text-white text-base font-medium leading-normal">Material #2</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="Optional description (e.g., Gravel Base)" value=""/>
-</div>
-<button class="text-gray-500 dark:text-gray-400 shrink-0 mt-1">
-<span class="material-symbols-outlined">delete</span>
-</button>
-</div>
-<div class="grid grid-cols-3 gap-2 mt-4">
-<div class="flex flex-col gap-2">
-<p class="text-black dark:text-white text-base font-medium leading-normal">L</p>
-<div class="flex">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="" value=""/>
-<div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
-<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
-<span class="truncate">ft</span>
-<input checked="" class="invisible w-0" name="l-unit-2" type="radio" value="ft"/>
-</label>
-<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
-<span class="truncate">in</span>
-<input class="invisible w-0" name="l-unit-2" type="radio" value="in"/>
-</label>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<p class="text-black dark:text-white text-base font-medium leading-normal">W</p>
-<div class="flex">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="" value=""/>
-<div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
-<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
-<span class="truncate">ft</span>
-<input checked="" class="invisible w-0" name="w-unit-2" type="radio" value="ft"/>
-</label>
-<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
-<span class="truncate">in</span>
-<input class="invisible w-0" name="w-unit-2" type="radio" value="in"/>
-</label>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<p class="text-black dark:text-white text-base font-medium leading-normal">H</p>
-<div class="flex">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="" value=""/>
-<div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
-<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
-<span class="truncate">ft</span>
-<input class="invisible w-0" name="h-unit-2" type="radio" value="ft"/>
-</label>
-<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
-<span class="truncate">in</span>
-<input checked="" class="invisible w-0" name="h-unit-2" type="radio" value="in"/>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-4 border-t border-gray-300 dark:border-[#3b5445] pt-4 space-y-3">
-<div class="flex items-center justify-between">
-<p class="text-black dark:text-white font-bold text-lg">Materials totals</p>
-<p class="text-lg font-bold text-gray-500 dark:text-gray-400">0.00 cu yd</p>
-</div>
-<div class="flex flex-col sm:flex-row sm:items-center gap-2">
-<label class="flex items-center gap-1 flex-1">
-<span class="text-gray-500 dark:text-gray-400 text-sm">$</span>
-<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Cost per unit" value=""/>
-</label>
-<input class="form-input flex w-full sm:w-auto flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Source (optional)" value=""/>
-</div>
-</div>
-</div>
-<button class="flex items-center justify-center w-full gap-2 py-3 mb-4 text-primary font-bold border-2 border-primary/50 rounded-lg">
+<button id="addMaterialBtn" class="flex items-center justify-center w-full gap-2 py-3 mb-4 text-primary font-bold border-2 border-primary/50 rounded-lg">
 <span class="material-symbols-outlined">add_circle</span>
 <span>Add Material</span>
 </button>
 <div class="rounded-xl bg-gray-100 dark:bg-primary/10 p-4 mb-6">
 <h3 class="text-black dark:text-white text-lg font-bold pb-3">Material Subtotals</h3>
-<div class="space-y-2">
-<div class="flex justify-between items-center">
-<p class="text-gray-600 dark:text-gray-300">Concrete Slab</p>
-<p class="text-black dark:text-white font-medium">$445.00</p>
-</div>
-<div class="flex justify-between items-center">
-<p class="text-gray-600 dark:text-gray-300">Gravel Base</p>
-<p class="text-black dark:text-white font-medium">$0.00</p>
-</div>
+<div id="materialSubtotals" class="space-y-2">
 </div>
 </div>
 <hr class="border-gray-200 dark:border-gray-700 my-6"/>
@@ -247,21 +164,21 @@
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Labor Estimate</p>
 <div class="relative">
 <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 dark:text-[#9db9a8]">$</span>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] pl-8 p-[15px] text-base font-normal leading-normal" placeholder="2,500.00" value=""/>
+<input id="laborCost" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] pl-8 p-[15px] text-base font-normal leading-normal" placeholder="2,500.00" value=""/>
 </div>
 </label>
 <label class="flex flex-col w-full">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Equipment Rental</p>
 <div class="relative">
 <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 dark:text-[#9db9a8]">$</span>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] pl-8 p-[15px] text-base font-normal leading-normal" placeholder="550.00" value=""/>
+<input id="equipmentCost" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] pl-8 p-[15px] text-base font-normal leading-normal" placeholder="550.00" value=""/>
 </div>
 </label>
 <label class="flex flex-col w-full">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Hauling Fees</p>
 <div class="relative">
 <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 dark:text-[#9db9a8]">$</span>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] pl-8 p-[15px] text-base font-normal leading-normal" placeholder="300.00" value=""/>
+<input id="haulingCost" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] pl-8 p-[15px] text-base font-normal leading-normal" placeholder="300.00" value=""/>
 </div>
 </label>
 </div>
@@ -270,39 +187,39 @@
 <div class="space-y-4 pb-36">
 <div class="flex justify-between items-center">
 <p class="text-gray-600 dark:text-gray-300">Subtotal</p>
-<p class="text-black dark:text-white font-medium text-lg">$445.00</p>
+<p id="subtotalDisplay" class="text-black dark:text-white font-medium text-lg">$0.00</p>
 </div>
 <div class="flex items-center gap-4">
 <label class="flex-1">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Markup</p>
-<select class="form-select w-full min-w-0 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 p-[15px] text-base font-normal leading-normal">
-<option>5%</option>
-<option>10%</option>
-<option>15%</option>
-<option selected="">20%</option>
-<option>25%</option>
-<option>30%</option>
-<option>35%</option>
-<option>40%</option>
+<select id="markupSelect" class="form-select w-full min-w-0 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 p-[15px] text-base font-normal leading-normal">
+<option value="5">5%</option>
+<option value="10">10%</option>
+<option value="15">15%</option>
+<option value="20" selected="">20%</option>
+<option value="25">25%</option>
+<option value="30">30%</option>
+<option value="35">35%</option>
+<option value="40">40%</option>
 </select>
 </label>
-<p class="text-gray-600 dark:text-gray-300 text-lg pt-9">($89.00)</p>
+<p id="markupAmount" class="text-gray-600 dark:text-gray-300 text-lg pt-9">($0.00)</p>
 </div>
 <div class="pt-4 flex justify-between items-center">
 <p class="text-black dark:text-white font-bold text-xl">Grand Total</p>
-<p class="text-primary font-bold text-2xl">$534.00</p>
+<p id="grandTotal" class="text-primary font-bold text-2xl">$0.00</p>
 </div>
 </div>
 </div>
 <div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
 <div class="flex gap-2">
-<button class="w-full bg-primary text-black font-bold py-4 px-6 rounded-xl text-lg">
+<button id="generateBtn" class="w-full bg-primary text-black font-bold py-4 px-6 rounded-xl text-lg">
         Generate
       </button>
-<button class="shrink-0 bg-gray-200 dark:bg-[#28392f] text-black dark:text-white font-bold p-4 rounded-xl">
+<button id="saveBtn" class="shrink-0 bg-gray-200 dark:bg-[#28392f] text-black dark:text-white font-bold p-4 rounded-xl">
 <span class="material-symbols-outlined">save</span>
 </button>
-<button class="shrink-0 bg-gray-200 dark:bg-[#28392f] text-black dark:text-white font-bold p-4 rounded-xl">
+<button id="shareBtn" class="shrink-0 bg-gray-200 dark:bg-[#28392f] text-black dark:text-white font-bold p-4 rounded-xl">
 <span class="material-symbols-outlined">share</span>
 </button>
 </div>
@@ -319,43 +236,463 @@
 <div class="p-4 space-y-4 overflow-y-auto">
 <label class="flex flex-col w-full">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Project Description</p>
-<textarea class="form-textarea w-full min-w-0 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" placeholder="e.g., Driveway replacement" rows="3"></textarea>
+<textarea id="projectDescription" class="form-textarea w-full min-w-0 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" placeholder="e.g., Driveway replacement" rows="3"></textarea>
 </label>
 <label class="flex flex-col w-full">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Estimated Date</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" type="date"/>
+<input id="projectDate" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" type="date"/>
 </label>
 <label class="flex flex-col w-full">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Client/Owner</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" placeholder="e.g., John Smith"/>
+<input id="clientName" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" placeholder="e.g., John Smith"/>
 </label>
 <label class="flex flex-col w-full">
 <p class="text-black dark:text-white text-base font-medium leading-normal pb-2">Contact Details</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" placeholder="e.g., (555) 123-4567"/>
+<input id="clientContact" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#111814] focus:border-gray-400 dark:focus:border-[#3b5445] h-14 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] p-[15px] text-base font-normal leading-normal" placeholder="e.g., (555) 123-4567"/>
 </label>
 </div>
 <div class="p-4 mt-auto sticky bottom-0 bg-background-light dark:bg-[#1C2720] border-t border-gray-200 dark:border-[#3b5445]">
-<button class="w-full bg-primary text-black font-bold py-4 px-6 rounded-xl text-lg">
+<button id="saveInfoBtn" class="w-full bg-primary text-black font-bold py-4 px-6 rounded-xl text-lg">
           Save Info
         </button>
 </div>
 </div>
 </div>
 <script>
+    // State management
+    let materialCounter = 1;
+    let currentProject = {
+      name: 'New Project Estimate',
+      materials: [],
+      labor: 0,
+      equipment: 0,
+      hauling: 0,
+      markup: 20,
+      projectInfo: {
+        description: '',
+        date: '',
+        clientName: '',
+        clientContact: ''
+      }
+    };
+
+    // Modal functionality
     const openModalBtn = document.getElementById('openModalBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modal = document.getElementById('projectInfoModal');
+
     openModalBtn.addEventListener('click', () => {
       modal.classList.add('flex');
     });
+
     closeModalBtn.addEventListener('click', () => {
       modal.classList.remove('flex');
     });
-    // Also close modal if clicking on the background
+
     modal.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.classList.remove('flex');
       }
+    });
+
+    // Utility functions
+    function parseNumber(value) {
+      const num = parseFloat(value) || 0;
+      return num;
+    }
+
+    function formatCurrency(value) {
+      return `$${value.toFixed(2)}`;
+    }
+
+    function formatVolume(value) {
+      return `${value.toFixed(2)} cu yd`;
+    }
+
+    // Volume calculation (convert to cubic yards)
+    function calculateVolume(length, width, height, lUnit, wUnit, hUnit) {
+      // Convert to feet
+      const l = lUnit === 'in' ? length / 12 : length;
+      const w = wUnit === 'in' ? width / 12 : width;
+      const h = hUnit === 'in' ? height / 12 : height;
+
+      // Calculate cubic feet
+      const cubicFeet = l * w * h;
+
+      // Convert to cubic yards (27 cubic feet = 1 cubic yard)
+      return cubicFeet / 27;
+    }
+
+    // Calculate material cost
+    function calculateMaterialCost(card) {
+      const lengthInput = card.querySelector('.length-input');
+      const widthInput = card.querySelector('.width-input');
+      const heightInput = card.querySelector('.height-input');
+      const costInput = card.querySelector('.cost-per-unit');
+
+      const length = parseNumber(lengthInput.value);
+      const width = parseNumber(widthInput.value);
+      const height = parseNumber(heightInput.value);
+      const costPerUnit = parseNumber(costInput.value);
+
+      const lUnit = card.querySelector('input[name^="l-unit"]:checked')?.value || 'ft';
+      const wUnit = card.querySelector('input[name^="w-unit"]:checked')?.value || 'ft';
+      const hUnit = card.querySelector('input[name^="h-unit"]:checked')?.value || 'ft';
+
+      const volume = calculateVolume(length, width, height, lUnit, wUnit, hUnit);
+      const cost = volume * costPerUnit;
+
+      // Update volume display
+      const volumeDisplay = card.querySelector('.volume-display');
+      volumeDisplay.textContent = formatVolume(volume);
+      volumeDisplay.classList.toggle('text-primary', volume > 0);
+      volumeDisplay.classList.toggle('text-gray-500', volume === 0);
+      volumeDisplay.classList.toggle('dark:text-gray-400', volume === 0);
+
+      return { volume, cost };
+    }
+
+    // Update all calculations
+    function updateCalculations() {
+      const cards = document.querySelectorAll('.material-card');
+      let totalMaterialCost = 0;
+      const subtotals = [];
+
+      // Calculate each material
+      cards.forEach(card => {
+        const { volume, cost } = calculateMaterialCost(card);
+        const description = card.querySelector('.material-description').value || 'Unnamed Material';
+
+        if (cost > 0) {
+          totalMaterialCost += cost;
+          subtotals.push({ description, cost });
+        }
+      });
+
+      // Update material subtotals
+      const subtotalsContainer = document.getElementById('materialSubtotals');
+      subtotalsContainer.innerHTML = subtotals.map(item => `
+        <div class="flex justify-between items-center">
+          <p class="text-gray-600 dark:text-gray-300">${item.description}</p>
+          <p class="text-black dark:text-white font-medium">${formatCurrency(item.cost)}</p>
+        </div>
+      `).join('') || '<p class="text-gray-500 dark:text-gray-400">No materials added yet</p>';
+
+      // Get labor costs
+      const labor = parseNumber(document.getElementById('laborCost').value);
+      const equipment = parseNumber(document.getElementById('equipmentCost').value);
+      const hauling = parseNumber(document.getElementById('haulingCost').value);
+
+      // Calculate subtotal
+      const subtotal = totalMaterialCost + labor + equipment + hauling;
+      document.getElementById('subtotalDisplay').textContent = formatCurrency(subtotal);
+
+      // Calculate markup
+      const markupPercent = parseNumber(document.getElementById('markupSelect').value);
+      const markupAmount = subtotal * (markupPercent / 100);
+      document.getElementById('markupAmount').textContent = `(${formatCurrency(markupAmount)})`;
+
+      // Calculate grand total
+      const grandTotal = subtotal + markupAmount;
+      document.getElementById('grandTotal').textContent = formatCurrency(grandTotal);
+    }
+
+    // Create new material card
+    function createMaterialCard(index) {
+      const card = document.createElement('div');
+      card.className = 'space-y-4 rounded-xl bg-gray-100 dark:bg-[#1C2720] p-4 mb-4 material-card';
+      card.setAttribute('data-material-id', index);
+
+      card.innerHTML = `
+        <div class="flex items-start justify-between gap-4">
+          <div class="flex-1 space-y-2">
+            <p class="text-black dark:text-white text-base font-medium leading-normal">Material #${index + 1}</p>
+            <input class="material-description form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="Optional description (e.g., Gravel Base)" value=""/>
+          </div>
+          <button class="delete-material text-gray-500 dark:text-gray-400 shrink-0 mt-1">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+        <div class="grid grid-cols-3 gap-2 mt-4">
+          <div class="flex flex-col gap-2">
+            <p class="text-black dark:text-white text-base font-medium leading-normal">L</p>
+            <div class="flex">
+              <input class="length-input form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="0" value=""/>
+              <div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
+                <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
+                  <span class="truncate">ft</span>
+                  <input checked="" class="invisible w-0" name="l-unit-${index}" type="radio" value="ft"/>
+                </label>
+                <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
+                  <span class="truncate">in</span>
+                  <input class="invisible w-0" name="l-unit-${index}" type="radio" value="in"/>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="text-black dark:text-white text-base font-medium leading-normal">W</p>
+            <div class="flex">
+              <input class="width-input form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="0" value=""/>
+              <div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
+                <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
+                  <span class="truncate">ft</span>
+                  <input checked="" class="invisible w-0" name="w-unit-${index}" type="radio" value="ft"/>
+                </label>
+                <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
+                  <span class="truncate">in</span>
+                  <input class="invisible w-0" name="w-unit-${index}" type="radio" value="in"/>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="text-black dark:text-white text-base font-medium leading-normal">H</p>
+            <div class="flex">
+              <input class="height-input form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal" placeholder="0" value=""/>
+              <div class="flex h-12 flex-shrink-0 items-center rounded-r-lg bg-gray-200 dark:bg-[#28392f] p-0.5 border border-l-0 border-gray-300 dark:border-[#3b5445]">
+                <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
+                  <span class="truncate">ft</span>
+                  <input class="invisible w-0" name="h-unit-${index}" type="radio" value="ft"/>
+                </label>
+                <label class="flex cursor-pointer h-full items-center justify-center rounded-md px-2.5 has-[:checked]:bg-white dark:has-[:checked]:bg-[#111814] text-gray-500 dark:text-[#9db9a8] has-[:checked]:text-black dark:has-[:checked]:text-white text-sm font-medium">
+                  <span class="truncate">in</span>
+                  <input checked="" class="invisible w-0" name="h-unit-${index}" type="radio" value="in"/>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 border-t border-gray-300 dark:border-[#3b5445] pt-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <p class="text-black dark:text-white font-bold text-lg">Materials totals</p>
+            <p class="volume-display text-lg font-bold text-gray-500 dark:text-gray-400">0.00 cu yd</p>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+            <label class="flex items-center gap-1 flex-1">
+              <span class="text-gray-500 dark:text-gray-400 text-sm">$</span>
+              <input class="cost-per-unit form-input flex w-full resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Cost per unit (cu yd)" value=""/>
+            </label>
+            <input class="source-input form-input flex w-full sm:w-auto flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border border-gray-300 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] focus:border-gray-400 dark:focus:border-[#3b5445] h-10 placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-2 text-sm font-normal" placeholder="Source (optional)" value=""/>
+          </div>
+        </div>
+      `;
+
+      return card;
+    }
+
+    // Add material
+    document.getElementById('addMaterialBtn').addEventListener('click', () => {
+      const container = document.getElementById('materialsContainer');
+      const newCard = createMaterialCard(materialCounter);
+      container.appendChild(newCard);
+      materialCounter++;
+
+      // Add event listeners to new card
+      attachCardEventListeners(newCard);
+      updateCalculations();
+    });
+
+    // Attach event listeners to a card
+    function attachCardEventListeners(card) {
+      // Delete button
+      const deleteBtn = card.querySelector('.delete-material');
+      deleteBtn.addEventListener('click', () => {
+        card.remove();
+        updateCalculations();
+        renumberMaterials();
+      });
+
+      // Input changes
+      const inputs = card.querySelectorAll('input');
+      inputs.forEach(input => {
+        input.addEventListener('input', updateCalculations);
+        input.addEventListener('change', updateCalculations);
+      });
+    }
+
+    // Renumber materials after deletion
+    function renumberMaterials() {
+      const cards = document.querySelectorAll('.material-card');
+      cards.forEach((card, index) => {
+        card.setAttribute('data-material-id', index);
+        const label = card.querySelector('p.text-base');
+        label.textContent = `Material #${index + 1}`;
+      });
+    }
+
+    // Save project
+    function saveProject() {
+      const projectName = prompt('Enter project name:', currentProject.name);
+      if (!projectName) return;
+
+      // Collect all material data
+      const materials = [];
+      document.querySelectorAll('.material-card').forEach(card => {
+        materials.push({
+          description: card.querySelector('.material-description').value,
+          length: card.querySelector('.length-input').value,
+          width: card.querySelector('.width-input').value,
+          height: card.querySelector('.height-input').value,
+          lUnit: card.querySelector('input[name^="l-unit"]:checked')?.value || 'ft',
+          wUnit: card.querySelector('input[name^="w-unit"]:checked')?.value || 'ft',
+          hUnit: card.querySelector('input[name^="h-unit"]:checked')?.value || 'ft',
+          cost: card.querySelector('.cost-per-unit').value,
+          source: card.querySelector('.source-input').value
+        });
+      });
+
+      currentProject = {
+        name: projectName,
+        materials,
+        labor: document.getElementById('laborCost').value,
+        equipment: document.getElementById('equipmentCost').value,
+        hauling: document.getElementById('haulingCost').value,
+        markup: document.getElementById('markupSelect').value,
+        projectInfo: {
+          description: document.getElementById('projectDescription').value,
+          date: document.getElementById('projectDate').value,
+          clientName: document.getElementById('clientName').value,
+          clientContact: document.getElementById('clientContact').value
+        }
+      };
+
+      // Save to localStorage
+      const projects = JSON.parse(localStorage.getItem('concreteProjects') || '{}');
+      projects[projectName] = currentProject;
+      localStorage.setItem('concreteProjects', JSON.stringify(projects));
+
+      // Update dropdown
+      updateProjectDropdown();
+
+      alert('Project saved successfully!');
+    }
+
+    // Load project
+    function loadProject(projectName) {
+      const projects = JSON.parse(localStorage.getItem('concreteProjects') || '{}');
+      const project = projects[projectName];
+
+      if (!project) return;
+
+      currentProject = project;
+
+      // Clear existing materials
+      document.getElementById('materialsContainer').innerHTML = '';
+      materialCounter = 0;
+
+      // Load materials
+      project.materials.forEach((mat, index) => {
+        const card = createMaterialCard(index);
+        card.querySelector('.material-description').value = mat.description || '';
+        card.querySelector('.length-input').value = mat.length || '';
+        card.querySelector('.width-input').value = mat.width || '';
+        card.querySelector('.height-input').value = mat.height || '';
+        card.querySelector('.cost-per-unit').value = mat.cost || '';
+        card.querySelector('.source-input').value = mat.source || '';
+
+        // Set units
+        const lRadio = card.querySelector(`input[name="l-unit-${index}"][value="${mat.lUnit}"]`);
+        const wRadio = card.querySelector(`input[name="w-unit-${index}"][value="${mat.wUnit}"]`);
+        const hRadio = card.querySelector(`input[name="h-unit-${index}"][value="${mat.hUnit}"]`);
+        if (lRadio) lRadio.checked = true;
+        if (wRadio) wRadio.checked = true;
+        if (hRadio) hRadio.checked = true;
+
+        document.getElementById('materialsContainer').appendChild(card);
+        attachCardEventListeners(card);
+        materialCounter++;
+      });
+
+      // Load labor costs
+      document.getElementById('laborCost').value = project.labor || '';
+      document.getElementById('equipmentCost').value = project.equipment || '';
+      document.getElementById('haulingCost').value = project.hauling || '';
+      document.getElementById('markupSelect').value = project.markup || 20;
+
+      // Load project info
+      document.getElementById('projectDescription').value = project.projectInfo.description || '';
+      document.getElementById('projectDate').value = project.projectInfo.date || '';
+      document.getElementById('clientName').value = project.projectInfo.clientName || '';
+      document.getElementById('clientContact').value = project.projectInfo.clientContact || '';
+
+      updateCalculations();
+    }
+
+    // Update project dropdown
+    function updateProjectDropdown() {
+      const projects = JSON.parse(localStorage.getItem('concreteProjects') || '{}');
+      const selector = document.getElementById('projectSelector');
+
+      selector.innerHTML = '<option value="new">New Project Estimate</option>';
+
+      Object.keys(projects).forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        selector.appendChild(option);
+      });
+    }
+
+    // Project dropdown change
+    document.getElementById('projectSelector').addEventListener('change', (e) => {
+      if (e.target.value === 'new') {
+        location.reload();
+      } else {
+        loadProject(e.target.value);
+      }
+    });
+
+    // Save button
+    document.getElementById('saveBtn').addEventListener('click', saveProject);
+
+    // Save project info button
+    document.getElementById('saveInfoBtn').addEventListener('click', () => {
+      modal.classList.remove('flex');
+      alert('Project information saved!');
+    });
+
+    // Generate button - print/download
+    document.getElementById('generateBtn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Share button
+    document.getElementById('shareBtn').addEventListener('click', () => {
+      const text = `Concrete Project Estimate\nGrand Total: ${document.getElementById('grandTotal').textContent}`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: 'Concrete Project Estimate',
+          text: text
+        });
+      } else {
+        // Fallback - copy to clipboard
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Estimate copied to clipboard!');
+        });
+      }
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Attach listeners to initial material card
+      const initialCard = document.querySelector('.material-card');
+      if (initialCard) {
+        attachCardEventListeners(initialCard);
+      }
+
+      // Add listeners to labor inputs
+      ['laborCost', 'equipmentCost', 'haulingCost', 'markupSelect'].forEach(id => {
+        document.getElementById(id).addEventListener('input', updateCalculations);
+        document.getElementById(id).addEventListener('change', updateCalculations);
+      });
+
+      // Load saved projects into dropdown
+      updateProjectDropdown();
+
+      // Initial calculation
+      updateCalculations();
     });
   </script>
 
