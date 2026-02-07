@@ -57,6 +57,46 @@ def _load_prompt(name: str) -> str:
     raise FileNotFoundError(f"Prompt template not found: {path}")
 
 
+def _load_knowledge_context() -> str:
+    """Load all knowledge base markdown files into a combined context string.
+
+    This pulls in business_rules.md, dispatch_relationships.md, corrections.md,
+    and worked examples so GPT has full domain awareness when parsing and
+    generating dispatch messages.
+    """
+    sections = []
+
+    # Load markdown knowledge files
+    for md_file in sorted(KB_DIR.glob("*.md")):
+        content = md_file.read_text().strip()
+        if content:
+            sections.append(f"--- {md_file.stem} ---\n{content}")
+
+    # Load worked examples (last 20 to stay within context limits)
+    examples_file = KB_DIR / "examples.jsonl"
+    if examples_file.exists():
+        lines = examples_file.read_text().strip().split("\n")
+        recent = lines[-20:]  # keep it bounded
+        if recent:
+            examples_text = "--- worked_examples ---\n"
+            examples_text += "Use these past examples as reference for parsing accuracy:\n\n"
+            for line in recent:
+                try:
+                    ex = json.loads(line)
+                    examples_text += f"Transcript: {ex.get('transcript', '')[:200]}\n"
+                    examples_text += f"Expected: {json.dumps(ex.get('expected_job', {}))}\n"
+                    examples_text += f"Type: {ex.get('dispatch_type', 'unknown')}\n\n"
+                except json.JSONDecodeError:
+                    continue
+            sections.append(examples_text)
+
+    combined = "\n\n".join(sections)
+    if combined:
+        print(f"[knowledge] Loaded {len(sections)} knowledge sections "
+              f"({len(combined):,} chars)")
+    return combined
+
+
 # ===================================================================
 # STEP 1 — Transcribe audio via OpenAI Whisper
 # ===================================================================
@@ -84,8 +124,20 @@ def parse_job_from_transcript(transcript: str) -> dict:
 
     Uses the 'dump_truck_job_structured' prompt template which mirrors
     the existing "Dump Truck Job Structured" entry in the prompt bank.
+    Enriches the system prompt with all knowledge base context (business
+    rules, terminology, dispatch relationships, worked examples, and
+    any logged corrections).
     """
     system_prompt = _load_prompt("dump_truck_job_structured")
+    knowledge = _load_knowledge_context()
+    if knowledge:
+        system_prompt += (
+            "\n\n# KNOWLEDGE BASE REFERENCE\n"
+            "Use the following domain knowledge to improve parsing accuracy.\n"
+            "Pay special attention to terminology, corrections, and worked examples.\n\n"
+            + knowledge
+        )
+
     client = openai.OpenAI(api_key=OPENAI_API_KEY)
     response = client.chat.completions.create(
         model=GPT_MODEL,
@@ -159,8 +211,22 @@ def generate_dispatch_message(job: dict) -> str:
 
     Uses the 'dispatch_message_template' prompt which instructs GPT to
     produce a formatted message suitable for SMS or email to a driver.
+    Includes dispatch relationship rules and business rules from the
+    knowledge base so the message is appropriate for the recipient type.
     """
     system_prompt = _load_prompt("dispatch_message_template")
+
+    # Add relationship-specific and business rule context
+    knowledge = _load_knowledge_context()
+    if knowledge:
+        system_prompt += (
+            "\n\n# KNOWLEDGE BASE REFERENCE\n"
+            "Use dispatch relationship rules and business rules below to "
+            "ensure the message is appropriate for the recipient type, "
+            "includes proper terminology, and follows rate confidentiality rules.\n\n"
+            + knowledge
+        )
+
     client = openai.OpenAI(api_key=OPENAI_API_KEY)
     response = client.chat.completions.create(
         model=GPT_MODEL,
