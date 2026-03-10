@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1976 LHS Class Reunion – 50 Years</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      padding: 30px 16px 60px;
+    }
+    .card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.12);
+      overflow: hidden;
+    }
+    /* ── Header ── */
+    .header {
+      background: #1a3a6b;
+      color: #fff;
+      padding: 28px 32px 22px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .header svg { flex-shrink: 0; }
+    .header-text h1 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: .5px;
+      line-height: 1.2;
+    }
+    .header-text p {
+      font-size: .85rem;
+      margin-top: 4px;
+      opacity: .85;
+    }
+    /* ── Body ── */
+    .body { padding: 28px 32px 32px; }
+    .notice {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      padding: 10px 14px;
+      font-size: .85rem;
+      border-radius: 4px;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+    .notice strong { color: #1a3a6b; }
+    .notice a { color: #1a3a6b; }
+    .maiden-note {
+      color: #c62828;
+      font-size: .82rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    /* ── Field groups ── */
+    .field-group { margin-bottom: 18px; }
+    label {
+      display: block;
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: .95rem;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+    input:focus, select:focus {
+      border-color: #1a3a6b;
+      box-shadow: 0 0 0 3px rgba(26,58,107,.15);
+    }
+    input::placeholder { color: #aaa; }
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .row-3 { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; }
+    /* ── Submit ── */
+    .submit-wrap { text-align: center; margin-top: 26px; }
+    button[type="submit"] {
+      background: #1a3a6b;
+      color: #fff;
+      border: none;
+      padding: 13px 44px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 7px;
+      cursor: pointer;
+      letter-spacing: .4px;
+      transition: background .2s, transform .1s;
+    }
+    button[type="submit"]:hover { background: #14305a; }
+    button[type="submit"]:active { transform: scale(.98); }
+    button[type="submit"]:disabled { background: #888; cursor: not-allowed; }
+    /* ── Status messages ── */
+    #status {
+      display: none;
+      margin-top: 18px;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: .92rem;
+      text-align: center;
+    }
+    #status.success { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+    #status.error   { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+    /* ── Committee footer ── */
+    .committee {
+      background: #f0f4fa;
+      border-top: 1px solid #dce3ef;
+      padding: 22px 32px 26px;
+    }
+    .committee h3 {
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: #1a3a6b;
+      margin-bottom: 14px;
+    }
+    .members { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 8px; }
+    .member { font-size: .82rem; line-height: 1.65; }
+    .member strong { display: block; }
+    .member a { color: #1a3a6b; word-break: break-all; }
+    .payment {
+      margin-top: 18px;
+      padding: 12px 14px;
+      background: #fff3e0;
+      border-left: 4px solid #ef6c00;
+      border-radius: 4px;
+      font-size: .82rem;
+      line-height: 1.7;
+    }
+    .payment strong { color: #bf360c; }
+    @media (max-width: 520px) {
+      .header { flex-direction: column; text-align: center; }
+      .row-2, .row-3 { grid-template-columns: 1fr; }
+      .members { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <!-- Header -->
+  <div class="header">
+    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="35" cy="35" r="33" fill="#0d2a54" stroke="#4a7fc1" stroke-width="2"/>
+      <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+            font-size="28" font-weight="bold" fill="#4a7fc1" font-family="serif">LHS</text>
+    </svg>
+    <div class="header-text">
+      <h1>1976 LHS Class Reunion</h1>
+      <p>50 Years &nbsp;|&nbsp; Register below to RSVP &amp; stay connected</p>
+    </div>
+  </div>
+
+  <!-- Form body -->
+  <div class="body">
+    <div class="notice">
+      <strong>Follow our class on Facebook:</strong> LHS Class of 1976 Group &nbsp;&mdash;&nbsp;
+      Contact any committee member listed below with questions.
+    </div>
+    <p class="maiden-note">** Ladies, please include your maiden name **</p>
+
+    <form id="reunionForm" novalidate>
+      <div class="field-group">
+        <label for="name">Full Name <span style="color:#c62828">(include maiden name if applicable)</span></label>
+        <input type="text" id="name" name="name" placeholder="e.g. Jane (Smith) Doe" required />
+      </div>
+      <div class="field-group">
+        <label for="address">Street Address</label>
+        <input type="text" id="address" name="address" placeholder="123 Main St" required />
+      </div>
+      <div class="field-group row-3">
+        <div>
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="City" required />
+        </div>
+        <div>
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" placeholder="OH" maxlength="2" style="text-transform:uppercase" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label for="zip">ZIP Code</label>
+        <input type="text" id="zip" name="zip" placeholder="44721" maxlength="10" style="max-width:160px" />
+      </div>
+      <div class="field-group row-2">
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="(330) 555-0000" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label for="contactMethod">Best Contact Method</label>
+        <select id="contactMethod" name="contactMethod" required>
+          <option value="" disabled selected>Select one…</option>
+          <option value="Phone">Phone</option>
+          <option value="Email">Email</option>
+          <option value="USPS">USPS Mail</option>
+          <option value="Facebook">Facebook</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="numAttending">Number of People Attending <span style="color:#555;font-weight:400">($35 per person)</span></label>
+        <input type="text" id="numAttending" name="numAttending" placeholder="e.g. 2" style="max-width:120px" />
+      </div>
+
+      <div class="submit-wrap">
+        <button type="submit" id="submitBtn">Submit Registration</button>
+        <div id="status"></div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Committee footer -->
+  <div class="committee">
+    <h3>Committee Team Members</h3>
+    <div class="members">
+      <div class="member">
+        <strong>Jeff Gambone</strong>
+        (330) 931-1677<br>
+        <a href="mailto:Jeff_gambone@yahoo.com">Jeff_gambone@yahoo.com</a>
+      </div>
+      <div class="member">
+        <strong>Bob Meadows</strong>
+        (330) 323-7704<br>
+        <a href="mailto:rmeadows972@gmail.com">rmeadows972@gmail.com</a>
+      </div>
+      <div class="member">
+        <strong>Nancy (Black) Rapp</strong>
+        (330) 575-9677<br>
+        <a href="mailto:nrapp76@gmail.com">nrapp76@gmail.com</a>
+      </div>
+      <div class="member">
+        <strong>Kris (Wilson) Voight</strong>
+        (330) 608-9463<br>
+        <a href="mailto:Klvrd@yahoo.com">Klvrd@yahoo.com</a>
+      </div>
+      <div class="member">
+        <strong>Dave Lasure</strong>
+        (330) 209-9692<br>
+        <a href="mailto:Dirthero@AOL.com">Dirthero@AOL.com</a>
+      </div>
+    </div>
+    <div class="payment">
+      <strong>Make checks / money orders payable to: "LHS Class of 1976"</strong><br>
+      <strong>Kris (Wilson) Voight</strong> &mdash; 7896 Peddler Cir NE, Canton, Ohio 44721<br>
+      <strong>Dave Lasure</strong> &mdash; 6395 Chesham Dr NE, North Canton, Ohio 44721<br>
+      Please mail by <strong>May 13<sup>th</sup>, 2026</strong> &nbsp;&bull;&nbsp; <strong>$35.00 per person</strong>
+    </div>
+  </div>
+</div><!-- /.card -->
+
+<script>
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz6khFqfjxSs_qm57TMXm4BLDz8nUJ8jW07e-RzZXUsFyiIC6ojezZnpZHd2pZuFsoTcg/exec';
+
+  const form   = document.getElementById('reunionForm');
+  const btn    = document.getElementById('submitBtn');
+  const status = document.getElementById('status');
+
+  function showStatus(msg, type) {
+    status.textContent = msg;
+    status.className = type;
+    status.style.display = 'block';
+    status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    const name          = document.getElementById('name').value.trim();
+    const contactMethod = document.getElementById('contactMethod').value;
+    if (!name)          { showStatus('Please enter your name.', 'error'); return; }
+    if (!contactMethod) { showStatus('Please select a best contact method.', 'error'); return; }
+
+    btn.disabled    = true;
+    btn.textContent = 'Submitting…';
+    status.style.display = 'none';
+
+    const payload = {
+      timestamp:     new Date().toLocaleString(),
+      name:          name,
+      address:       document.getElementById('address').value.trim(),
+      city:          document.getElementById('city').value.trim(),
+      state:         document.getElementById('state').value.trim(),
+      zip:           document.getElementById('zip').value.trim(),
+      phone:         document.getElementById('phone').value.trim(),
+      email:         document.getElementById('email').value.trim(),
+      contactMethod: contactMethod,
+      numAttending:  document.getElementById('numAttending').value.trim(),
+    };
+
+    try {
+      const response = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (result.result === 'success') {
+        showStatus('Registration submitted successfully! We look forward to seeing you.', 'success');
+        form.reset();
+      } else {
+        showStatus('Submission error: ' + (result.error || 'Unknown error'), 'error');
+      }
+    } catch (err) {
+      showStatus('Network error. Please try again or contact a committee member.', 'error');
+    } finally {
+      btn.disabled    = false;
+      btn.textContent = 'Submit Registration';
+    }
+  });
+</script>
+</body>
+</html>
